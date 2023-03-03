@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Etude_Cuda_Objet/src/video_stream/03_stream_todelete&apos; to &apos;03_stream_faux&apos;" description="Rename resource &apos;03_stream_todelete&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/video_stream/03_stream_todelete" name="03_stream_faux" stamp="1638178884077" updateReferences="false"/>
+</session>

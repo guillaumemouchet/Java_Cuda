@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_WIDTH" value="575"/>
+		<item key="BUILD_ALL" value="true"/>
+		<item key="TOGGLE_SELECTED" value="true"/>
+		<item key="DIALOG_HEIGHT" value="644"/>
+		<item key="BUILD_NOW" value="false"/>
+		<item key="DIALOG_Y_ORIGIN" value="28"/>
+		<item key="DIALOG_X_ORIGIN" value="449"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCudaTuto/Tuto_Cuda_Image_advanced"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCudaTuto/Tuto_Image_Cuda_Image"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Corriger_Cuda_3D_Cube_video"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Cuda_Video"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Corriger_Video_Cuda"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_3D_Cube_Corriger"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Cuda_3D_Cube"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_Tools"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Cuda_Tools"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_Image_2"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_MOO"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/TestReductionCuda"/>
+			<item value="/home/bilat/temp2/WCuda/TestDroneCode"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Cuda_corriger"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Corrige_ExercicesCpp"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Cpp"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_JNI_C"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/BilatTools_JNI"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_Surface_3D"/>
+			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Surface_Cuda"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1376921678049"/>
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="LINK_NAVIGATOR_TO_EDITOR" value="true"/>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.cdt.ui.newCWizards"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
+		<item key="SELECTED_FILTER_GROUP" value="selected_CBI"/>
+		<list key="PREV_SELECTED_ELEMENTS">
+		</list>
+	</section>
+</section>

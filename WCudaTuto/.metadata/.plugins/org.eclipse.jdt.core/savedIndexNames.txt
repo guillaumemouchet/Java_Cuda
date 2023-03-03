@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/arc27/CUDA/toStudent/code/WCudaTuto/.metadata/.plugins/org.eclipse.jdt.core
+830087614.index
+1865797976.index
+2031783402.index
+630618575.index

@@ -1,0 +1,208 @@
+#include "SliceGM.h"
+
+#include <iostream>
+#include <assert.h>
+
+#include "GM.h"
+#include "Maths.h"
+#include "sliceVersion.h"
+#include "Hardware.h"
+
+using std::cout;
+using std::endl;
+using std::to_string;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern __global__ void reductionIntraThreadGM(float* tabGM,int nbSlice);
+extern __global__ void ecrasementGM(float* tabGM, int moitier);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Constructeur			*|
+ \*-------------------------------------*/
+
+SliceGM::SliceGM(const Grid& grid , int nbSlice , double* ptrPiHat) :
+	RunnableGPU(grid, "SliceGM-" + sliceVersionToString() + "-" + to_string(nbSlice)), // classe parente
+//
+	nbSlice(nbSlice), //
+	ptrPiHat(ptrPiHat)
+    {
+    // ntabGM
+	{
+	this->nTabGM = grid.threadCounts();
+
+	// Warning :  et si plus de threads que slices? (pourrait arriver dans les test unitaires)
+	// Mieux:
+	// this->nTabGM = MIN(nbSlice, grid.threadCounts());
+	}
+
+    this->sizeTabGM = nTabGM * sizeof(float); // [octet]
+
+    // MM
+	{
+	GM::malloc(&tabGM, sizeTabGM);
+	}
+    }
+
+SliceGM::~SliceGM(void)
+    {
+    //MM (device free)
+	{
+	GM::free(tabGM);
+	}
+    }
+
+/*--------------------------------------*\
+ |*		Methode			*|
+ \*-------------------------------------*/
+
+void SliceGM::run()
+    {
+#ifdef SLICE_GM
+    return runGM();
+#endif
+
+#ifdef SLICE_GM_PLUS
+    // return runGM_plus_V1();
+    return runGM_plus_V2();
+#endif
+
+    assert(false);	// ne devrait jamais arriver
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/**
+ * <pre>
+ *
+ * version 1: Idea globale
+ *
+ *	Etape 0 : Promotion d'un tableau en GM (MemoryManagement MM)		(Dans le constructeur)
+ * 	Etape 1 : Reduction intra-thread dans un tableau promu en GM
+ * 	Etape 2 : Copy du tableau coter host
+ * 	Etape 3 : Reduction parallel du tableau coter host
+ * 	Etape 4 : Destruction GM						(Dans le destructeur)
+ *
+ * </pre>
+ */
+void SliceGM::runGM()	// Naif
+    {
+    reductionIntraThreadGM<<<dg,db>>>(tabGM, nbSlice);
+
+    // Reduction paralle sur cpu du tableau promu en GM, ramener coter host
+	{
+	float tab[nTabGM];
+	GM::memcpyDToH(tab, tabGM, sizeTabGM);
+
+	const double DX = 1 / (double)nbSlice;
+	double sum = 0.0;
+
+#pragma omp parallel for reduction(+:sum)
+	for (int i = 0; i < nTabGM; ++i)
+	    {
+	    sum += tab[i];
+	    }
+
+	*ptrPiHat = sum * DX;
+	}
+    }
+
+/**
+ * <pre>
+ *
+ * version 2: Idea globale
+ *
+ *	Etape 0 : Promotion d'un tableau en GM (MemoryManagement MM)				(Dans le constructeur)
+ * 	Etape 1 : Reduction intra-thread dans un tableau promu en GM
+ * 	Etape 2 : Reduction du tableau en GM par ecrasement hierarchique 2 à 2
+ * 		  On lance les kernles d'ecrasement depuis le host (chef d'orchestre)
+ * 	Etape 4 : Copy du reseultat coter host
+ * 	Etape 5 : Destruction GM								(Dans le destructeur)
+ * </pre>
+ */
+void SliceGM::runGM_plus_V1()    // Naif+
+    {
+    reductionIntraThreadGM<<<dg,db>>>(tabGM,nbSlice); // asynchrone
+
+    int moitier = nTabGM >> 1; // nTabGM/2;
+    // une autre grid que ci-dessus, pas utiliser this->dg et this->db, mais une nouvelle grid!
+    dim3 dg(moitier, 1, 1); // 1D
+    dim3 db(1, 1, 1);
+
+    // 1D , contrainte db.x <=1024
+    while (moitier >= 1)
+	{
+	ecrasementGM<<<dg,db>>>(tabGM, moitier); //barriere synchronisation
+	moitier = moitier >> 1; // moitier=moitier/2
+
+	dg.x = moitier;
+	}
+
+    float piHatFloat;
+    GM::memcpyDToH_float(&piHatFloat, tabGM);
+
+    const double DX = 1 / (double)nbSlice;
+    *ptrPiHat = piHatFloat * DX;
+    }
+
+void SliceGM::runGM_plus_V2()    // Naif+
+    {
+    reductionIntraThreadGM<<<dg,db>>>(tabGM,nbSlice); // asynchrone
+
+    int moitier = nTabGM >> 1; // nTabGM/2;
+    int dbx = 1024;
+    int dgx = moitier / dbx; //ok car nTab est une puissance de 2 et 1024 aussi
+
+    const int MP = Hardware::getMPCount();
+
+    assert(dgx * dbx == moitier);
+
+    // une autre grid que ci-dessus, pas utiliser this->dg et this->db, mais une nouvelle grid!
+    dim3 dg(dgx, 1, 1); // 1D
+    dim3 db(dbx, 1, 1);
+
+    // 1D , contrainte db.x <=1024
+    while (moitier >= 1)
+	{
+	ecrasementGM<<<dg,db>>>(tabGM, moitier); //barriere synchronisation
+	moitier = moitier >> 1; // moitier=moitier/2
+
+//	if (dgx > 2*MP)
+//	    {
+//	    dgx = dgx >> 1;
+//	    }
+//	else
+	    {
+	    if (dbx >= 2)
+		{
+		dbx = dbx >> 1;
+		}
+	    else
+		{
+		dgx = dgx >> 1;
+		}
+	    }
+	}
+
+    float piHatFloat;
+    GM::memcpyDToH_float(&piHatFloat, tabGM);
+
+    const double DX = 1 / (double)nbSlice;
+    *ptrPiHat = piHatFloat * DX;
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

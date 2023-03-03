@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 3 resources" deleteContents="false" description="Delete 3 resources" element1="/BUILDER/install_workspace_arm.sh" element2="/BUILDER/install_workspace_tools.sh" element3="/BUILDER/install_workspace.sh" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1661439865584"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/Tuto_Image_Cuda_JPG/src/core/01_imageVideo/01_animable/host/Image.cpp" element2="/Tuto_Image_Cuda_JPG/src/core/01_imageVideo/01_animable/host/Image.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1661512910299"/>
+</session>

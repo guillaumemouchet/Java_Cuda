@@ -1,0 +1,7 @@
+1566210772795	Rename package 'com.bilat.tuto.image.jni'
+1566210888705	Copy compilation unit
+1566211877121	Rename field 'panelHello'
+1566220256872	Rename resource 'runARM.sh'
+1566224793663	Move 'readme.txt' to 'JTuto_Image_JNI'
+1566225071964	Rename resource 'runGCC.sh'
+1566225174728	Rename resource 'runCudaARM.sh'

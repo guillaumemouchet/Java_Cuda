@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="org.bilat.thread.naif.AddNaifs"/>
+    <fullyQualifiedTypeName name="org.bilat.thread.use.UseAdds"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.bilat.thread.tools.TabTools"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Future"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executor"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+    <fullyQualifiedTypeName name="com.bilat.tuto.graph.jni.moo.SinusMOO"/>
+    <fullyQualifiedTypeName name="com.bilat.tuto.graph.jni.animator.Animable_I"/>
+    <fullyQualifiedTypeName name="com.bilat.tuto.jni.natif.Native"/>
+    <fullyQualifiedTypeName name="com.bilat.canvas.jni.natif.Native"/>
+    <fullyQualifiedTypeName name="com.bilat.canvas.jni.tools.AnimatorJava"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="com.bilat.canvas.jni.tools.LibraryLoader"/>
+    <fullyQualifiedTypeName name="ch.hearc.mavsdk.tools.Threads"/>
+    <fullyQualifiedTypeName name="com.sun.source.doctree.SerialDataTree"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="org.bilat.tuto.image.jni.gui.atome.JCurve"/>
+    <fullyQualifiedTypeName name="org.bilat.tuto.image.jni.gui.atome.tools.JSliderFLoat"/>
+    <fullyQualifiedTypeName name="org.bilat.tuto.image.jni.gui.atome.CanvasImage"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="org.jfree.data.general.SeriesDataset"/>
+    <fullyQualifiedTypeName name="org.jfree.chart.ChartPanel"/>
+    <fullyQualifiedTypeName name="org.jfree.data.time.TimeSeries"/>
+    <fullyQualifiedTypeName name="javax.swing.Timer"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.debug.Assertions"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+    <fullyQualifiedTypeName name="org.bilat.tuto.image.jni.gui.atome.chart.JCurveDynamique"/>
+</qualifiedTypeNameHistroy>

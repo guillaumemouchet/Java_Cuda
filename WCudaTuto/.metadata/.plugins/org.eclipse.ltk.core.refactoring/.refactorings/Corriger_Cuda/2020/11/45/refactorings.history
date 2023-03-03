@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Cuda_MOO/src/cpp/core/05_addvector_advanced/02_real&apos; to &apos;02_baseline&apos;" description="Rename resource &apos;02_real&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/05_addvector_advanced/02_real" name="02_baseline" stamp="1604337337086" updateReferences="false"/>
+</session>

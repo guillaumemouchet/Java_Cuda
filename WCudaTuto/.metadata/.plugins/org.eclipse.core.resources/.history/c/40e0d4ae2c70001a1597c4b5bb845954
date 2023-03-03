@@ -1,0 +1,114 @@
+#include <stdlib.h>
+#include <assert.h>
+#include <iostream>
+
+#include "cudaTools.h"
+#include "Hardware.h"
+
+#include "Settings_GPU.h"
+using namespace gpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+extern int mainImage(Settings& settings);
+extern int mainAnimable(Settings& settings);
+extern int mainBrutForce(Settings& settings);
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+int main(int argc, char** argv);
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+static int use(Settings& option);
+static int start(Settings& option);
+static void initCuda(Settings& option);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+int main(int argc, char** argv)
+    {
+    // Server Cuda3: in [0,2]
+    int DEVICE_ID = 0;
+
+    LaunchMode launchMode = LaunchMode::IMAGE; // IMAGE  ANIMABLE   FORCEBRUT
+    Settings settings(launchMode, DEVICE_ID, argc, argv);
+
+    return use(settings);
+    }
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+int use(Settings& settings)
+    {
+    initCuda(settings);
+    int isOk = start(settings);
+
+    Hardware::reset(); //cudaDeviceReset causes the driver to clean up all state. While not mandatory in normal operation, it is good practice.
+
+    return isOk;
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+void initCuda(Settings& settings)
+    {
+    int deviceId = settings.getDeviceId();
+
+    // Choose current device  (state of host-thread)
+    Hardware::setDevice(deviceId);
+    assert(Hardware::isCuda());
+
+    // It can be usefull to preload driver, by example to practice benchmarking! (sometimes slow under linux)
+    Hardware::loadCudaDriver(deviceId);
+    // Hardware::loadCudaDriverAll();// Force driver to be load for all GPU
+    }
+
+int start(Settings& settings)
+    {
+    // print
+	{
+	// Hardware::printAll();
+	Hardware::printAllSimple();
+	Hardware::printCurrent();
+	//Hardware::print(option.getDeviceId());
+	}
+
+    switch (settings.getLauchMode())
+	{
+	case IMAGE:
+	    return mainImage(settings);
+	case ANIMABLE:
+	    return mainAnimable(settings);
+	case FORCEBRUT:
+	    return mainBrutForce(settings);
+
+	 default:
+		assert(false);
+	}
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

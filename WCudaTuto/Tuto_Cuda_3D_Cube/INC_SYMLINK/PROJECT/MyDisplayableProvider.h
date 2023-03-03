@@ -1,0 +1,1 @@
+/home/arc27/CUDA/toStudent/code/WCudaTuto/Tuto_Cuda_3D_Cube/../Tuto_Cuda_Image/src/core/03_advanced/04_opengl_pure/03_provider/MyDisplayableProvider.h

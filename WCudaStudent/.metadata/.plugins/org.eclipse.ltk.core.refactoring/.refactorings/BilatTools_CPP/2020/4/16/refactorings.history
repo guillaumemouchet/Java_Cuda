@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BilatTools_CPP/src/core/tools/cpp/Folders.h&apos; to &apos;Chrome.h&apos;" description="Rename resource &apos;Folders.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/tools/cpp/Folders.h" name="Chrome.h" stamp="1586859587738" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BilatTools_CPP/src/core/tools/cpp/Folders.cpp&apos; to &apos;Chrome.cpp&apos;" description="Rename resource &apos;Folders.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/tools/cpp/Folders.cpp" name="Chrome.cpp" stamp="1586859595844" updateReferences="true"/>
+</session>

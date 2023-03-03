@@ -1,0 +1,1 @@
+/home/arc27/CUDA/toStudent/code/WCudaTuto/Tuto_Cpp/src/cpp/core/04_destruction/identity2/Identity2.h

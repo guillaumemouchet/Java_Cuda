@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tuto_Image_Cuda_CV/src/core/01_imageVideo/tools&apos; to &apos;temp&apos;" description="Rename resource &apos;tools&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/01_imageVideo/tools" name="temp" stamp="1636919414505" updateReferences="false"/>
+</session>

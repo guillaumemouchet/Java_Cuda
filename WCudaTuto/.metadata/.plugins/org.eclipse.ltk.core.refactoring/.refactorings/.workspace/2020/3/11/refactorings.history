@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;TestReductionCuda/INC_SYMLINK/EXT&apos;" deleteContents="false" description="Delete resource &apos;TestReductionCuda/INC_SYMLINK/EXT&apos;" element1="/TestReductionCuda/INC_SYMLINK/EXT" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1583945819652"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tuto_Cuda_API/src/cpp/test/junit&apos; to &apos;unit&apos;" description="Rename resource &apos;junit&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/test/junit" name="unit" stamp="1587071881475" updateReferences="true"/>
+</session>

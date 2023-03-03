@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_Cuda_Image/src/cpp/core/02_Mandelbrot/b_provider/entier.h&apos; to &apos;real.h&apos;" description="Rename resource &apos;entier.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/02_Mandelbrot/b_provider/entier.h" name="real.h" stamp="1583335838709" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_Cuda/src/cpp/core/00_Hello/addScalaire.cu&apos; to &apos;hello.cu&apos;" description="Rename resource &apos;addScalaire.cu&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/00_Hello/addScalaire.cu" name="hello.cu" stamp="1598276315774" updateReferences="false"/>
+</session>

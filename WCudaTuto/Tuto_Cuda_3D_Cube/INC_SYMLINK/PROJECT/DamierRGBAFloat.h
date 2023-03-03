@@ -1,0 +1,1 @@
+/home/arc27/CUDA/toStudent/code/WCudaTuto/Tuto_Cuda_3D_Cube/../Tuto_Cuda_Image/src/core/02_simple_type/02_Damier_RGBA_float4/01_animable/host/DamierRGBAFloat.h

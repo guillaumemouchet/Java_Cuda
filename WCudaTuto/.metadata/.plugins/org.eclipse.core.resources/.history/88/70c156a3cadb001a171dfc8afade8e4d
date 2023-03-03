@@ -1,0 +1,183 @@
+#include <iostream>
+#include <stdlib.h>
+
+#include "Limits.h"
+#include "entier.h"
+#include "ChronoFactory.h"
+
+using std::cerr;
+using std::cout;
+using std::endl;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+// Vector
+#include "AddVectorSmallUse.h"
+#include "AddVector11Use.h"
+#include "AddVectorBigUse.h"
+
+// Slice
+#include "SliceGmUse.h"
+#include "SliceSmUse.h"
+extern bool isSliceSMOK();
+
+// Montecarlo
+#include "MontecarloUse.h"
+#include "MontecarloMultiUse.h"
+
+bool isMontecarloOK();
+bool isMontecarloMultiOK();
+
+// reduction tools
+extern bool isReductionAdd_I_Ok();
+extern bool isReductionAdd_II_Ok();
+
+extern bool isReductionGeneric_I_Ok();
+extern bool isReductionGeneric_II_Ok();
+
+extern bool isReductionGeneric_long_II_Ok();
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+int mainCore();
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+extern int mainBruteforce();
+extern int mainAnimable();
+int mainCore()
+    {
+     mainAnimable();
+    //mainBruteforce();
+    }
+
+int mainCore3()
+    {
+    //cout << "ici" << endl;
+
+    AddVectorSmallUse addVectorSmallUse;
+    AddVector11Use addVector11Use;
+    AddVectorBigUse addVectorBigUse;
+
+    cout << addVectorSmallUse.isOk() << endl;
+    cout << addVector11Use.isOk() << endl;
+    cout << addVectorBigUse.isOk() << endl;
+
+    dim3 dg(1, 1, 1);
+    dim3 db(1, 1, 1);
+    Grid grid(dg, db);
+
+    // cout<<"ici"<<endl;
+    cout << addVectorBigUse.isOk(grid) << endl;
+
+    SliceGmUse sliceGmUse;
+    cout << sliceGmUse.isOk() << endl;
+
+    SliceSmUse sliceSmUse;
+    cout << sliceSmUse.isOk() << endl;
+
+    MontecarloUse montecarloUse;
+    cout << montecarloUse.isOk() << endl;
+
+    MontecarloMultiUse montecarloMultiUse;
+       cout << montecarloMultiUse.isOk() << endl;
+
+
+    }
+
+int mainCore2()
+    {
+    Chrono* ptrChrono = ChronoFactory::create();
+
+    // Commenter ce dont vous n'avez pas besoin ci-dessous
+
+    bool isOk = true;
+
+    // Vector
+	{
+
+	AddVectorSmallUse addVectorSmallUse;
+	AddVector11Use addVector11Use;
+	AddVectorBigUse addVectorBigUse;
+
+	isOk &= addVectorSmallUse.isOk();
+	isOk &= addVector11Use.isOk();
+	isOk &= addVectorBigUse.isOk();
+
+	}
+
+    // slice
+	{
+	SliceGmUse sliceGmUse;
+	SliceSmUse sliceSmUse;
+
+//	isOk &= isSliceGMOK();
+//	isOk &= isSliceSMOK();
+
+//isOk &= sliceGmUse.isOk();
+	isOk &= sliceSmUse.isOk();
+	}
+
+//    // montecarlo
+	{
+	MontecarloUse montecarloUse;
+	MontecarloMultiUse montecarloMultiUse;
+//	isOk &= isMontecarloOK();
+//	isOk &= isMontecarloMultiOK();
+
+	isOk &= montecarloUse.isOk();
+	isOk &= montecarloMultiUse.isOk();
+	}
+
+// tools
+	{
+	// add
+//	isOk &= isReductionAdd_I_Ok();
+//	isOk &= isReductionAdd_II_Ok();
+//
+//	// generic
+//	isOk &= isReductionGeneric_I_Ok();
+//	isOk &= isReductionGeneric_II_Ok();
+//
+//	// long
+//	isOk &= isReductionGeneric_long_II_Ok();
+	}
+
+    ptrChrono->stop();
+
+    cout << endl << endl;
+    cout << "mainCore :" << *ptrChrono << endl;
+    cout << "mainCore : ";
+    if (isOk)
+	{
+	cout << "SUCCESS, Congratulation!";
+	}
+    else
+	{
+	cerr << "FAILED, sorry!";
+	}
+    cout << endl << endl;
+
+    delete ptrChrono;
+
+    return isOk ? EXIT_SUCCESS : EXIT_FAILURE;
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

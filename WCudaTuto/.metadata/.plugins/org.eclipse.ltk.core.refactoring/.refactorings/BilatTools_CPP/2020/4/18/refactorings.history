@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BilatTools_CPP/src/core/tools/06_context/Chrono.h&apos; to &apos;Args.h&apos;" description="Rename resource &apos;Chrono.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/tools/06_context/Chrono.h" name="Args.h" stamp="1587906911582" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BilatTools_CPP/src/core/tools/06_context/Chrono.cpp&apos; to &apos;Args.cpp&apos;" description="Rename resource &apos;Chrono.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/tools/06_context/Chrono.cpp" name="Args.cpp" stamp="1587906916800" updateReferences="true"/>
+</session>

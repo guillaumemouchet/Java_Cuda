@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TestReductionCuda/src/core/long/generic/useReductionGeneric_long_protocole_II.cu.cu&apos; to &apos;useReductionGeneric_long_protocole_II.cu&apos;" description="Rename resource &apos;useReductionGeneric_long_protocole_II.cu.cu&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/long/generic/useReductionGeneric_long_protocole_II.cu.cu" name="useReductionGeneric_long_protocole_II.cu" stamp="1584385998452" updateReferences="true"/>
+</session>

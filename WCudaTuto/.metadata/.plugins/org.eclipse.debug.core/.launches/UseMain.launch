@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/JTuto_Image_JNI/src/org/bilat/tuto/image/jni/gui/UseMain.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="LD_LIBRARY_PATH" value="../RELEASE/bin:/opt/api/SYMLINK/BIN:/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.bilat.tuto.image.jni.gui.UseMain"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="JTuto_Image_JNI"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="JTuto_Image_JNI"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xms2048m -Xmx4096m &#10;-DSIMPLE_NAME_SHARED_LIB_JNI=Tuto_Image_JNI_Cuda &#10;-DPATH_SHARED_LIB_JNI=../RELEASE/bin &#10;-DCXX=cuda"/>
+</launchConfiguration>

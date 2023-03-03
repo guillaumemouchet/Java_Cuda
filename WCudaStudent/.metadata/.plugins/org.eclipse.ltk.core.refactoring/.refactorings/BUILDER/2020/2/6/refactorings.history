@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BUILDER/makefile/private/cuda/common.mk&apos; to &apos;commonCuda.mk&apos;" description="Rename resource &apos;common.mk&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="makefile/private/cuda/common.mk" name="commonCuda.mk" stamp="1580829005021" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BUILDER/makefile/private/cuda/c++11.mk&apos; to &apos;cuda_c++11.mk&apos;" description="Rename resource &apos;c++11.mk&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="makefile/private/cuda/c++11.mk" name="cuda_c++11.mk" stamp="1580829066197" updateReferences="true"/>
+</session>

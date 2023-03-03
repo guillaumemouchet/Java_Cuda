@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="CallHierarchyViewPart.field_mode" value="2"/>
+	<item key="CallHierarchyViewPart.call_mode" value="0"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="/opt/api/cbi/infographie/image/302/Bilat_Image_JAVA"/>
+	<item key="CallHierarchyViewPart.orientation" value="3"/>
+	<item key="CallHierarchyViewPart.ratio1" value="500"/>
+	<item key="SearchScopeActionGroup.search_scope_type" value="1"/>
+	<item key="CallHierarchyViewPart.ratio3" value="500"/>
+	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
+	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
+	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
+	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
+	<item key="TypeHierarchyViewPart.orientation" value="3"/>
+	<list key="workingset_selection_history">
+		<item value="API"/>
+	</list>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="renameSubpackages" value="true"/>
+		<item key="updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateTextualMatches" value="false"/>
+	</section>
+	<section name="GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="OmitCallToSuper" value="false"/>
+	</section>
+	<section name="SearchInDialog">
+		<item key="SearchInProjects" value="true"/>
+		<item key="SearchInAppLibs" value="true"/>
+		<item key="SearchInJRE" value="true"/>
+		<item key="SearchInSources" value="true"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
+		<item key="layout" value="1"/>
+		<item key="group_libraries" value="true"/>
+		<item key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;packageExplorer configured=&quot;true&quot; group_libraries=&quot;1&quot; layout=&quot;1&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;2&quot; sortWorkingSets=&quot;false&quot; workingSetName=&quot;Aggregate for window 1597790430431&quot;&gt;&#x0A;&lt;localWorkingSetManager&gt;&#x0A;&lt;workingSet editPageId=&quot;org.eclipse.jdt.internal.ui.OthersWorkingSet&quot; factoryID=&quot;org.eclipse.ui.internal.WorkingSetFactory&quot; id=&quot;1624620258772_333&quot; label=&quot;Other Projects&quot; name=&quot;Other Projects&quot;&gt;&#x0A;&lt;item elementID=&quot;=BUILDER&quot; factoryID=&quot;org.eclipse.jdt.ui.PersistableJavaElementFactory&quot;/&gt;&#x0A;&lt;item elementID=&quot;=JTuto_Canvas_JNI&quot; factoryID=&quot;org.eclipse.jdt.ui.PersistableJavaElementFactory&quot;/&gt;&#x0A;&lt;item elementID=&quot;=JTuto_Graphe_JNI&quot; factoryID=&quot;org.eclipse.jdt.ui.PersistableJavaElementFactory&quot;/&gt;&#x0A;&lt;item elementID=&quot;=JTuto_Image_JNI&quot; factoryID=&quot;org.eclipse.jdt.ui.PersistableJavaElementFactory&quot;/&gt;&#x0A;&lt;item elementID=&quot;=JavaTrucBase&quot; factoryID=&quot;org.eclipse.jdt.ui.PersistableJavaElementFactory&quot;/&gt;&#x0A;&lt;item elementID=&quot;=RELEASE&quot; factoryID=&quot;org.eclipse.jdt.ui.PersistableJavaElementFactory&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_CPP&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_Cuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_Cuda_3D&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_Cuda_Image&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_Cuda_Image_CV&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_Image&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_Image_CV&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_Intel_MKL&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_JNI&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_OMP&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_OpenCV&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatTools_V4L_Linux&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/BilatUtil_CPP&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/CppTest&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Cuda_3D_Cube&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Cuda_3D_Surface&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Cuda_Image&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Cuda_Image_Advanced&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Cuda_MOO&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Cuda_Tools_Reduction&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Etude_Cuda_Objet&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Etude_Cula&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/OMP_Image&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/OMP_MOO&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Student_Cuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Student_Cuda_Image&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Student_Cuda_Tools_Reduction&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Student_OMP&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Student_OMP_Image&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/TestReductionCuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_3D_Cube_Cuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_3D_Surface_Cuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Boost&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Canvas_JNI&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Cpp&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_CppTest&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Cpp_Corriger&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Cuda_API&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Doxy&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_GLEW&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Graphe_GL&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Graphe_JNI&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Image&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Image_CV&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Image_Cuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Image_Cuda_CV&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Image_JNI&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_Image_JNI_Cuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_JNI_C&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_MultiCourbes_Cuda&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_NameSpaces&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_OpenCV&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_OpenGL&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/Tuto_V4L_Linux&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;/workingSet&gt;&#x0A;&lt;/localWorkingSetManager&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;Other Projects&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Other Projects&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Cuda&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Cuda_Student_Corriger&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Etude&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Make&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;OMP&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Student&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Target&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Test&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Tools&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Tools_Image&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Tools_static&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Tuto_API&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Tuto_Base&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Tuto_API_JNI_0&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Tuto_API_JNI_1&quot;/&gt;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0A;&lt;xmlDefinedFilters&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0A;&lt;/customFilters&gt;&#x0A;&lt;/packageExplorer&gt;"/>
+		<item key="linkWithEditor" value="false"/>
+		<item key="rootMode" value="2"/>
+	</section>
+	<section name="ExtractMethodWizard">
+		<item key="GenerateJavadoc" value="false"/>
+		<item key="AccessModifier" value="2"/>
+		<item key="ThrowRuntimeExceptions" value="false"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item key="create_constructor" value="false"/>
+		<item key="create_unimplemented" value="true"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
+	</section>
+	<section name="SourceActionDialog.constructors">
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="false"/>
+		<item key="VisibilityModifier" value="1"/>
+		<item key="FinalModifier" value="false"/>
+	</section>
+	<section name="DialogBounds_GenerateToStringDialog">
+		<item key="DIALOG_WIDTH" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_HEIGHT" value="773"/>
+		<item key="DIALOG_Y_ORIGIN" value="307"/>
+		<item key="DIALOG_X_ORIGIN" value="1030"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item key="IgnoreDefault" value="true"/>
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="false"/>
+		<item key="VisibilityModifier" value="1"/>
+		<item key="StringStyle" value="1"/>
+		<item key="ToStringTemplateSelected" value="0"/>
+		<item key="LimitElements" value="false"/>
+		<item key="SkipNull" value="false"/>
+		<item key="LimitValue" value="10"/>
+		<item key="FinalModifier" value="false"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="2"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="AddGetterSetterDialog">
+		<item key="RemoveFinal" value="false"/>
+		<item key="SortOrdering" value="false"/>
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item key="index" value="1"/>
+	</section>
+	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="965"/>
+		<item key="DIALOG_Y_ORIGIN" value="277"/>
+		<item key="DIALOG_WIDTH" value="636"/>
+		<item key="DIALOG_HEIGHT" value="743"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="957"/>
+		<item key="DIALOG_Y_ORIGIN" value="265"/>
+		<item key="DIALOG_WIDTH" value="653"/>
+		<item key="DIALOG_HEIGHT" value="761"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+</section>

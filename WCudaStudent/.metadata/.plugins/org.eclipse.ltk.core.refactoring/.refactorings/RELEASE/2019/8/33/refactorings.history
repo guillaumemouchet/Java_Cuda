@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RELEASE/bin/libTuto_Image_Cuda_JNI_cuda_101_x86_64.so&apos; to &apos;libTuto_Image_JNI_cuda_101_x86_64.so&apos;" description="Rename resource &apos;libTuto_Image_Cuda_JNI_cuda_101_x86_64.so&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="bin/libTuto_Image_Cuda_JNI_cuda_101_x86_64.so" name="libTuto_Image_JNI_cuda_101_x86_64.so" stamp="1565966958833" updateReferences="true"/>
+</session>

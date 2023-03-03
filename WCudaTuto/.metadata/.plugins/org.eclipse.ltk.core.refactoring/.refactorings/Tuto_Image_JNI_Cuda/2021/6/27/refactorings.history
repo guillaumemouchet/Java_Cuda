@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tuto_Image_JNI_Cuda/src/cpp/core/hello/00_bridge/03&apos; to &apos;03_ctoJava&apos;" description="Rename resource &apos;03&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/hello/00_bridge/03" name="03_ctoJava" stamp="1624882575682" updateReferences="false"/>
+</session>

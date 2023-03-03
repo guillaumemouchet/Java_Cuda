@@ -1,0 +1,111 @@
+#include "MandelbrotProvider.h"
+#include "Mandelbrot.h"
+
+#include "Maths.h"
+#include "Grid.h"
+#include "Hardware.h"
+#include "UseFromProvider.h"
+
+#include <assert.h>
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Override		*|
+ \*-------------------------------------*/
+
+/**
+ * Override
+ */
+Animable_I<uchar4>* MandelbrotProvider::createAnimable(bool isVerbose)
+    {
+    Grid grid=createGrid();
+
+    return createAnimable(grid, isVerbose);
+    }
+
+/**
+ * static, private
+ */
+Grid MandelbrotProvider::createGrid()
+    {
+    const int MP = Hardware::getMPCount();
+    const int CORE_MP = Hardware::getCoreCountMP();
+
+    // fp64 (float 64 bits)
+#ifdef MANDELBROT_DOUBLE
+    assert(false); // to be removed once implemented
+    Grid grid; //TODO Mandelbrot
+    return grid;
+#endif
+
+    // fp32 (float 32 bits)
+#ifdef MANDELBROT_FLOAT
+    assert(false); // to be removed once implemented
+    Grid grid; //TODO Mandelbrot
+    return grid;
+#endif
+
+    // fp16 (float 32 bits)
+#ifdef MANDELBROT_HALF
+    assert(false); // to be removed once implemented
+    Grid grid; //TODO Mandelbrot
+    return grid;
+#endif
+
+    assert(false);// ne devrait jamais arriver ici
+    }
+
+/**
+ * Override
+ */
+Animable_I<uchar4>* MandelbrotProvider::createAnimable(const Grid& grid , bool isVerbose)
+    {
+    // Animation;
+    int nMin = 20; // 100
+    int nMax = 120; // 100
+
+    // Domaine init
+    double x1 = -2.1;
+    double y1 = -1.3;
+    double x2 = 0.8;
+    double y2 = 1.3;
+    DomaineMath domaineMath(x1, y1, x2, y2);
+
+    // Dimension
+    int w = 16 * 80;
+    int h = 16 * 60;
+
+    return new Mandelbrot(grid, w, h, domaineMath, isVerbose, nMin, nMax);
+    }
+
+/**
+ * Override
+ */
+Image_I* MandelbrotProvider::createImageGL()
+    {
+    ColorRGB_01 colorTexte(0, 1, 0); // Green
+    return new ImageAnimable_RGBA_uchar4(createAnimable(), colorTexte);
+    }
+
+/**
+ * override
+ */
+Use_I* MandelbrotProvider::createUse(const Grid& grid , bool isVerbose)
+    {
+    return new UseFromProvider<uchar4>(this, grid, isVerbose);
+    }
+
+/**
+ * override
+ */
+Use_I* MandelbrotProvider::createUse(bool isVerbose)
+    {
+    return new UseFromProvider<uchar4>(this, isVerbose);
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

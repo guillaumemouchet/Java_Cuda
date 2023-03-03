@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Cuda_MOO/src/cpp/main.cpp&apos; to &apos;main.cpp.old&apos;" description="Rename resource &apos;main.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/main.cpp" name="main.cpp.old" stamp="1587819200901" updateReferences="true"/>
+</session>

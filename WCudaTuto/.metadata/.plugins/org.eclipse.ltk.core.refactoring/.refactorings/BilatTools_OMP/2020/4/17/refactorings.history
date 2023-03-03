@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BilatTools_OMP/src/core/OMP_Tools/OmpTools.cpp&apos; to &apos;Omps.cpp&apos;" description="Rename resource &apos;OmpTools.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/OMP_Tools/OmpTools.cpp" name="Omps.cpp" stamp="1587833199873" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BilatTools_OMP/src/core/OMP_Tools/OmpTools.h&apos; to &apos;Omps.h&apos;" description="Rename resource &apos;OmpTools.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/OMP_Tools/OmpTools.h" name="Omps.h" stamp="1587833208234" updateReferences="true"/>
+</session>

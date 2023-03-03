@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BilatTools_Cuda_Image/src/core/helper/animator_link/AnimableToKernel_GPU.h&apos; to &apos;AnimableToRunnable_GPU.h&apos;" description="Rename resource &apos;AnimableToKernel_GPU.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/helper/animator_link/AnimableToKernel_GPU.h" name="AnimableToRunnable_GPU.h" stamp="1596716886210" updateReferences="false"/>
+</session>

@@ -1,0 +1,124 @@
+#include <iostream>
+#include <stdlib.h>
+
+#include "FpsCalculator.h"
+
+#include "AddVectorBigUse.h"
+
+#include "SliceGmUse.h"
+#include "SliceSmUse.h"
+
+#include "MontecarloUse.h"
+#include "MontecarloMultiUse.h"
+
+using std::cout;
+using std::endl;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+static void addvector();
+static void sliceGM();
+static void sliceSM();
+static void montecarlo();
+static void montecarloMulti();
+
+// Tools
+
+static void process(RunnableGPU_I* ptrRunnableGPU,int durationMaxS);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+int mainAnimable()
+    {
+    cout << "\n[Animable] mode" << endl;
+
+    // Please, un a la fois!
+   // addvector();
+    //sliceGM();
+  //  sliceSM();
+   // montecarlo();
+    montecarloMulti();
+
+    cout << "\n[Animable] end" << endl;
+
+    return EXIT_SUCCESS;
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+void addvector()
+    {
+    const double DURATION_MAX_S = 10;
+
+    AddVectorBigUse addVectorUse;
+
+    process(addVectorUse.getRunnable(),DURATION_MAX_S);
+    }
+
+void sliceGM()
+    {
+    const double DURATION_MAX_S = 10;
+
+    SliceGmUse sliceGmUse;
+
+    process(sliceGmUse.getRunnable(),DURATION_MAX_S);
+    }
+
+void sliceSM()
+    {
+    const double DURATION_MAX_S = 10;
+
+    SliceSmUse sliceSmUse;
+
+    process(sliceSmUse.getRunnable(),DURATION_MAX_S);
+    }
+
+void montecarlo()
+    {
+    const double DURATION_MAX_S = 10;
+
+    MontecarloUse montecarloUse;
+
+    process(montecarloUse.getRunnable(),DURATION_MAX_S);
+    }
+
+void montecarloMulti()
+    {
+    const double DURATION_MAX_S = 10;
+
+    MontecarloMultiUse montecarloMultiUse;
+
+    process(montecarloMultiUse.getRunnable(),DURATION_MAX_S);
+    }
+
+/*-----------------------------------*\
+ |*		Tools	        	*|
+ \*-----------------------------------*/
+
+void process(RunnableGPU_I* ptrRunnableGPU, int durationMaxS)
+    {
+    bool isVerboseEnable=true;
+
+    FpsCalculator fpsCalculator(ptrRunnableGPU, isVerboseEnable, durationMaxS);
+    fpsCalculator.run();
+    fpsCalculator.print();
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

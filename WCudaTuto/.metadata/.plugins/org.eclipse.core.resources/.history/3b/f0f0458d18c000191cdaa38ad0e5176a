@@ -1,0 +1,117 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+
+#include "Device.h"
+#include "cudaTools.h"
+
+#include "RipplingProvider.h"
+#include "MandelbrotProvider.h"
+#include "RaytracingProvider.h"
+#include "ConvolutionProvider.h"
+#include "ColorieurProvider.h"
+#include "HeatTransfertProvider.h"
+
+#include "Settings_GPU.h"
+#include "Viewer_GPU.h"
+using namespace gpu;
+
+using std::cout;
+using std::endl;
+using std::string;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+int mainImage(Settings& option);
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+int mainImage(Settings& settings)
+    {
+    cout << "\n[Image] mode" << endl;
+
+    GLUTImageViewers::init(settings.getArgc(), settings.getArgv()); //only once
+
+    // ImageOption : (boolean,boolean) : (isSelection,isAnimation)
+    // ImageOption : (boolean,boolean) : (isSelection ,isAnimation,isOverlay,isShowHelp)
+    ImageOption zoomable(true, true, true, true);
+    ImageOption nozoomable(false);
+
+//    Viewer<RipplingProvider> rippling(nozoomable, 0, 0); // imageOption px py
+//    Viewer<MandelbrotProvider> mandelbrot(zoomable);
+//    Viewer<RaytracingProvider> raytracing(nozoomable);
+
+    Viewer<ConvolutionProvider> convolution(nozoomable);
+//    Viewer<ColorieurProvider> colorieur(nozoomable);
+//    Viewer<HeatTransfertProvider> heatTransfert(nozoomable);
+
+    // Facultatif : par default:
+    // 	- size viewer = size image (une texture prend le relais en cas de taille différente)
+    //  - positon (0,0) ou celle du constructeur du viewer
+	{
+	int h = 450;
+
+	// size (size of image  don't change, a texture work for you to adapt the image to the size of the frame)
+	    {
+	    // Ligne1
+//	    rippling.setViewerSize(450, h);
+//	    mandelbrot.setViewerSize(640, h);
+//	    raytracing.setViewerSize(640, h);
+
+	    // Ligne2
+	    convolution.setViewerSize(1920, 1080);
+	 //   colorieur.setViewerSize(960, 540);
+	    }
+
+	// position
+	    {
+	    // ligne1
+//	    rippling.setViewerPosition(0, 0);
+//	    mandelbrot.setViewerPosition(450, 0);
+//	    raytracing.setViewerPosition(450 + 640, 0);
+
+	    // Ligne2
+	    convolution.setViewerPosition(0, h); // problem  en y
+//	    colorieur.setViewerPosition(960, h); // problem  en x et y
+//	    heatTransfert.setViewerPosition(1200, h);
+	    }
+
+	// cout << convolution.getViewerPosition().y << endl;
+	}
+
+    // Common
+    GLUTImageViewers::runALL(); // Bloquant, Tant qu'une fenetre est ouverte
+
+    cout << "\n[Image] end" << endl;
+
+    return EXIT_SUCCESS;
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

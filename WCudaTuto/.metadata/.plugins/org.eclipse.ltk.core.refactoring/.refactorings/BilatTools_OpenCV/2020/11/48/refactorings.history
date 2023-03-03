@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BilatTools_OpenCV/data_sample&apos; to &apos;data&apos;" description="Rename resource &apos;data_sample&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="data_sample" name="data" stamp="1606153756164" updateReferences="false"/>
+</session>
