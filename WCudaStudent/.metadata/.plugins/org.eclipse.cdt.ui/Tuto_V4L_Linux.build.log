@@ -1,0 +1,275 @@
+16:18:38 **** Incremental Build of configuration GCC_parallel for project Tuto_V4L_Linux ****
+cbicc gcc jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-11-openjdk-amd64
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[dronecode]         : /opt/api/ext/dronecode
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_V4L_Linux_gcc_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_V4L_Linux/bin/Tuto_V4L_Linux_gcc_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -fopenmp
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++17
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/INC/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/INC/tools/01_namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/INC/tools/02_fps
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/INC/tools/03_array
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/INC/tools/04_files
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/INC/tools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/capture
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/capture/video
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/capture/webcam
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show/shapeOverlay
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show/shapeOverlay/appearance
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show/shapeOverlay/drawer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show/shapeOverlay/shape
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show/view
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show/view/viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/show/view/viewerMat
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/INC/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/01_basNiveau
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/01_basNiveau/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/02_tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/02_tools/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/03_api
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/03_api/api
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/03_api/api/RGBA
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/INC/03_api/api/grayscale
+[CBI] ->              : /opt/api/ext/opencv/420/include
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/calib3d
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/cuda
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/cuda/detail
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/detail
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/hal
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/opencl
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/opencl/runtime
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/opencl/runtime/autogenerated
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/core/utils
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/dnn
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/dnn/utils
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/features2d
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/features2d/hal
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/flann
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/cpu
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/fluid
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/gpu
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/infer
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/ocl
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/own
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/plaidml
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/render
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/streaming
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/gapi/util
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/highgui
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/imgcodecs
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/imgcodecs/legacy
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/imgproc
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/imgproc/detail
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/imgproc/hal
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/ml
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/objdetect
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/photo
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/photo/legacy
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/stitching
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/stitching/detail
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/video
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/video/legacy
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/videoio
+[CBI] ->              : /opt/api/ext/opencv/420/include/opencv4/opencv2/videoio/legacy
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_007/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/304_007/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_v4l/304_007/BIN/gcc
+[CBI] ->              : /opt/api/ext/opencv/420/lib
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_304_007_gcc_x86_64
+[CBI] ->              : BilatTools_OpenCV_304_007_gcc_x86_64
+[CBI] ->              : BilatTools_V4L_gcc_x86_64
+[CBI] ->              : opencv_calib3d
+[CBI] ->              : opencv_core
+[CBI] ->              : opencv_dnn
+[CBI] ->              : opencv_features2d
+[CBI] ->              : opencv_flann
+[CBI] ->              : opencv_gapi
+[CBI] ->              : opencv_highgui
+[CBI] ->              : opencv_imgcodecs
+[CBI] ->              : opencv_imgproc
+[CBI] ->              : opencv_ml
+[CBI] ->              : opencv_objdetect
+[CBI] ->              : opencv_photo
+[CBI] ->              : opencv_stitching
+[CBI] ->              : opencv_video
+[CBI] ->              : opencv_videoio
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_V4L_Linux/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_V4L_Linux/obj
+
+[CBI] -> Compilation parallel (36 threads)
+
+[Tuto_V4L_Linux_gcc_x86_64] -> g++ compiling .cpp : src/core/main.cpp
+[Tuto_V4L_Linux_gcc_x86_64] -> g++ compiling .cpp : src/core/use/useRGBA.cpp
+[Tuto_V4L_Linux_gcc_x86_64] -> g++ compiling .cpp : src/core/use/useGrayScale.cpp
+[Tuto_V4L_Linux_gcc_x86_64] -> g++ compiling .cpp : src/core/use/useAPI.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_V4L_Linux/bin/Tuto_V4L_Linux_gcc_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lBilatTools_CPP_304_007_gcc_x86_64
+[CBI] ->              : -lBilatTools_OpenCV_304_007_gcc_x86_64
+[CBI] ->              : -lBilatTools_V4L_gcc_x86_64
+[CBI] ->              : -lgomp
+[CBI] ->              : -lopencv_calib3d
+[CBI] ->              : -lopencv_core
+[CBI] ->              : -lopencv_dnn
+[CBI] ->              : -lopencv_features2d
+[CBI] ->              : -lopencv_flann
+[CBI] ->              : -lopencv_gapi
+[CBI] ->              : -lopencv_highgui
+[CBI] ->              : -lopencv_imgcodecs
+[CBI] ->              : -lopencv_imgproc
+[CBI] ->              : -lopencv_ml
+[CBI] ->              : -lopencv_objdetect
+[CBI] ->              : -lopencv_photo
+[CBI] ->              : -lopencv_stitching
+[CBI] ->              : -lopencv_video
+[CBI] ->              : -lopencv_videoio
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_V4L_Linux_gcc_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_V4L_Linux/bin/Tuto_V4L_Linux_gcc_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 3 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_V4L_Linux_gcc_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> Tuto_V4L_Linux_gcc_x86_64 : End ALL!
+
+
+16:18:42 Build Finished. 0 errors, 0 warnings. (took 3s.750ms)
+

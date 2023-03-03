@@ -58,7 +58,7 @@ class SliceGMHOST: public RunnableGPU
 	double* ptrPiHat;
 
 	// Tools
-	float* tabDev;
+	//float* tabDev;
 	float* tabGM; // promotion de tabeau en GM (GM = Global Memory du Device).
 		      // On devrait presque l'appeler ptrDevTabGM, mais un tableau est deja un pointeur (sur la premiere case)
 		      // et GM et est la global memory du device

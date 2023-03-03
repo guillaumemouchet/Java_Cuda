@@ -48,6 +48,7 @@ __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
     tabGM[TID] = somme*DX; //C2
 
     }
+
     // Conseils :
     //
     //		(C1) 	Ne calculer pas en double cote device, mais tout en float.

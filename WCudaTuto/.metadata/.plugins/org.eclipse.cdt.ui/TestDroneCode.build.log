@@ -1,0 +1,207 @@
+18:12:47 **** Incremental Build of configuration GCC_parallel for project TestDroneCode ****
+cbicc gcc jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-11-openjdk-amd64
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[dronecode]         : /opt/api/ext/dronecode
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : TestDroneCode_gcc_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/TestDroneCode/bin/TestDroneCode_gcc_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++14
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/api/
+[CBI] ->              : src/cpp/core/use/
+[CBI] ->              : src/cpp/test/gps/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/ext/cpptest/200/INC
+[CBI] ->              : /opt/api/ext/cpptest/200/INC/extension
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/action
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/calibration
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/camera
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/follow_me
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/geofence
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/gimbal
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/info
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/log_files
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/mission
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/mission_raw
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/offboard
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/param
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/include/mavsdk/plugins/telemetry
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/ext/dronecode/0_18_1/lib
+
+[CBI] -> API_LIBRARIES_STATIC :
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : mavsdk
+[CBI] ->              : mavsdk_action
+[CBI] ->              : mavsdk_calibration
+[CBI] ->              : mavsdk_camera
+[CBI] ->              : mavsdk_follow_me
+[CBI] ->              : mavsdk_geofence
+[CBI] ->              : mavsdk_gimbal
+[CBI] ->              : mavsdk_info
+[CBI] ->              : mavsdk_log_files
+[CBI] ->              : mavsdk_mission
+[CBI] ->              : mavsdk_mission_raw
+[CBI] ->              : mavsdk_offboard
+[CBI] ->              : mavsdk_param
+[CBI] ->              : mavsdk_telemetry
+
+
+[CBI] -> Compilation parallel (36 threads)
+
+[TestDroneCode_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/api/Drone.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/TestDroneCode/bin/TestDroneCode_gcc_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lCpp_Test_200_gcc_x86_64
+[CBI] ->              : -lmavsdk
+[CBI] ->              : -lmavsdk_action
+[CBI] ->              : -lmavsdk_calibration
+[CBI] ->              : -lmavsdk_camera
+[CBI] ->              : -lmavsdk_follow_me
+[CBI] ->              : -lmavsdk_geofence
+[CBI] ->              : -lmavsdk_gimbal
+[CBI] ->              : -lmavsdk_info
+[CBI] ->              : -lmavsdk_log_files
+[CBI] ->              : -lmavsdk_mission
+[CBI] ->              : -lmavsdk_mission_raw
+[CBI] ->              : -lmavsdk_offboard
+[CBI] ->              : -lmavsdk_param
+[CBI] ->              : -lmavsdk_telemetry
+
+==================================================================================
+[CBI] -> Target Name  : TestDroneCode_gcc_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/TestDroneCode/bin/TestDroneCode_gcc_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 1 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/TestDroneCode_gcc_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> TestDroneCode_gcc_x86_64 : End ALL!
+
+
+18:12:50 Build Finished. 0 errors, 0 warnings. (took 2s.448ms)
+

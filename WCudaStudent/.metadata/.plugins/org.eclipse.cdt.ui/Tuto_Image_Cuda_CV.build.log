@@ -1,0 +1,487 @@
+17:26:40 **** Incremental Build of configuration CudaGCC_parallel for project Tuto_Image_Cuda_CV ****
+cbicc cuda jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-11-openjdk-amd64
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[dronecode]         : /opt/api/ext/dronecode
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Wed_Jul_22_19:09:09_PDT_2020
+Cuda compilation tools, release 11.0, V11.0.221
+Build cuda_11.0_bu.TC445_37.28845127_0
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/Tuto_Image_CV_Cuda_bilat/bin/Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fopenmp
+[CBI] ->              : -std=c++17
+[CBI] ->              : -O3
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fomit-frame-pointer
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_75
+[CBI] ->              : -m64
+[CBI] ->              : -std=c++17
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_75
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/01_imageVideo/01_animable/host/
+[CBI] ->              : src/core/01_imageVideo/02_provider/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/INC/gpu
+[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/tools/305/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/02_fps
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/02_fps/01_namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/03_array
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/04_files
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/05_chrono
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/05_chrono/clock
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/05_chrono/omp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/05_chrono/std
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/06_context
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/cpp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/INC/tools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/01_nvidia
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/02_cudaContext
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/02_cudaContext/simple
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/02_cudaContext/simple/enum
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/03_tid
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/00_grid
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/01_memory
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/01_memory/cm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/01_memory/gm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/01_memory/hm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/01_memory/sm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/02_stream
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/03_kernel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/04_host_wrapper/04_hardware
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/05_runnable
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/06_fps
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/07_benchmark
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/08_bruteforce
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/08_bruteforce/maillage
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/08_bruteforce/matlab
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/08_bruteforce/output
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/08_bruteforce/output/io
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/09_tests
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/09_tests/filter
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/09_tests/filter/concret
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/10_reducer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/10_reducer/derivate
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/10_reducer/synchronisation
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/11_use
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/tools/both
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/tools/device
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/INC/cudatools/tools/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/animable
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/animable/animator
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/animable/converter
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/benchmark
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/cudaContext
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/provider
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/provider/uchar
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/provider/uchar4
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/INC/cudatoolsimage/viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/01_opencv
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/02_video
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/02_video/a_provider
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/02_video/a_provider/RGB
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/02_video/a_provider/gray
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/02_video/b_preloader
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/02_video/b_preloader/all
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/INC/02_video/b_preloader/iterator
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_013/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_013/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/capture
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/capture/video
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/capture/webcam
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show/shapeOverlay
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show/shapeOverlay/appearance
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show/shapeOverlay/drawer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show/shapeOverlay/shape
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show/view
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show/view/viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/show/view/viewerMat
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/INC/tools
+[CBI] ->              : /opt/api/ext/cpptest/200/INC
+[CBI] ->              : /opt/api/ext/cpptest/200/INC/extension
+[CBI] ->              : /opt/api/ext/opencv/440/include
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/calib3d
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/cuda
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/cuda/detail
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/detail
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/hal
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/opencl
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/opencl/runtime
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/opencl/runtime/autogenerated
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/core/utils
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/dnn
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/dnn/utils
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/features2d
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/features2d/hal
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/flann
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/cpu
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/fluid
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/gpu
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/infer
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/ocl
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/own
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/plaidml
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/render
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/streaming
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/gapi/util
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/highgui
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/imgcodecs
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/imgcodecs/legacy
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/imgproc
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/imgproc/detail
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/imgproc/hal
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/ml
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/objdetect
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/photo
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/photo/legacy
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/stitching
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/stitching/detail
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/video
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/video/legacy
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/videoio
+[CBI] ->              : /opt/api/ext/opencv/440/include/opencv4/opencv2/videoio/legacy
+[CBI] ->              : /usr/local/cuda/include
+[CBI] ->              : /usr/local/cuda/include/CL
+[CBI] ->              : /usr/local/cuda/include/crt
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_013/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_013/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_013/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_013/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_013/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_013/BIN/gcc
+[CBI] ->              : /opt/api/ext/opencv/440/lib
+[CBI] ->              : /usr/local/cuda/lib64
+
+[CBI] -> API_LIBRARIES_STATIC :
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_305_013_gcc_x86_64
+[CBI] ->              : BilatTools_Cuda_305_013_cuda_110_x86_64
+[CBI] ->              : BilatTools_Cuda_Image_305_013_cuda_110_x86_64
+[CBI] ->              : BilatTools_Image_OpenCV_Cuda_305_013_cuda_110_x86_64
+[CBI] ->              : BilatTools_OMP_305_013_gcc_x86_64
+[CBI] ->              : BilatTools_OpenCV_305_013_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_305_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_305_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_305_gcc_x86_64
+[CBI] ->              : Bilat_Image_FreeGlut_305_gcc_x86_64
+[CBI] ->              : Bilat_Image_FreeGlut_Cuda_305_cuda_110_x86_64
+[CBI] ->              : Bilat_Image_GL_305_gcc_x86_64
+[CBI] ->              : Bilat_Image_GL_Cuda_305_cuda_110_x86_64
+[CBI] ->              : Bilat_OpenGL_Tools_305_gcc_x86_64
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : OpenCL
+[CBI] ->              : accinj64
+[CBI] ->              : cublas
+[CBI] ->              : cublasLt
+[CBI] ->              : cudart
+[CBI] ->              : cudnn
+[CBI] ->              : cudnn_adv_infer
+[CBI] ->              : cudnn_adv_train
+[CBI] ->              : cudnn_cnn_infer
+[CBI] ->              : cudnn_cnn_train
+[CBI] ->              : cudnn_ops_infer
+[CBI] ->              : cudnn_ops_train
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusolverMg
+[CBI] ->              : cusparse
+[CBI] ->              : glut
+[CBI] ->              : nppc
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvblas
+[CBI] ->              : nvjpeg
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
+[CBI] ->              : opencv_calib3d_gcc750
+[CBI] ->              : opencv_core_gcc750
+[CBI] ->              : opencv_dnn_gcc750
+[CBI] ->              : opencv_features2d_gcc750
+[CBI] ->              : opencv_flann_gcc750
+[CBI] ->              : opencv_gapi_gcc750
+[CBI] ->              : opencv_highgui_gcc750
+[CBI] ->              : opencv_imgcodecs_gcc750
+[CBI] ->              : opencv_imgproc_gcc750
+[CBI] ->              : opencv_ml_gcc750
+[CBI] ->              : opencv_objdetect_gcc750
+[CBI] ->              : opencv_photo_gcc750
+[CBI] ->              : opencv_stitching_gcc750
+[CBI] ->              : opencv_video_gcc750
+[CBI] ->              : opencv_videoio_gcc750
+
+
+[CBI] -> Compilation parallel (36 threads)
+
+[Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64] -> g++ compiling .cpp : src/core/01_imageVideo/02_provider/ImageVideoProvider.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_Image_CV_Cuda_bilat/bin/Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_305_013_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_305_013_cuda_110_x86_64
+[CBI] ->              : -lBilatTools_Cuda_Image_305_013_cuda_110_x86_64
+[CBI] ->              : -lBilatTools_Image_OpenCV_Cuda_305_013_cuda_110_x86_64
+[CBI] ->              : -lBilatTools_OMP_305_013_gcc_x86_64
+[CBI] ->              : -lBilatTools_OpenCV_305_013_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_305_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_305_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_305_gcc_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_305_gcc_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_Cuda_305_cuda_110_x86_64
+[CBI] ->              : -lBilat_Image_GL_305_gcc_x86_64
+[CBI] ->              : -lBilat_Image_GL_Cuda_305_cuda_110_x86_64
+[CBI] ->              : -lBilat_OpenGL_Tools_305_gcc_x86_64
+[CBI] ->              : -lCpp_Test_200_gcc_x86_64
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -laccinj64
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcublasLt
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcudnn
+[CBI] ->              : -lcudnn_adv_infer
+[CBI] ->              : -lcudnn_adv_train
+[CBI] ->              : -lcudnn_cnn_infer
+[CBI] ->              : -lcudnn_cnn_train
+[CBI] ->              : -lcudnn_ops_infer
+[CBI] ->              : -lcudnn_ops_train
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusolverMg
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lglut
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvjpeg
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+[CBI] ->              : -lopencv_calib3d_gcc750
+[CBI] ->              : -lopencv_core_gcc750
+[CBI] ->              : -lopencv_dnn_gcc750
+[CBI] ->              : -lopencv_features2d_gcc750
+[CBI] ->              : -lopencv_flann_gcc750
+[CBI] ->              : -lopencv_gapi_gcc750
+[CBI] ->              : -lopencv_highgui_gcc750
+[CBI] ->              : -lopencv_imgcodecs_gcc750
+[CBI] ->              : -lopencv_imgproc_gcc750
+[CBI] ->              : -lopencv_ml_gcc750
+[CBI] ->              : -lopencv_objdetect_gcc750
+[CBI] ->              : -lopencv_photo_gcc750
+[CBI] ->              : -lopencv_stitching_gcc750
+[CBI] ->              : -lopencv_video_gcc750
+[CBI] ->              : -lopencv_videoio_gcc750
+
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_Image_CV_Cuda_bilat/bin/Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 5 (s)
+==================================================================================
+
+
+[CBI] -> Deploying      : ../RELEASE/bin/Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> Tuto_Image_CV_Cuda_bilat_cuda_110_x86_64 : End ALL!
+
+
+17:26:47 Build Finished. 0 errors, 0 warnings. (took 7s.18ms)
+

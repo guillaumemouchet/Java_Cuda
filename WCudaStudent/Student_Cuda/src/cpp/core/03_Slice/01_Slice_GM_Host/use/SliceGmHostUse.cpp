@@ -32,7 +32,7 @@ using std::setprecision;
 SliceGmHostUse::SliceGmHostUse(const Grid& grid , bool isVerbose) : //
 	grid(grid), //
 	nbSlice(SliceNumber::nbSlice()), //
-	piHat(-1)
+	piHat(3.1415926535)
     {
     this->ptrRunnableGPU = new SliceGMHOST(grid, this->nbSlice, &piHat, isVerbose);
 
@@ -81,7 +81,7 @@ bool SliceGmHostUse::isOk(bool isVerbose)
 	cout << setprecision(4);
 	cout << endl;
 	cout << title << " : PI hat = " << piHat << endl;
-	//cout << title << " : PI     = " << PI << endl;
+	cout << title << " : PI     = " << PI << endl;
 	cout << title << " : ";
 
 	if (isOk)
@@ -122,8 +122,8 @@ Grid SliceGmHostUse::createGrid()
     const int CORE_MP = Hardware::getCoreCountMP();
 
     // Grid 1D
-    dim3 dg(MP, 1, 1); // Produit des 3 doit être un multiple de MP
-    dim3 db(CORE_MP, 1, 1); // 128 * 6 = 768 is ok// produit <=1024
+    dim3 dg(MP, 4, 1); // Produit des 3 doit être un multiple de MP
+    dim3 db(CORE_MP, 6, 1); // 128 * 6 = 768 is ok// produit <=1024
     Grid grid(dg, db);
     return grid;
     }

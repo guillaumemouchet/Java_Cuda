@@ -1,0 +1,429 @@
+18:08:35 **** Build of configuration CudaGCC_parallel for project Student_Cuda_corriger ****
+cbicc cuda jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-11-openjdk-amd64
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[dronecode]         : /opt/api/ext/dronecode
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Wed_Oct_23_19:24:38_PDT_2019
+Cuda compilation tools, release 10.2, V10.2.89
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : Student_Cuda_corriger_cuda_102_x86_64
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/bin/Student_Cuda_corriger_cuda_102_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fopenmp
+[CBI] ->              : -std=c++14
+[CBI] ->              : -O3
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fomit-frame-pointer
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_75
+[CBI] ->              : -m64
+[CBI] ->              : -std=c++14
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_75
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/01_addScalar/b_objet/host/
+[CBI] ->              : src/cpp/core/02_addVector/00_tools/
+[CBI] ->              : src/cpp/core/02_addVector/01_implementation/host/
+[CBI] ->              : src/cpp/core/03_Slice_naif/host/
+[CBI] ->              : src/cpp/test/unit/01_Test_Hello/
+[CBI] ->              : src/cpp/test/unit/02_Test_Scalar/
+[CBI] ->              : src/cpp/test/unit/03_Test_Vector/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/INC/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/INC/tools/01_namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/INC/tools/02_fps
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/INC/tools/03_array
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/INC/tools/04_files
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/INC/tools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/00_nvidia
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/01_animator
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/02_bruteforce
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/02_bruteforce/maillage
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/02_bruteforce/maillage/creator
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/02_bruteforce/matlab
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/02_bruteforce/output
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/02_bruteforce/output/io
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/03_reduction
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/03_reduction/derivate
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/03_reduction/synchronisation
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/04_test_tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/both
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/device
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/device/curand
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/hardware
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/kernel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/memory
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/memory/cm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/memory/gm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/memory/hm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/memory/sm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/INC/cudatools/header/host/stream
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/304_008/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/304_008/INC/OMP_Tools
+[CBI] ->              : /opt/api/ext/boost/1720/include
+[CBI] ->              : /opt/api/ext/boost/1720/include/boost
+[CBI] ->              : /opt/api/ext/cpptest/200/INC
+[CBI] ->              : /opt/api/ext/cpptest/200/INC/extension
+[CBI] ->              : /usr/local/cuda/include
+[CBI] ->              : /usr/local/cuda/include/CL
+[CBI] ->              : /usr/local/cuda/include/crt
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/304_008/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/304_008/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/304_008/BIN/gcc
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/Boost-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_atomic-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_chrono-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_container-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_context-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_contract-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_coroutine-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_date_time-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_exception-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_fiber-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_fiber_numa-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_filesystem-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_graph-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_graph_parallel-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_headers-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_iostreams-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_locale-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_log-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_log_setup-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_math_c99-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_math_c99f-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_math_c99l-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_math_tr1-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_math_tr1f-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_math_tr1l-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_mpi-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_numpy-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_prg_exec_monitor-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_program_options-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_python-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_random-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_regex-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_serialization-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_stacktrace_addr2line-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_stacktrace_backtrace-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_stacktrace_basic-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_stacktrace_noop-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_stacktrace_windbg-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_stacktrace_windbg_cached-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_system-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_test_exec_monitor-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_thread-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_timer-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_type_erasure-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_unit_test_framework-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_wave-1.72.0
+[CBI] ->              : /opt/api/ext/boost/1720/lib/gcc/cmake/boost_wserialization-1.72.0
+[CBI] ->              : /usr/local/cuda/lib64
+
+[CBI] -> API_LIBRARIES_STATIC :
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_304_008_gcc_x86_64
+[CBI] ->              : BilatTools_Cuda_304_008_cuda_102_x86_64
+[CBI] ->              : BilatTools_OMP_304_008_gcc_x86_64
+[CBI] ->              : OpenCL
+[CBI] ->              : accinj64
+[CBI] ->              : boost_atomic-gcc740
+[CBI] ->              : boost_chrono-gcc740
+[CBI] ->              : boost_container-gcc740
+[CBI] ->              : boost_context-gcc740
+[CBI] ->              : boost_contract-gcc740
+[CBI] ->              : boost_coroutine-gcc740
+[CBI] ->              : boost_date_time-gcc740
+[CBI] ->              : boost_fiber-gcc740
+[CBI] ->              : boost_filesystem-gcc740
+[CBI] ->              : boost_graph-gcc740
+[CBI] ->              : boost_iostreams-gcc740
+[CBI] ->              : boost_locale-gcc740
+[CBI] ->              : boost_log-gcc740
+[CBI] ->              : boost_log_setup-gcc740
+[CBI] ->              : boost_math_c99-gcc740
+[CBI] ->              : boost_math_c99f-gcc740
+[CBI] ->              : boost_math_c99l-gcc740
+[CBI] ->              : boost_math_tr1-gcc740
+[CBI] ->              : boost_math_tr1f-gcc740
+[CBI] ->              : boost_math_tr1l-gcc740
+[CBI] ->              : boost_numpy27-gcc740
+[CBI] ->              : boost_prg_exec_monitor-gcc740
+[CBI] ->              : boost_program_options-gcc740
+[CBI] ->              : boost_python27-gcc740
+[CBI] ->              : boost_random-gcc740
+[CBI] ->              : boost_regex-gcc740
+[CBI] ->              : boost_serialization-gcc740
+[CBI] ->              : boost_stacktrace_addr2line-gcc740
+[CBI] ->              : boost_stacktrace_backtrace-gcc740
+[CBI] ->              : boost_stacktrace_basic-gcc740
+[CBI] ->              : boost_stacktrace_noop-gcc740
+[CBI] ->              : boost_system-gcc740
+[CBI] ->              : boost_thread-gcc740
+[CBI] ->              : boost_timer-gcc740
+[CBI] ->              : boost_type_erasure-gcc740
+[CBI] ->              : boost_unit_test_framework-gcc740
+[CBI] ->              : boost_wave-gcc740
+[CBI] ->              : boost_wserialization-gcc740
+[CBI] ->              : cudart
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusparse
+[CBI] ->              : nppc
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppicom
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvgraph
+[CBI] ->              : nvjpeg
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/cubin
+
+[CBI] -> Compilation parallel (36 threads)
+
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/01_Test_Hello/TestHello.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/02_Test_Scalar/TestScalar.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Vector/TestVector.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/core/02_addVector/00_tools/VectorTools.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/core/02_addVector/01_implementation/useAddVector.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice_naif/useSliceNaif.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/core/01_addScalar/a_procedurale/useAddScalaire.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/core/01_addScalar/b_objet/useAddScalar.cpp
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/00_Hello/helloCuda.cu
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/02_addVector/01_implementation/device/addVector_device.cu
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/02_addVector/01_implementation/host/AddVector.cu
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice_naif/devive/sliceNaif_device.cu
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice_naif/host/SliceNaif.cu
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/01_addScalar/a_procedurale/addScalaire.cu
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/01_addScalar/b_objet/device/addScalar_device.cu
+[Student_Cuda_corriger_cuda_102_x86_64] -> nvcc compiling .cu : src/cpp/core/01_addScalar/b_objet/host/AddScalar.cu
+src/cpp/core/02_addVector/01_implementation/useAddVector.cpp:3:10: fatal error: Device.h: No such file or directory
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useSliceNaif.o' failed
+ #include "Device.h"
+          ^~~~~~~~~~
+src/cpp/core/03_Slice_naif/useSliceNaif.cpp:3:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useAddVector.o' failed
+compilation terminated.
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useAddScalaire.o' failed
+compilation terminated.
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useAddScalar.o' failed
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useSliceNaif.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/TestVector.o' failed
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useAddVector.o] Error 1
+src/cpp/core/01_addScalar/a_procedurale/useAddScalaire.cpp:5:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/cpp/core/01_addScalar/b_objet/useAddScalar.cpp:5:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/mainTest.o' failed
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/TestHello.o' failed
+compilation terminated.
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/TestScalar.o' failed
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useAddScalaire.o] Error 1
+src/cpp/test/unit/03_Test_Vector/TestVector.cpp:3:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/cpp/test/unit/01_Test_Hello/TestHello.cpp:3:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/cpp/test/mainTest.cpp:6:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/useAddScalar.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/TestVector.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/mainTest.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/TestHello.o] Error 1
+src/cpp/test/unit/02_Test_Scalar/TestScalar.cpp:3:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/TestScalar.o] Error 1
+src/cpp/main.cpp:6:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/main.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/main.o' failed
+src/cpp/core/00_Hello/helloCuda.cu:5:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/helloCuda.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:107: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/helloCuda.o' failed
+src/cpp/core/01_addScalar/a_procedurale/addScalaire.cu:6:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/addScalaire.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:107: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/addScalaire.o' failed
+src/cpp/core/02_addVector/01_implementation/host/AddVector.cu:6:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/cpp/core/03_Slice_naif/host/SliceNaif.cu:6:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+src/cpp/core/01_addScalar/b_objet/host/AddScalar.cu:6:10: fatal error: Device.h: No such file or directory
+ #include "Device.h"
+          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/AddVector.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:107: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/AddVector.o' failed
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/SliceNaif.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:107: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/SliceNaif.o' failed
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/AddScalar.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:107: recipe for target '/tmp/ramdrive/bilat/Targets/Student_Cuda_corriger/obj/AddScalar.o' failed
+make: *** [jall] Error 2
+../BUILDER/makefile/private/cuda/parallel.mk:35: recipe for target 'jall' failed
+"cbicc cuda jall" terminated with exit code 2. Build might be incomplete.
+
+18:08:38 Build Failed. 45 errors, 0 warnings. (took 3s.324ms)
+

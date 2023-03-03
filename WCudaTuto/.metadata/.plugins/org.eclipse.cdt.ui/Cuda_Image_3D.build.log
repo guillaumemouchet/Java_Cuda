@@ -1,0 +1,605 @@
+12:31:40 **** Incremental Build of configuration CudaGCC_parallel for project Cuda_Image_3D ****
+cbicc cuda jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-11-openjdk-amd64
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[dronecode]         : /opt/api/ext/dronecode
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Wed_Oct_23_19:24:38_PDT_2019
+Cuda compilation tools, release 10.2, V10.2.89
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : Cuda_Image_3D_bilat_cuda_102_x86_64
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/bin/Cuda_Image_3D_bilat_cuda_102_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../Cuda_Image/src/cpp/core
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fopenmp
+[CBI] ->              : -std=c++14
+[CBI] ->              : -O3
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fomit-frame-pointer
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_75
+[CBI] ->              : -m64
+[CBI] ->              : -std=c++14
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_75
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../Cuda_Image/src/cpp/core/01_Rippling/a_animable/device/math/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/01_Rippling/a_animable/host/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/01_Rippling/b_provider/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/02_Mandelbrot/a_animable/device/math/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/02_Mandelbrot/a_animable/host/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/02_Mandelbrot/b_provider/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/03_RayTracing/a_animable/device/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/03_RayTracing/a_animable/device/math/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/03_RayTracing/a_animable/host/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/03_RayTracing/a_animable/host/tools/
+[CBI] ->              : ../Cuda_Image/src/cpp/core/03_RayTracing/b_provider/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/moo/device/math/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/moo/host/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/image/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/image/listener/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/moo/device/math/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/moo/host/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/provider/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/benchmark/host/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/host/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/tools/algo/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/tools/simgletonMemory/
+[CBI] ->              : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/provider/
+[CBI] ->              : src/cpp/core/scene/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/INC/gpu
+[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/model
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/model/shapes
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/model/shapes/cpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/appearance
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/geometry
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/geometry/primitives
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/geometry/shapes
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/geometry/simple
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/geometry/simple/cpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/gl
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/gl/primitives
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/gl/renderer
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/gl/shapes
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/INC/view/quadric
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/model
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/model/shapes
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/model/shapes/gpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/view
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/view/geometry
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/view/geometry/simple
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/view/geometry/simple/gpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/INC/view/gl
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_FreeGlut/INC
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_FreeGlut/INC/glut
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/algo
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/algo/cpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/model
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/model/cpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/view
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/view/geometry
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/view/geometry/cpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/INC/view/gl
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC/algo
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC/algo/gpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC/model
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC/model/gpu
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC/view
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC/view/geometry
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/INC/view/geometry/gpu
+[CBI] ->              : /opt/api/cbi/infographie/tools/305/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/02_fps
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/02_fps/01_namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/03_array
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/04_files
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/05_chrono
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/05_chrono/clock
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/05_chrono/omp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/05_chrono/std
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/06_context
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/cpp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/INC/tools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/01_nvidia
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/02_cudaContext
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/02_cudaContext/simple
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/02_cudaContext/simple/enum
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/03_tid
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/00_grid
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/01_memory
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/01_memory/cm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/01_memory/gm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/01_memory/hm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/01_memory/sm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/02_stream
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/03_kernel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/04_host_wrapper/04_hardware
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/05_runnable
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/06_fps
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/07_benchmark
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/08_bruteforce
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/08_bruteforce/maillage
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/08_bruteforce/matlab
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/08_bruteforce/output
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/08_bruteforce/output/io
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/09_tests
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/09_tests/filter
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/09_tests/filter/concret
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/10_reducer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/10_reducer/derivate
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/10_reducer/synchronisation
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/11_use
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/tools/both
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/tools/device
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/tools/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/305_010/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/305_010/INC/3d
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/305_010/INC/3d/01_sceneplan
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/305_010/INC/3d/02_scenecube
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/305_010/INC/surface
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/305_010/INC/surface/scenesurfacestrip
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/animator
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/benchmark
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/cudaContext
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/provider
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_010/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_010/INC/opencv
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_010/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_010/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/capture
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/capture/video
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/capture/webcam
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show/shapeOverlay
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show/shapeOverlay/appearance
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show/shapeOverlay/drawer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show/shapeOverlay/shape
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show/view
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show/view/viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/show/view/viewerMat
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/INC/tools
+[CBI] ->              : /opt/api/ext/GLM/0975/include
+[CBI] ->              : /opt/api/ext/opencv/430/include
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/calib3d
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/cuda
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/cuda/detail
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/detail
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/hal
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/opencl
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/opencl/runtime
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/opencl/runtime/autogenerated
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/core/utils
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/dnn
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/dnn/utils
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/features2d
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/features2d/hal
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/flann
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/cpu
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/fluid
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/gpu
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/infer
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/ocl
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/own
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/plaidml
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/render
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/streaming
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/gapi/util
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/highgui
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/imgcodecs
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/imgcodecs/legacy
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/imgproc
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/imgproc/detail
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/imgproc/hal
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/ml
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/objdetect
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/photo
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/photo/legacy
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/stitching
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/video
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/video/legacy
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/videoio
+[CBI] ->              : /opt/api/ext/opencv/430/include/opencv4/opencv2/videoio/legacy
+[CBI] ->              : /usr/local/cuda/include
+[CBI] ->              : /usr/local/cuda/include/CL
+[CBI] ->              : /usr/local/cuda/include/crt
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Scene3D_GL_FreeGlut/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/scene3d/305/Bilat_Surface_GL_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_010/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_010/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_3D/305_010/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_010/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_010/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_010/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_010/BIN/gcc
+[CBI] ->              : /opt/api/ext/opencv/430/lib
+[CBI] ->              : /usr/local/cuda/lib64
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_305_010_gcc_x86_64
+[CBI] ->              : BilatTools_Cuda_305_010_cuda_102_x86_64
+[CBI] ->              : BilatTools_Cuda_3D_305_010_cuda_102_x86_64
+[CBI] ->              : BilatTools_Cuda_Image_305_010_cuda_102_x86_64
+[CBI] ->              : BilatTools_Image_OpenCV_Cuda_305_010_cuda_102_x86_64
+[CBI] ->              : BilatTools_OMP_305_010_gcc_x86_64
+[CBI] ->              : BilatTools_OpenCV_305_010_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_305_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_305_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_305_gcc_x86_64
+[CBI] ->              : Bilat_Image_FreeGlut_305_gcc_x86_64
+[CBI] ->              : Bilat_Image_FreeGlut_Cuda_305_cuda_102_x86_64
+[CBI] ->              : Bilat_Image_GL_305_gcc_x86_64
+[CBI] ->              : Bilat_Image_GL_Cuda_305_cuda_102_x86_64
+[CBI] ->              : Bilat_OpenGL_Tools_305_gcc_x86_64
+[CBI] ->              : Bilat_OpenGL_Tools_Cuda_305_cuda_102_x86_64
+[CBI] ->              : Bilat_Scene3D_FreeGlut_305_gcc_x86_64
+[CBI] ->              : Bilat_Scene3D_GL_305_gcc_x86_64
+[CBI] ->              : Bilat_Scene3D_GL_Cuda_305_cuda_102_x86_64
+[CBI] ->              : Bilat_Surface_GL_305_gcc_x86_64
+[CBI] ->              : Bilat_Surface_GL_Cuda_305_cuda_102_x86_64
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : OpenCL
+[CBI] ->              : accinj64
+[CBI] ->              : cudart
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusparse
+[CBI] ->              : glut
+[CBI] ->              : nppc
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppicom
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvgraph
+[CBI] ->              : nvjpeg
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
+[CBI] ->              : opencv_calib3d
+[CBI] ->              : opencv_core
+[CBI] ->              : opencv_dnn
+[CBI] ->              : opencv_features2d
+[CBI] ->              : opencv_flann
+[CBI] ->              : opencv_gapi
+[CBI] ->              : opencv_highgui
+[CBI] ->              : opencv_imgcodecs
+[CBI] ->              : opencv_imgproc
+[CBI] ->              : opencv_ml
+[CBI] ->              : opencv_objdetect
+[CBI] ->              : opencv_photo
+[CBI] ->              : opencv_stitching
+[CBI] ->              : opencv_video
+[CBI] ->              : opencv_videoio
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/cubin
+
+[CBI] -> Compilation parallel (36 threads)
+
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/mainCore.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : src/cpp/core/scene/SceneCubeCreator.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image/src/cpp/core/01_Rippling/b_provider/RipplingProvider.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image/src/cpp/core/02_Mandelbrot/b_provider/MandelbrotProvider.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image/src/cpp/core/03_RayTracing/b_provider/RaytracingProviderCM.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image/src/cpp/core/03_RayTracing/b_provider/RaytracingProviderSM.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image/src/cpp/core/03_RayTracing/b_provider/RaytracingCreator.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image/src/cpp/core/03_RayTracing/b_provider/RaytracingProviderGM.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image/src/cpp/core/03_RayTracing/b_provider/RaytracingProviderCM2SM.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/provider/HeatTransfertProvider.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/image/HeatTransfertImage.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/image/listener/HeatListener.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/ColorieurProvider.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/host/NoyauCreator.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/host/Convolution.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/benchmark/host/useBench.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/benchmark/host/useOptimiseur.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/benchmark/host/Bench.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/benchmark/host/Optimiseur.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> g++ compiling .cpp : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/provider/ConvolutionProvider.cpp
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image/src/cpp/core/01_Rippling/a_animable/device/ripplingDevice.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image/src/cpp/core/01_Rippling/a_animable/host/Rippling.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image/src/cpp/core/02_Mandelbrot/a_animable/device/mandelbrotDevice.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image/src/cpp/core/02_Mandelbrot/a_animable/host/Mandelbrot.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image/src/cpp/core/03_RayTracing/a_animable/device/raytracingDevice.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image/src/cpp/core/03_RayTracing/a_animable/host/Raytracing.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image/src/cpp/core/03_RayTracing/a_animable/host/tools/SphereCreator.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/moo/device/HeatTransfertDevice.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/moo/host/HeatTransfert.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/moo/device/colorieurDevice.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/moo/host/Colorieur.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/device/pipelineKernelDev.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/tools/algo/Convoluer.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/tools/algo/MinMax.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/tools/algo/Gray.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/tools/algo/Amplifier.cu
+[Cuda_Image_3D_bilat_cuda_102_x86_64] -> nvcc compiling .cu : ../Cuda_Image_Advanced/src/cpp/core/09_convolution/moo/host/PipelineKernel.cu
+../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/provider/HeatTransfertProvider.cpp: In member function ‘virtual Use_I* HeatTransfertProvider::createUse(const Grid&)’:
+../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/provider/HeatTransfertProvider.cpp:79:50: error: no matching function for call to ‘UseFromProvider<uchar4>::UseFromProvider(HeatTransfertProvider*, const Grid&)’
+     return new UseFromProvider<uchar4>(this, grid);
+                                                  ^
+In file included from ../Cuda_Image_Advanced/src/cpp/core/08_heattransfert/provider/HeatTransfertProvider.cpp:8:0:
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:44:2: note: candidate: UseFromProvider<T>::UseFromProvider(gpu::Provider_I<T>*, bool) [with T = uchar4]
+  UseFromProvider(Provider_I<T>* ptrProvider, bool isVerbose)
+  ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:44:2: note:   no known conversion for argument 2 from ‘const Grid’ to ‘bool’
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:36:2: note: candidate: UseFromProvider<T>::UseFromProvider(gpu::Provider_I<T>*, const Grid&, bool) [with T = uchar4]
+  UseFromProvider(Provider_I<T>* ptrProvider , const Grid& grid, bool isVerbose)
+  ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:36:2: note:   candidate expects 3 arguments, 2 provided
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:28:7: note: candidate: constexpr UseFromProvider<uchar4>::UseFromProvider(const UseFromProvider<uchar4>&)
+ class UseFromProvider: public Use_I
+       ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:28:7: note:   candidate expects 1 argument, 2 provided
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/HeatTransfertProvider.o' failed
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/HeatTransfertProvider.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+src/cpp/core/scene/SceneCubeCreator.cpp: In member function ‘void SceneCubeCreator::createImages()’:
+src/cpp/core/scene/SceneCubeCreator.cpp:57:35: error: invalid cast to abstract class type ‘ColorieurProvider’
+     ptrImage1 = ColorieurProvider().createImageGL();
+                                   ^
+In file included from src/cpp/core/scene/SceneCubeCreator.cpp:5:0:
+../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/ColorieurProvider.h:18:7: note:   because the following virtual functions are pure within ‘ColorieurProvider’:
+ class ColorieurProvider: public Provider_I<uchar4>, ProviderUse_I
+       ^~~~~~~~~~~~~~~~~
+In file included from ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/ColorieurProvider.h:5:0,
+                 from src/cpp/core/scene/SceneCubeCreator.cpp:5:
+/opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/11_use/ProviderUse_I.h:29:17: note: 	virtual Use_I* ProviderUse_I::createUse(const Grid&, bool)
+  virtual Use_I* createUse(const Grid& grid, bool isVerbose=false)=0;
+                 ^~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/11_use/ProviderUse_I.h:31:17: note: 	virtual Use_I* ProviderUse_I::createUse(bool)
+  virtual Use_I* createUse(bool isVerbose=true)=0;
+                 ^~~~~~~~~
+src/cpp/core/scene/SceneCubeCreator.cpp:59:37: error: invalid cast to abstract class type ‘ConvolutionProvider’
+     ptrImage3 = ConvolutionProvider().createImageGL();
+                                     ^
+In file included from src/cpp/core/scene/SceneCubeCreator.cpp:6:0:
+../Cuda_Image_Advanced/src/cpp/core/09_convolution/provider/ConvolutionProvider.h:18:7: note:   because the following virtual functions are pure within ‘ConvolutionProvider’:
+ class ConvolutionProvider: public Provider_I<uchar4>, ProviderUse_I
+       ^~~~~~~~~~~~~~~~~~~
+In file included from ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/ColorieurProvider.h:5:0,
+                 from src/cpp/core/scene/SceneCubeCreator.cpp:5:
+/opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/11_use/ProviderUse_I.h:29:17: note: 	virtual Use_I* ProviderUse_I::createUse(const Grid&, bool)
+  virtual Use_I* createUse(const Grid& grid, bool isVerbose=false)=0;
+                 ^~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda/305_010/INC/cudatools/11_use/ProviderUse_I.h:31:17: note: 	virtual Use_I* ProviderUse_I::createUse(bool)
+  virtual Use_I* createUse(bool isVerbose=true)=0;
+                 ^~~~~~~~~
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/SceneCubeCreator.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/SceneCubeCreator.o' failed
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"
+
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"
+
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"
+
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"
+
+../Cuda_Image_Advanced/src/cpp/core/09_convolution/provider/ConvolutionProvider.cpp: In member function ‘virtual Use_I* ConvolutionProvider::createUse(const Grid&)’:
+../Cuda_Image_Advanced/src/cpp/core/09_convolution/provider/ConvolutionProvider.cpp:71:50: error: no matching function for call to ‘UseFromProvider<uchar4>::UseFromProvider(ConvolutionProvider*, const Grid&)’
+     return new UseFromProvider<uchar4>(this, grid);
+                                                  ^
+In file included from ../Cuda_Image_Advanced/src/cpp/core/09_convolution/provider/ConvolutionProvider.cpp:10:0:
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:44:2: note: candidate: UseFromProvider<T>::UseFromProvider(gpu::Provider_I<T>*, bool) [with T = uchar4]
+  UseFromProvider(Provider_I<T>* ptrProvider, bool isVerbose)
+  ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:44:2: note:   no known conversion for argument 2 from ‘const Grid’ to ‘bool’
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:36:2: note: candidate: UseFromProvider<T>::UseFromProvider(gpu::Provider_I<T>*, const Grid&, bool) [with T = uchar4]
+  UseFromProvider(Provider_I<T>* ptrProvider , const Grid& grid, bool isVerbose)
+  ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:36:2: note:   candidate expects 3 arguments, 2 provided
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:28:7: note: candidate: constexpr UseFromProvider<uchar4>::UseFromProvider(const UseFromProvider<uchar4>&)
+ class UseFromProvider: public Use_I
+       ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:28:7: note:   candidate expects 1 argument, 2 provided
+../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/ColorieurProvider.cpp: In member function ‘virtual Use_I* ColorieurProvider::createUse(const Grid&)’:
+../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/ColorieurProvider.cpp:63:50: error: no matching function for call to ‘UseFromProvider<uchar4>::UseFromProvider(ColorieurProvider*, const Grid&)’
+     return new UseFromProvider<uchar4>(this, grid);
+                                                  ^
+In file included from ../Cuda_Image_Advanced/src/cpp/core/07_colorieur/provider/ColorieurProvider.cpp:8:0:
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:44:2: note: candidate: UseFromProvider<T>::UseFromProvider(gpu::Provider_I<T>*, bool) [with T = uchar4]
+  UseFromProvider(Provider_I<T>* ptrProvider, bool isVerbose)
+  ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:44:2: note:   no known conversion for argument 2 from ‘const Grid’ to ‘bool’
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:36:2: note: candidate: UseFromProvider<T>::UseFromProvider(gpu::Provider_I<T>*, const Grid&, bool) [with T = uchar4]
+  UseFromProvider(Provider_I<T>* ptrProvider , const Grid& grid, bool isVerbose)
+  ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:36:2: note:   candidate expects 3 arguments, 2 provided
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:28:7: note: candidate: constexpr UseFromProvider<uchar4>::UseFromProvider(const UseFromProvider<uchar4>&)
+ class UseFromProvider: public Use_I
+       ^~~~~~~~~~~~~~~
+/opt/api/cbi/tools/bilat_tools_cuda_image/305_010/INC/cudatoolsimage/animable/converter/UseFromProvider.h:28:7: note:   candidate expects 1 argument, 2 provided
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/ConvolutionProvider.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/ConvolutionProvider.o' failed
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/ColorieurProvider.o] Error 1
+../BUILDER/makefile/private/cuda/rules_linux.mk:75: recipe for target '/tmp/ramdrive/bilat/Targets/Cuda_Image_3D_bilat/obj/ColorieurProvider.o' failed
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"
+
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/warpers.hpp(213): warning: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"
+
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"
+
+/opt/api/ext/opencv/430/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"
+
+../BUILDER/makefile/private/cuda/parallel.mk:35: recipe for target 'jall' failed
+make: *** [jall] Error 2
+"cbicc cuda jall" terminated with exit code 2. Build might be incomplete.
+
+12:31:50 Build Failed. 16 errors, 8 warnings. (took 10s.20ms)
+

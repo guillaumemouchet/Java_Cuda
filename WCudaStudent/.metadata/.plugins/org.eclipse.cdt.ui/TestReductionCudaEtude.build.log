@@ -1,0 +1,542 @@
+19:25:20 **** Incremental Build of configuration CudaGCC_parallel for project TestReductionCudaEtude ****
+cbicc cuda jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm/java-11-openjdk-amd64
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[glm]      : /opt/api/ext/GLM
+
+[dronecode]         : /opt/api/ext/dronecode
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SCENE_3D_HOME              = /opt/api/cbi/infographie/scene3d
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CV_HOME        = /opt/api/cbi/tools/bilat_tools_image_cv
+     BILAT_TOOLS_CUDA_3D_HOME         = /opt/api/cbi/tools/bilat_tools_cuda_3D
+     BILAT_TOOLS_JNI_HOME             = /opt/api/cbi/tools/bilat_tools_jni
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME                 = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                   = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                   = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                    = /opt/api/cbi/capteur/bilat_tau2
+     BILAT_SPEECH_HOME                  = /opt/api/cbi/capteur/bilat_speech
+     BILAT_GPS_HOME                     = /opt/api/cbi/capteur/bilat_gps
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 7.4.0-1ubuntu1~18.04.1) 7.4.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Fri_Feb__8_19:08:17_PST_2019
+Cuda compilation tools, release 10.1, V10.1.105
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : TestReductionCuda_cuda_101_x86_64
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/TestReductionCuda/bin/TestReductionCuda_cuda_101_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../Student_Cuda/src/cpp/test/tools
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fopenmp
+[CBI] ->              : -std=c++14
+[CBI] ->              : -O3
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fomit-frame-pointer
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_35
+[CBI] ->              : -m64
+[CBI] ->              : -std=c++14
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_35
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../Student_Cuda/src/cpp/test/tools/
+[CBI] ->              : src/cpp/core/01_Slice/host/
+[CBI] ->              : src/cpp/core/02_Histogramme/host/
+[CBI] ->              : src/cpp/core/03_Reduction1/
+[CBI] ->              : src/cpp/core/03_Reduction1/host/
+[CBI] ->              : src/cpp/test/junit/
+[CBI] ->              : src/cpp/test/junit/00_tools/
+[CBI] ->              : src/cpp/test/junit/00_tools/00_tests/
+[CBI] ->              : src/cpp/test/junit/01_Test_Slice/
+[CBI] ->              : src/cpp/test/junit/02_Test_Histogram/
+[CBI] ->              : src/cpp/test/junit/03_Test_Reduction/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL_Cuda/INC/gpu
+[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/tools/303/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/cpp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/cpp/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/both
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device/curand
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device/reduction
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/device/synchronisation
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/header/mixte
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/INC/cudatools/nvidia
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/imp
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/imp/01_api_animateur
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/imp/02_api_force_brute
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/imp/02_api_force_brute/maillage
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/imp/03_api_barivox
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/imp/api_image_link
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/imp/api_viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/INC/spec
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/INC/OMP_Tools/header
+[CBI] ->              : /opt/api/ext/boost/1700/include
+[CBI] ->              : /opt/api/ext/boost/1700/include/boost
+[CBI] ->              : /opt/api/ext/cpptest/200/INC
+[CBI] ->              : /opt/api/ext/cpptest/200/INC/extension
+[CBI] ->              : /usr/local/cuda/include
+[CBI] ->              : /usr/local/cuda/include/CL
+[CBI] ->              : /usr/local/cuda/include/crt
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_Displayable_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/303/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_FreeGlut_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/image/303/Bilat_Image_GL_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/opengl/303/Bilat_OpenGL_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/303_006/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/303_006/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/303_006/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/303_006/BIN/gcc
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/Boost-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_atomic-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_chrono-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_container-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_context-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_contract-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_coroutine-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_date_time-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_exception-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_fiber-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_fiber_numa-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_filesystem-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_graph-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_graph_parallel-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_headers-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_iostreams-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_locale-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_log-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_log_setup-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99f-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_c99l-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1f-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_math_tr1l-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_mpi-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_numpy-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_prg_exec_monitor-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_program_options-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_python-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_random-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_regex-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_serialization-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_addr2line-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_backtrace-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_basic-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_noop-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_windbg-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_stacktrace_windbg_cached-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_system-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_test_exec_monitor-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_thread-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_timer-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_type_erasure-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_unit_test_framework-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_wave-1.70.0
+[CBI] ->              : /opt/api/ext/boost/1700/lib/gcc/cmake/boost_wserialization-1.70.0
+[CBI] ->              : /usr/local/cuda/lib64
+
+[CBI] -> API_LIBRARIES_STATIC :
+[CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_303_006_gcc_x86_64
+[CBI] ->              : BilatTools_Cuda_303_006_cuda_101_x86_64
+[CBI] ->              : BilatTools_Cuda_Image_303_006_cuda_101_x86_64
+[CBI] ->              : BilatTools_OMP_303_006_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_303_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_303_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_303_gcc_x86_64
+[CBI] ->              : Bilat_Image_FreeGlut_303_gcc_x86_64
+[CBI] ->              : Bilat_Image_FreeGlut_Cuda_303_cuda_101_x86_64
+[CBI] ->              : Bilat_Image_GL_303_gcc_x86_64
+[CBI] ->              : Bilat_Image_GL_Cuda_303_cuda_101_x86_64
+[CBI] ->              : Bilat_OpenGL_Tools_303_gcc_x86_64
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : OpenCL
+[CBI] ->              : accinj64
+[CBI] ->              : boost_atomic-gcc740
+[CBI] ->              : boost_chrono-gcc740
+[CBI] ->              : boost_container-gcc740
+[CBI] ->              : boost_context-gcc740
+[CBI] ->              : boost_contract-gcc740
+[CBI] ->              : boost_coroutine-gcc740
+[CBI] ->              : boost_date_time-gcc740
+[CBI] ->              : boost_fiber-gcc740
+[CBI] ->              : boost_filesystem-gcc740
+[CBI] ->              : boost_graph-gcc740
+[CBI] ->              : boost_iostreams-gcc740
+[CBI] ->              : boost_locale-gcc740
+[CBI] ->              : boost_log-gcc740
+[CBI] ->              : boost_log_setup-gcc740
+[CBI] ->              : boost_math_c99-gcc740
+[CBI] ->              : boost_math_c99f-gcc740
+[CBI] ->              : boost_math_c99l-gcc740
+[CBI] ->              : boost_math_tr1-gcc740
+[CBI] ->              : boost_math_tr1f-gcc740
+[CBI] ->              : boost_math_tr1l-gcc740
+[CBI] ->              : boost_prg_exec_monitor-gcc740
+[CBI] ->              : boost_program_options-gcc740
+[CBI] ->              : boost_random-gcc740
+[CBI] ->              : boost_regex-gcc740
+[CBI] ->              : boost_serialization-gcc740
+[CBI] ->              : boost_stacktrace_addr2line-gcc740
+[CBI] ->              : boost_stacktrace_backtrace-gcc740
+[CBI] ->              : boost_stacktrace_basic-gcc740
+[CBI] ->              : boost_stacktrace_noop-gcc740
+[CBI] ->              : boost_system-gcc740
+[CBI] ->              : boost_thread-gcc740
+[CBI] ->              : boost_timer-gcc740
+[CBI] ->              : boost_type_erasure-gcc740
+[CBI] ->              : boost_unit_test_framework-gcc740
+[CBI] ->              : boost_wave-gcc740
+[CBI] ->              : boost_wserialization-gcc740
+[CBI] ->              : cudart
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusparse
+[CBI] ->              : glut
+[CBI] ->              : nppc
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppicom
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvgraph
+[CBI] ->              : nvjpeg
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/TestReductionCuda/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/TestReductionCuda/obj
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/TestReductionCuda/cubin
+
+[CBI] -> Compilation parallel (36 threads)
+
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/SettingsTests.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/01_Test_Slice/TestSlice.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/00_tools/GridProvider.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/00_tools/VariateurAdditif.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/00_tools/VariateurMultiplicatif.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/00_tools/DataCreator.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/03_Test_Reduction/TestReduction.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/00_tools/00_tests/TestTools.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/02_Test_Histogram/TestHistogram.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Histogramme/useHistogram.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Slice/useSlice.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : ../Student_Cuda/src/cpp/test/tools/TestGeneric.cpp
+[TestReductionCuda_cuda_101_x86_64] -> g++ compiling .cpp : ../Student_Cuda/src/cpp/test/tools/Iterator.cpp
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Histogramme/device/histogram_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Histogramme/host/Histogram.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Slice/device/slice_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Slice/host/Slice.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionMinMaxV2_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionTid_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionMinMaxV2_lock_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionTid_lock_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reduction1_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reduction1_lock_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionMinMaxV1_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionMinMaxV1_lock_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionMinMax_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/device/reductionMinMax_lock_device.cu
+[TestReductionCuda_cuda_101_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Reduction1/host/Reduction.cu
+src/cpp/test/mainTest.cpp: In function ‘bool testALL()’:
+src/cpp/test/mainTest.cpp:68:24: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+     testSuite.add(std::auto_ptr < Suite > (new TestTools(deviceId)));
+                        ^~~~~~~~
+In file included from /usr/include/c++/7/memory:80:0,
+                 from /opt/api/ext/cpptest/200/INC/cpptest-suite.h:33,
+                 from /opt/api/ext/cpptest/200/INC/cpptest.h:34,
+                 from /opt/api/ext/cpptest/200/INC/extension/cppTest+.h:4,
+                 from src/cpp/test/mainTest.cpp:5:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/cpp/test/mainTest.cpp:69:24: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+     testSuite.add(std::auto_ptr < Suite > (new TestSlice(deviceId, 1e-6)));
+                        ^~~~~~~~
+In file included from /usr/include/c++/7/memory:80:0,
+                 from /opt/api/ext/cpptest/200/INC/cpptest-suite.h:33,
+                 from /opt/api/ext/cpptest/200/INC/cpptest.h:34,
+                 from /opt/api/ext/cpptest/200/INC/extension/cppTest+.h:4,
+                 from src/cpp/test/mainTest.cpp:5:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/cpp/test/mainTest.cpp:70:24: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+     testSuite.add(std::auto_ptr < Suite > (new TestHistogram(deviceId)));
+                        ^~~~~~~~
+In file included from /usr/include/c++/7/memory:80:0,
+                 from /opt/api/ext/cpptest/200/INC/cpptest-suite.h:33,
+                 from /opt/api/ext/cpptest/200/INC/cpptest.h:34,
+                 from /opt/api/ext/cpptest/200/INC/extension/cppTest+.h:4,
+                 from src/cpp/test/mainTest.cpp:5:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/cpp/test/mainTest.cpp:71:24: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+     testSuite.add(std::auto_ptr < Suite > (new TestReduction(deviceId)));
+                        ^~~~~~~~
+In file included from /usr/include/c++/7/memory:80:0,
+                 from /opt/api/ext/cpptest/200/INC/cpptest-suite.h:33,
+                 from /opt/api/ext/cpptest/200/INC/cpptest.h:34,
+                 from /opt/api/ext/cpptest/200/INC/extension/cppTest+.h:4,
+                 from src/cpp/test/mainTest.cpp:5:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/TestReductionCuda/bin/TestReductionCuda_cuda_101_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_303_006_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_303_006_cuda_101_x86_64
+[CBI] ->              : -lBilatTools_Cuda_Image_303_006_cuda_101_x86_64
+[CBI] ->              : -lBilatTools_OMP_303_006_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_303_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_303_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_303_gcc_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_303_gcc_x86_64
+[CBI] ->              : -lBilat_Image_FreeGlut_Cuda_303_cuda_101_x86_64
+[CBI] ->              : -lBilat_Image_GL_303_gcc_x86_64
+[CBI] ->              : -lBilat_Image_GL_Cuda_303_cuda_101_x86_64
+[CBI] ->              : -lBilat_OpenGL_Tools_303_gcc_x86_64
+[CBI] ->              : -lCpp_Test_200_gcc_x86_64
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -laccinj64
+[CBI] ->              : -lboost_atomic-gcc740
+[CBI] ->              : -lboost_chrono-gcc740
+[CBI] ->              : -lboost_container-gcc740
+[CBI] ->              : -lboost_context-gcc740
+[CBI] ->              : -lboost_contract-gcc740
+[CBI] ->              : -lboost_coroutine-gcc740
+[CBI] ->              : -lboost_date_time-gcc740
+[CBI] ->              : -lboost_fiber-gcc740
+[CBI] ->              : -lboost_filesystem-gcc740
+[CBI] ->              : -lboost_graph-gcc740
+[CBI] ->              : -lboost_iostreams-gcc740
+[CBI] ->              : -lboost_locale-gcc740
+[CBI] ->              : -lboost_log-gcc740
+[CBI] ->              : -lboost_log_setup-gcc740
+[CBI] ->              : -lboost_math_c99-gcc740
+[CBI] ->              : -lboost_math_c99f-gcc740
+[CBI] ->              : -lboost_math_c99l-gcc740
+[CBI] ->              : -lboost_math_tr1-gcc740
+[CBI] ->              : -lboost_math_tr1f-gcc740
+[CBI] ->              : -lboost_math_tr1l-gcc740
+[CBI] ->              : -lboost_prg_exec_monitor-gcc740
+[CBI] ->              : -lboost_program_options-gcc740
+[CBI] ->              : -lboost_random-gcc740
+[CBI] ->              : -lboost_regex-gcc740
+[CBI] ->              : -lboost_serialization-gcc740
+[CBI] ->              : -lboost_stacktrace_addr2line-gcc740
+[CBI] ->              : -lboost_stacktrace_backtrace-gcc740
+[CBI] ->              : -lboost_stacktrace_basic-gcc740
+[CBI] ->              : -lboost_stacktrace_noop-gcc740
+[CBI] ->              : -lboost_system-gcc740
+[CBI] ->              : -lboost_thread-gcc740
+[CBI] ->              : -lboost_timer-gcc740
+[CBI] ->              : -lboost_type_erasure-gcc740
+[CBI] ->              : -lboost_unit_test_framework-gcc740
+[CBI] ->              : -lboost_wave-gcc740
+[CBI] ->              : -lboost_wserialization-gcc740
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lglut
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppicom
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvgraph
+[CBI] ->              : -lnvjpeg
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+
+
+==================================================================================
+[CBI] -> Target Name  : TestReductionCuda_cuda_101_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/TestReductionCuda/bin/TestReductionCuda_cuda_101_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 3 (s)
+==================================================================================
+
+
+[CBI] -> Deploying      : ../RELEASE/bin/TestReductionCuda_cuda_101_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+[CBI] -> TestReductionCuda_cuda_101_x86_64 : End ALL!
+
+
+19:25:25 Build Finished. 0 errors, 4 warnings. (took 5s.503ms)
+
