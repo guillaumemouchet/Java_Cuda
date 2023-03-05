@@ -32,7 +32,7 @@ using std::setprecision;
 SliceGmHostUse::SliceGmHostUse(const Grid& grid , bool isVerbose) : //
 	grid(grid), //
 	nbSlice(SliceNumber::nbSlice()), //
-	piHat(3.1415926535)
+	piHat(-1)
     {
     this->ptrRunnableGPU = new SliceGMHOST(grid, this->nbSlice, &piHat, isVerbose);
 
