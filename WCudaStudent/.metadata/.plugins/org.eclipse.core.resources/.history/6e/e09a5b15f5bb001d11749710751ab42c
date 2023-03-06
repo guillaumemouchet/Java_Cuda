@@ -47,9 +47,12 @@ SliceGMHOST::SliceGMHOST(Grid grid , int nbSlice , double* ptrPiHat , bool isVer
 
     // MM
 	{
-	this->sizeTabGM = nTabGM*sizeof(float);//  TODO SliceGMHOST // [octet]
+	this->sizeTabGM = nTagGM*sizeof(float);//  TODO SliceGMHOST // [octet]
 	//GM::malloc(&tabDev, sizeTabGM);
 	GM::malloc(&tabGM, sizeTabGM);
+
+	//printf("tabDEv %f", tabDev[0]);
+	//printf("site %f", sizeof(tabDev) / sizeof(tabDev[0]));
 	}
     }
 
@@ -57,7 +60,10 @@ SliceGMHOST::~SliceGMHOST(void)
     {
     //MM (device free)
 	{
+	// TODO SliceGMHOST
+	//GM::free(tabDev);
 	GM::free(tabGM);
+
 	}
     }
 
@@ -97,8 +103,8 @@ void SliceGMHOST::reductionHost()
     {
     // 1) Creer un tableau de bonne dimension (sur la pile, possible ssi petit, sinon sur la tas)
     float *tabH = new float[nTabGM];
+    //printf("tabDEv %f",tabDev[0]);
     // 2) Transferer la tabGM dedans
-    //printf("test taille %f \n",sizeof(tabH));
     double totalSomme = 0;
 
 

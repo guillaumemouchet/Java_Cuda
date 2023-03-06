@@ -98,13 +98,13 @@ void SliceGMHOST::reductionHost()
     // 1) Creer un tableau de bonne dimension (sur la pile, possible ssi petit, sinon sur la tas)
     float *tabH = new float[nTabGM];
     // 2) Transferer la tabGM dedans
-    //printf("test taille %f \n",sizeof(tabH));
+    printf("test taille %f \n",sizeof(tabH));
     double totalSomme = 0;
 
 
-    GM::memcpyDToH(tabH, tabGM, sizeTabGM);
+    //GM::memcpyDToH(tabH, tabGM, sizeTabGM);
     // 3) Reduction sequentiel cote host
-
+/*
     for(int i = 0; i<nbSlice; i++)
 	{
 	totalSomme += tabH[i];
@@ -115,7 +115,7 @@ void SliceGMHOST::reductionHost()
     // TODO SliceGMHOST
     *ptrPiHat = totalSomme;
 
-    printf("Somme totale %f", totalSomme);
+    printf("Somme totale %f", totalSomme);*/
     }
 
 /*----------------------------------------------------------------------*\

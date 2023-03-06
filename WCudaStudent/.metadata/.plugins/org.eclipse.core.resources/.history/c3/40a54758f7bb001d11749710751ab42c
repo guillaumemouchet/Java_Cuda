@@ -32,6 +32,8 @@ __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
     const float DX = 1 / (float)n;
     const int NB_THREAD = Thread2D::nbThread();
 
+    #pragma omp parallel
+    {
     const int TID = Thread2D::tid();
     int  s = TID;
 
@@ -45,6 +47,7 @@ __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
 	}
     tabGM[TID] = somme*DX; //C2
 
+    }
 
     // Conseils :
     //
