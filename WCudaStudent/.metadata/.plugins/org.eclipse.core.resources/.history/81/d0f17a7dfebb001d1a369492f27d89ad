@@ -42,8 +42,8 @@ SliceGMHOST::SliceGMHOST(Grid grid , int nbSlice , double* ptrPiHat , bool isVer
 
 	this->ptrPiHat = ptrPiHat;
 	this->nTabGM = grid.threadCounts(); // TODO SliceGMHOST
-	//printf("-------------------------%lf\n", ptrPiHat);
-	//printf("-------------------------%lf\n", this->ptrPiHat);
+	printf("-------------------------%lf\n", ptrPiHat);
+	printf("-------------------------%lf\n", this->ptrPiHat);
 
 	// Warning : Advanced : Et si plus de threads que slices? complique! (pas utile de le coder)
 	}
@@ -115,9 +115,9 @@ void SliceGMHOST::reductionHost()
 	}
 
     // 4) finalisation du calcul de ptrPiHat
-    //totalSomme = totalSomme/nbSlice;
-    //printf("ptrpute %lf\n", ptrPiHat);
-    //printf("Somme totale %d", totalSomme);
+    totalSomme = totalSomme/nbSlice;
+    printf("ptrpute %lf\n", ptrPiHat);
+    printf("Somme totale %d", totalSomme);
 
     // TODO SliceGMHOST
     *ptrPiHat = totalSomme;
