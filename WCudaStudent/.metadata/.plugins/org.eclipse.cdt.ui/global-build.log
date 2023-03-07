@@ -1,4 +1,4 @@
-10:27:22 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+11:15:04 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -338,7 +338,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 [CBI] -> Compilation parallel (36 threads)
 
-[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_Slice_GM_Host/host/SliceGMHOST.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/02_Slice_GM/host/SliceGM.cu
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
 
@@ -443,7 +443,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 6 (s)
+[CBI] -> Time		  : 5 (s)
 ==================================================================================
 
 

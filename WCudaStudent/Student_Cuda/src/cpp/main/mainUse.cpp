@@ -65,12 +65,12 @@ int mainUse()
 
     // Slice
 	{
-	SliceGmHostUse sliceGmHostUse(IS_VERBOSE);
-//	SliceGmUse sliceGmUse(IS_VERBOSE);
+//	SliceGmHostUse sliceGmHostUse(IS_VERBOSE);
+	SliceGmUse sliceGmUse(IS_VERBOSE);
 //	SliceSmUse sliceSmUse(IS_VERBOSE);
 //
-	isOk &= sliceGmHostUse.isOk(IS_VERBOSE);
-//	isOk &= sliceGmUse.isOk(IS_VERBOSE);
+//	isOk &= sliceGmHostUse.isOk(IS_VERBOSE);
+	isOk &= sliceGmUse.isOk(IS_VERBOSE);
 //	isOk &= sliceSmUse.isOk(IS_VERBOSE);
 	}
 

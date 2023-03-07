@@ -3,7 +3,6 @@
 #include <assert.h>
 #include <GM.h>
 #include <GM_MemoryManagement.h>
-#include <Grid.h>
 #include <iostream>
 
 using std::cout;
@@ -89,31 +88,27 @@ void SliceGM::run()
 void SliceGM::reductionGM()
     {
     int middle = nTabGM >> 1; // nTabGM/2;
-//    dim3 dg_reduction(middle,1,1); //Juste mais pas performant
-//    dim3 db_reduction(1,1,1);
-    int a = middle / 4;
+    dim3 dg_reduction(middle,1,1); //Juste mais pas performant
+    dim3 db_reduction(1,1,1);
+    /*int a = middle / 4;
     int b = middle - a;
-    printf("a = %d", a);
-    printf("b = %d", b);
+    printf("a = %d",a);
+    printf("b = %d",b);
 
     dim3 dg_reduction(a, 1, 1); //Modifier pour décomposer middle
-    dim3 db_reduction(b, 1, 1);
+    dim3 db_reduction(b, 1, 1);*/
     while (middle > 0)
 	{
 	ecrasementGM<<<dg_reduction, db_reduction>>>(tabGM, middle);
-
+//	if(b>0)
+//	    {
+//	    b = b>>1;
+//	    }else
+//		{
+//		a = a>>1;
+//		}
 	middle = middle >> 1;
-	//dg_reduction.x = dg_reduction.x / 2;
-	if (b > 0)
-	    {
-	    b = b >> 1;
-	    db_reduction.x = b;
-	    }
-	else
-	    {
-	    a = a >> 1;
-	    dg_reduction.x = a;
-	    }
+	dg_reduction.x = dg_reduction.x / 2;
 	}
 
     float result;

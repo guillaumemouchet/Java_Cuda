@@ -125,15 +125,15 @@ Grid SliceGmUse::createGrid()
     const bool IS_CHECK_HEURISTIC = false;
 
     // Contraintes :
-    //	(C1) max(db.x*db.y*db.z)<=1024
-    //	(C2) dg power 2 (reduction)
-    //	(C3) db power 2 (reduction)
+    //    (C1) max(db.x*db.y*db.z)<=1024
+    //    (C2) dg power 2 (reduction)
+    //    (C3) db power 2 (reduction)
+    const int MP = Hardware::getMPCount();
+    const int CORE_MP = Hardware::getCoreCountMP();
 
-    dim3 dg;// TODO AddVector
-    dim3 db;// TODO AddVector
+    dim3 dg(64, 4, 1);//MP pas forc?ment multiple de 2
+    dim3 db(CORE_MP, 4, 1);//Core MP toujours multiple de 2 64 *6 < 1024
     Grid grid(dg,db,IS_CHECK_HEURISTIC);
-
-    assert(false); // to remove once coded
 
     return grid;
     }

@@ -31,7 +31,6 @@ __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
     const int n = nbSlice;
     const float DX = 1 / (float)n;
     const int NB_THREAD = Thread2D::nbThread();
-
     const int TID = Thread2D::tid();
     int  s = TID;
 

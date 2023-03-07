@@ -1,39 +1,50 @@
-#include "Thread2D.cu.h"
-#include "Thread1D.cu.h"
-#include "cudas.h"
-
 #include <stdio.h>
+#include <Thread2D.cu.h>
 
 /*----------------------------------------------------------------------*\
- |*			Declaration 					*|
+ |*            Declaration                     *|
  \*---------------------------------------------------------------------*/
 
 /*--------------------------------------*\
- |*		Private			*|
+ |*        Private            *|
  \*-------------------------------------*/
 
 static __device__ float f(float x);
 
 /*----------------------------------------------------------------------*\
- |*			Implementation 					*|
+ |*            Implementation                     *|
  \*---------------------------------------------------------------------*/
 
 /**
  * <pre>
  * Chaque thread effecteur une reduction intrathread avec le patern d'entrelacement,
- * puis stocke son résultat dans SA case dans tabGM
+ * puis stocke son r?sultat dans SA case dans tabGM
  *
  * tabGM est un tableau promu, qui a autant de case que de thread
  * </pre>
  */
 __global__ void reductionIntraThreadGM(float* tabGM , int nbSlice)
     {
-   // TODO SliceGM (idem SliceGMHOST) pour cette partie
+    const double DX = 1 / (double)nbSlice;
+    const int NB_THREADS = Thread2D::nbThread();
+    const int TID = Thread2D::tid();
+    int s = TID;
+    double sumThread = 0;
+    double xs;
+
+    while (s < nbSlice)
+	{
+	xs = s * DX;
+	sumThread += f(xs);
+
+	s += NB_THREADS;
+	}
+    tabGM[TID] = sumThread;
     }
 
 /**
  * <pre>
- * Effectue la reduction de tabGM cote device, par ecrasement 2 à 2 successif.
+ * Effectue la reduction de tabGM cote device, par ecrasement 2 ? 2 successif.
  * Ce kernel d ecrasement est appeler depuis le host dans une boucle, avec le bon nombre de thread
  *
  * Hypothese : |tabGM| est une puissance de 2
@@ -43,19 +54,15 @@ __global__ void reductionIntraThreadGM(float* tabGM , int nbSlice)
  */
 __global__ void ecrasementGM(float* tabGM , int middle)
     {
-    // TODO SliceGM
+    const int TID = Thread2D::tid();
+    tabGM[TID] = tabGM[TID] + tabGM[TID + middle];
     }
 
 /*--------------------------------------*\
- |*		Private			*|
+ |*        Private            *|
  \*-------------------------------------*/
 
 __device__ float f(float x)
     {
-    // TODO SliceGM
+    return 4.0f / (1 + x * x);
     }
-
-/*----------------------------------------------------------------------*\
- |*			End	 					*|
- \*---------------------------------------------------------------------*/
-

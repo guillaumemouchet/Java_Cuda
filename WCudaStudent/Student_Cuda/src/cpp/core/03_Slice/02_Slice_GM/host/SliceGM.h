@@ -1,13 +1,10 @@
 #pragma once
 
-#include "cudas.h"
-#include "Grid.h"
-#include "RunnableGPU.h"
+#include <RunnableGPU.h>
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
  \*---------------------------------------------------------------------*/
-
 
 class SliceGM: public RunnableGPU
     {
@@ -40,7 +37,6 @@ class SliceGM: public RunnableGPU
 
 	void reductionGM();
 
-
 	/*--------------------------------------*\
 	|*		Attributs		*|
 	 \*-------------------------------------*/
@@ -49,7 +45,8 @@ class SliceGM: public RunnableGPU
 
 	// Inputs
 	int nbSlice;
-
+	dim3 dg;
+	dim3 db;
 	// Inputs/Outputs
 	double* ptrPiHat;
 

@@ -40,6 +40,7 @@ SliceGMHOST::SliceGMHOST(Grid grid , int nbSlice , double* ptrPiHat , bool isVer
     {
     // ntabGM
 	{
+	cout << grid;
 	this->nTabGM = grid.threadCounts();
 	// Warning : Advanced : Et si plus de threads que slices? complique! (pas utile de le coder)
 	}

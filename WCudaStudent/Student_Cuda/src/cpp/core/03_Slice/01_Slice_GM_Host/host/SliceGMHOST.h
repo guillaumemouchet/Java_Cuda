@@ -50,7 +50,6 @@ class SliceGMHOST: public RunnableGPU
 
 	// Inputs
 	int nbSlice;
-	Grid grid;
 	dim3 dg;
 	dim3 db;
 

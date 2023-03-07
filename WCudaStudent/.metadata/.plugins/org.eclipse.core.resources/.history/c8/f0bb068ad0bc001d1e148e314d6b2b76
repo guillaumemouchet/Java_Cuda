@@ -98,22 +98,19 @@ void SliceGM::reductionGM()
 
     dim3 dg_reduction(a, 1, 1); //Modifier pour décomposer middle
     dim3 db_reduction(b, 1, 1);
-    while (middle > 0)
+    while (middle >0)
 	{
 	ecrasementGM<<<dg_reduction, db_reduction>>>(tabGM, middle);
-
-	middle = middle >> 1;
-	//dg_reduction.x = dg_reduction.x / 2;
 	if (b > 0)
 	    {
-	    b = b >> 1;
-	    db_reduction.x = b;
+	    dg_reduction.x = dg_reduction.x / 2;
 	    }
 	else
 	    {
-	    a = a >> 1;
-	    dg_reduction.x = a;
+	    db_reduction.x = db_reduction.x / 2;
 	    }
+	middle = middle >> 1;
+	//dg_reduction.x = dg_reduction.x / 2;
 	}
 
     float result;
