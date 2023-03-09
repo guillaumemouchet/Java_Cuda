@@ -1,4 +1,4 @@
-14:30:11 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+17:13:31 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -446,6 +446,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Time		  : 5 (s)
 ==================================================================================
 
+cp: cannot create regular file '../RELEASE/bin/Student_Cuda_arc27_cuda_110_x86_64.run': Text file busy
 
 [CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_arc27_cuda_110_x86_64.run
 

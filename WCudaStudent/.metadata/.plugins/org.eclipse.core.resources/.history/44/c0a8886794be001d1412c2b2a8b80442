@@ -94,24 +94,29 @@ void SliceGM::reductionGM()
     int a = middle / 128;
     int b = middle / a;
 
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
     dim3 dg_reduction(a, 1, 1); //Modifier pour décomposer middle
     dim3 db_reduction(b, 1, 1);
     while (a > 0 || b > 0)
 	{
+	printf("a==%d\tb==%d\n",a,b);
+	//    printf("ecramenent %d, %d\n", dg_reduction.x, db_reduction.x);
 	if(a==0 || b==0)
 	    {
-	    //Skip the last iteration
+	    //Skip
 	    }else{
 	    ecrasementGM<<<dg_reduction, db_reduction>>>(tabGM, middle);
 	    }
     middle = middle >> 1;
     //dg_reduction.x = dg_reduction.x / 2;
-    if (a > b)
+    if (a > b && a>0)
 	{
 	a = a / 2;
 	dg_reduction.x = a;
 	}
-    else
+    else if (b > 0)
 	{
 	b = b / 2;
 	db_reduction.x = b;
@@ -121,7 +126,7 @@ void SliceGM::reductionGM()
 
 float result;
 GM::memcpyDToH_float(&result, &tabGM[0]);
-*ptrPiHat = result / nbSlice;
+*ptrPiHat = result / nbSlice; //Strange shouldn't divide by 2
 
 // Warning:		Utiliser une autre grille que celle heriter de la classe parente dg, db
 // 			Votre grid ici doit avoir une taille speciale!
