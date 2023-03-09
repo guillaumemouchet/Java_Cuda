@@ -91,44 +91,48 @@ void SliceGM::reductionGM()
     int middle = nTabGM >> 1; // nTabGM/2;
 //    dim3 dg_reduction(middle,1,1); //Juste mais pas performant
 //    dim3 db_reduction(1,1,1);
-    int a = middle / 4;
-    int b = middle - a;
-    printf("a = %d", a);
-    printf("b = %d", b);
+    int a = middle / 128;
+    int b = middle / a;
+
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
 
     dim3 dg_reduction(a, 1, 1); //Modifier pour décomposer middle
     dim3 db_reduction(b, 1, 1);
-    while (middle > 0)
+    while (a > 0 || b > 0)
 	{
-	ecrasementGM<<<dg_reduction, db_reduction>>>(tabGM, middle);
 
-	middle = middle >> 1;
-	//dg_reduction.x = dg_reduction.x / 2;
-	if (b > 0)
-	    {
-	    b = b >> 1;
-	    db_reduction.x = b;
-	    }
-	else
-	    {
-	    a = a >> 1;
-	    dg_reduction.x = a;
-	    }
+	//    printf("ecramenent %d, %d\n", dg_reduction.x, db_reduction.x);
+	    ecrasementGM<<<dg_reduction, db_reduction>>>(tabGM, middle);
+
+    middle = middle >> 1;
+    //dg_reduction.x = dg_reduction.x / 2;
+    if (a > b && a>0)
+	{
+	a = a / 2;
+	dg_reduction.x = a == 0 ? 1 : a;
 	}
+    else if (b > 0)
+	{
+	b = b / 2;
+	db_reduction.x = b == 0 ? 1 : b;
 
-    float result;
-    GM::memcpyDToH_float(&result, &tabGM[0]);
-    *ptrPiHat = result / nbSlice;
-
-    // Warning:		Utiliser une autre grille que celle heriter de la classe parente dg, db
-    // 			Votre grid ici doit avoir une taille speciale!
-    // 			N'utiliser donc pas les vraibales dg et db de la super classe
-
-    // Tip:		Il y a une methode dedier pour ramener un float cote host
-    //
-    //				float resultat;
-    //				GM::memcpyDtoH_float(&resultat,ptrResultGM);
+	}
     }
+
+float result;
+GM::memcpyDToH_float(&result, &tabGM[0]);
+*ptrPiHat = result / nbSlice /2; //Strange shouldn't divide by 2
+
+// Warning:		Utiliser une autre grille que celle heriter de la classe parente dg, db
+// 			Votre grid ici doit avoir une taille speciale!
+// 			N'utiliser donc pas les vraibales dg et db de la super classe
+
+// Tip:		Il y a une methode dedier pour ramener un float cote host
+//
+//				float resultat;
+//				GM::memcpyDtoH_float(&resultat,ptrResultGM);
+}
 
 // BruteForce:
 //
