@@ -12837,3 +12837,91 @@ Binding(ALT+SHIFT+R,
 
 !ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-03-09 17:02:04.025
 !MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.272954162"
+!SESSION 2023-03-11 10:20:54.607 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2023-03-11 10:21:20.111
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-11 10:21:20.111
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1abf951a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@629600d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-11 10:21:20.111
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@180d918a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@55f23335,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-03-11 10:28:08.095
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.1880378736"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-03-11 10:28:08.117
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.370585809"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-03-11 10:28:08.143
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.2064026964"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-03-11 10:28:08.214
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.309315409"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-03-11 10:28:08.236
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.1926094149"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-03-11 10:28:08.260
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.272954162"
+
+!ENTRY org.eclipse.debug.core 4 125 2023-03-11 10:41:03.778
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:168)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:281)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-03-11 10:41:03.914
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:168)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:281)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:833)

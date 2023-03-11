@@ -89,39 +89,32 @@ void SliceGM::run()
 void SliceGM::reductionGM()
     {
     int middle = nTabGM >> 1; // nTabGM/2;
-//    dim3 dg_reduction(middle,1,1); //Juste mais pas performant
-//    dim3 db_reduction(1,1,1);
-    int a = middle / 128;
-    int b = middle / a;
 
-    dim3 dg_reduction(a, 1, 1); //Modifier pour décomposer middle
-    dim3 db_reduction(b, 1, 1);
-    while (a > 0 || b > 0)
+    int dgx = middle / db.x > 0 ? middle / db.x : 1;
+
+    dim3 dg_reduction(dgx, 1, 1); //Modifier pour décomposer middle
+    dim3 db_reduction = db;
+    while (middle > 0)
 	{
-	if(a==0 || b==0)
+
+	ecrasementGM<<<dg_reduction, db_reduction>>>(tabGM, middle);
+
+	middle = middle >> 1;
+	//dg_reduction.x = dg_reduction.x / 2;
+	if (dg_reduction.x > 1)
 	    {
-	    //Skip the last iteration
-	    }else{
-	    ecrasementGM<<<dg_reduction, db_reduction>>>(tabGM, middle);
+	    dg_reduction.x = dg_reduction.x >> 1;
 	    }
-    middle = middle >> 1;
-    //dg_reduction.x = dg_reduction.x / 2;
-    if (a > b)
-	{
-	a = a / 2;
-	dg_reduction.x = a;
-	}
-    else
-	{
-	b = b / 2;
-	db_reduction.x = b;
+	else
+	    {
+	    db_reduction.x = db_reduction.x >> 1;
 
+	    }
 	}
-    }
 
-float result;
-GM::memcpyDToH_float(&result, &tabGM[0]);
-*ptrPiHat = result / nbSlice;
+    float result;
+    GM::memcpyDToH_float(&result, tabGM);
+    *ptrPiHat = result / nbSlice;
 
 // Warning:		Utiliser une autre grille que celle heriter de la classe parente dg, db
 // 			Votre grid ici doit avoir une taille speciale!
@@ -131,7 +124,7 @@ GM::memcpyDToH_float(&result, &tabGM[0]);
 //
 //				float resultat;
 //				GM::memcpyDtoH_float(&resultat,ptrResultGM);
-}
+    }
 
 // BruteForce:
 //

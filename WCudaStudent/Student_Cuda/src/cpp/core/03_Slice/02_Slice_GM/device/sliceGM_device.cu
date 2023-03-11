@@ -30,12 +30,10 @@ __global__ void reductionIntraThreadGM(float* tabGM , int nbSlice)
     const int TID = Thread2D::tid();
     int s = TID;
     double sumThread = 0;
-    double xs;
 
     while (s < nbSlice)
 	{
-	xs = s * DX;
-	sumThread += f(xs);
+	sumThread += f(s * DX);
 
 	s += NB_THREADS;
 	}
