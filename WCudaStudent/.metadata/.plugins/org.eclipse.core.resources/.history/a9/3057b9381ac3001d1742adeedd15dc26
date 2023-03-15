@@ -57,7 +57,6 @@ __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
 
 __device__ float f(float x)
     {
-    //Bien
     return 4.0f / (1.0f + x * x);
     }
 

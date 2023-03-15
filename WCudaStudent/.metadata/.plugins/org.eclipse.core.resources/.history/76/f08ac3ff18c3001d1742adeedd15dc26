@@ -93,7 +93,7 @@ void SliceGMHOST::run()
 void SliceGMHOST::reductionHost()
     {
     // 1) Creer un tableau de bonne dimension (sur la pile, possible ssi petit, sinon sur la tas)
-    float* tab = new float[nTabGM];
+    float tab[nTabGM];
 
     // 2) Transferer la tabGM dedans
     float totalSomme = 0;
@@ -105,15 +105,15 @@ void SliceGMHOST::reductionHost()
 
     for(int i = 0; i<nTabGM; i++)
 	{
-	totalSomme += tab[i];
+	totalSomme = totalSomme +tab[i];
 	}
 
     // 4) finalisation du calcul de ptrPiHat
     //totalSomme = totalSomme/nbSlice;
 
-    *ptrPiHat = totalSomme;
+    *ptrPiHat = totalSomme/nbSlice;
 
-    free(tab);
+
     }
 
 /*----------------------------------------------------------------------*\

@@ -111,7 +111,7 @@ void SliceGMHOST::reductionHost()
     // 4) finalisation du calcul de ptrPiHat
     //totalSomme = totalSomme/nbSlice;
 
-    *ptrPiHat = totalSomme;
+    *ptrPiHat = totalSomme/nbSlice;
 
     free(tab);
     }

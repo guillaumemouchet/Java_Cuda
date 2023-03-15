@@ -28,7 +28,7 @@ static __device__ float f(float x);
  */
 __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
     {
-    const float DX = 1.0f / (float)nbSlice;
+    const float DX = 1 / (float)nbSlice;
     const int NB_THREAD = Thread2D::nbThread();
     const int TID = Thread2D::tid();
     int  s = TID;
@@ -39,7 +39,7 @@ __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
 	somme += f(s*DX);
 	s+=NB_THREAD;
 	}
-    tabGM[TID] = somme*DX; //C2
+    tabGM[TID] = somme; //C2
 
 
     // Conseils :
@@ -57,8 +57,7 @@ __global__ void reductionIntraThreadGMHOST(float* tabGM , int nbSlice)
 
 __device__ float f(float x)
     {
-    //Bien
-    return 4.0f / (1.0f + x * x);
+    return 4.0f / (1.0 + x * x);
     }
 
 /*----------------------------------------------------------------------*\

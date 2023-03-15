@@ -1,6 +1,6 @@
-#include "SliceGmUse.h"
+#include "SliceGmHostUse.h"
 
-#include "SliceGM.h"
+#include "SliceGMHOST.h"
 #include "SliceNumber.h"
 
 #include "Maths.h"
@@ -29,26 +29,23 @@ using std::setprecision;
  |*		Constructeurs		*|
  \*-------------------------------------*/
 
-/**
- * contrainte : grid (dg et db) une puissance de 2
- */
-SliceGmUse::SliceGmUse(const Grid& grid , bool isVerbose) : //
+SliceGmHostUse::SliceGmHostUse(const Grid& grid , bool isVerbose) : //
 	grid(grid), //
 	nbSlice(SliceNumber::nbSlice()), //
 	piHat(-1)
     {
-    this->ptrRunnableGPU = new SliceGM(grid, this->nbSlice, &piHat, isVerbose);
+    this->ptrRunnableGPU = new SliceGMHOST(grid, this->nbSlice, &piHat, isVerbose);
 
     assert(filter(grid));
     }
 
-SliceGmUse::SliceGmUse(bool isVerbose) : //
-	SliceGmUse(createGrid(), isVerbose)
+SliceGmHostUse::SliceGmHostUse(bool isVerbose) : //
+	SliceGmHostUse(createGrid(), isVerbose)
     {
     //rien
     }
 
-SliceGmUse::~SliceGmUse()
+SliceGmHostUse::~SliceGmHostUse()
     {
     delete ptrRunnableGPU;
     }
@@ -60,10 +57,9 @@ SliceGmUse::~SliceGmUse()
 /**
  * override
  */
-bool SliceGmUse::filter(const Grid& grid)
+bool SliceGmHostUse::filter(const Grid& grid)
     {
-    return Use_I::filter(grid) //
-    && Maths::isPower2(grid.threadCounts());
+    return Use_I::filter(grid);
     }
 
 /*--------------*\
@@ -73,7 +69,7 @@ bool SliceGmUse::filter(const Grid& grid)
 /**
  * Override
  */
-bool SliceGmUse::isOk(bool isVerbose)
+bool SliceGmHostUse::isOk(bool isVerbose)
     {
     this->ptrRunnableGPU->run();
 
@@ -108,7 +104,7 @@ bool SliceGmUse::isOk(bool isVerbose)
  * override
  * Warning : It's a getter, the user is not responsible for deleting RunnableGPU_I*
  */
-RunnableGPU_I* SliceGmUse::getRunnableGPU()
+RunnableGPU_I* SliceGmHostUse::getRunnableGPU()
     {
     return this->ptrRunnableGPU;
     }
@@ -120,20 +116,15 @@ RunnableGPU_I* SliceGmUse::getRunnableGPU()
 /**
  * static
  */
-Grid SliceGmUse::createGrid()
+Grid SliceGmHostUse::createGrid()
     {
-    const bool IS_CHECK_HEURISTIC = false;
-
-    // Contraintes :
-    //    (C1) max(db.x*db.y*db.z)<=1024
-    //    (C2) dg power 2 (reduction)
-    //    (C3) db power 2 (reduction)
+    const int MP = Hardware::getMPCount();
     const int CORE_MP = Hardware::getCoreCountMP();
 
-    dim3 dg(256, 1, 1);
-    dim3 db(CORE_MP*4, 1, 1);
-    Grid grid(dg,db,IS_CHECK_HEURISTIC);
-
+    // Grid 1D
+    dim3 dg(MP, 4, 1); // Produit des 3 doit être un multiple de MP
+    dim3 db(CORE_MP, 6<<, 1); // 128 * 8 = 768 is ok// produit <=1024
+    Grid grid(dg, db);
     return grid;
     }
 
