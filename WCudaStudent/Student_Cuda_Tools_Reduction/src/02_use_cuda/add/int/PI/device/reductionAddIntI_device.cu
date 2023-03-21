@@ -6,33 +6,36 @@
 #include <stdio.h>
 
 /*----------------------------------------------------------------------*\
- |*			Declaration 					*|
+ |*            Declaration                     *|
  \*---------------------------------------------------------------------*/
 
 /*--------------------------------------*\
- |*		Private			*|
+ |*        Private            *|
  \*-------------------------------------*/
 
 static __device__ void reductionIntraThread(int* tabSM);
 
 /*----------------------------------------------------------------------*\
- |*			Implementation 					*|
+ |*            Implementation                     *|
  \*---------------------------------------------------------------------*/
-
 
 __global__ void KAddIntProtocoleI(int* ptrSumGM)
     {
     // TODO ReductionAddIntI
 
-    // Declaration tabSM
-    // ReductionIntraThread
-    // ReductionAdd
+    // R?ception ("D?claration") tabSM
+    extern __shared__ int tabSM[];
 
-    // __syncthreads(); // des threads de meme block!// Question : utile? ou?
+    // ReductionIntraThread
+    reductionIntraThread (tabSM);
+
+    // ReductionAdd
+    ReductionAdd::reduce(tabSM, ptrSumGM);
+//    __syncthreads(); // des threads de meme block!// Question : utile? ou?
     }
 
 /*--------------------------------------*\
- |*		Private			*|
+ |*        Private            *|
  \*-------------------------------------*/
 
 /**
@@ -41,10 +44,10 @@ __global__ void KAddIntProtocoleI(int* ptrSumGM)
 __device__ void reductionIntraThread(int* tabSM)
     {
     // TODO ReductionAddIntI
-
+    const int TID_LOCAL = Thread2D::tidLocalBlock();
+    tabSM[TID_LOCAL] = 1;
     }
 
 /*----------------------------------------------------------------------*\
- |*			End	 					*|
+ |*            End                         *|
  \*---------------------------------------------------------------------*/
-

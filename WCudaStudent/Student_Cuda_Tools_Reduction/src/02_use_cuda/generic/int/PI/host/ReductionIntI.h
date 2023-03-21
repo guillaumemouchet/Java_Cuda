@@ -1,8 +1,6 @@
 #pragma once
 
-#include "cudas.h"
-#include "Grid.h"
-#include "RunnableGPU.h"
+#include <RunnableGPU.h>
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -16,7 +14,7 @@ class ReductionIntI: public RunnableGPU
 
     public:
 
-	ReductionIntI(const Grid& grid , int* ptrSum,bool isVerbose);
+	ReductionIntI(const Grid& grid , int* ptrSum , bool isVerbose);
 
 	virtual ~ReductionIntI();
 
@@ -39,6 +37,8 @@ class ReductionIntI: public RunnableGPU
 
 	// Inputs/Outputs
 	int* ptrSum;
+	dim3 dg;
+	dim3 db;
 
 	// Tools
 	int* ptrSumGM;

@@ -1,1 +1,1 @@
-/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCudaStudent/Student_Cuda_Tools_Reduction/src/03_private/a_use_wrapper/tools/protocole/long/II/PLongII.h
+/home/arc27/CUDA/toStudent/code/WCudaStudent/Student_Cuda_Tools_Reduction/src/03_private/a_use_wrapper/tools/protocole/long/II/PLongII.h

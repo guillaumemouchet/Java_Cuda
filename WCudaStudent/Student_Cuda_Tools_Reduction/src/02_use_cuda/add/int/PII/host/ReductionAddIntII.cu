@@ -30,15 +30,19 @@ extern __global__ void KAddIntProtocoleII(int* ptrSumGM);
 
 ReductionAddIntII::ReductionAddIntII(const Grid& grid , int* ptrSum,bool isVerbose) :
 	RunnableGPU(grid, "ReductionAddIntII-" + to_string(grid.threadCounts()),isVerbose), // classe parente
-	ptrSum(ptrSum)
+	ptrSum(ptrSum),
+	dg(grid.dg),
+	db(grid.db)
     {
     // TODO ReductionAddIntII
-    this->sizeSM = -1;
+    this->sizeSM = sizeof(int) * grid.threadByBlock();
+    GM::mallocInt0(&ptrSumGM);
+
     }
 
 ReductionAddIntII::~ReductionAddIntII()
     {
-    // TODO ReductionAddIntII
+    GM::free(ptrSumGM);
     }
 
 /*--------------------------------------*\
@@ -47,7 +51,9 @@ ReductionAddIntII::~ReductionAddIntII()
 
 void ReductionAddIntII::run()
     {
-    // TODO ReductionAddIntII
+    KAddIntProtocoleII<<<dg, db, sizeSM>>>(ptrSumGM);
+    GM::memcpyDToH_int(ptrSum, ptrSumGM);
+
     }
 
 /*----------------------------------------------------------------------*\

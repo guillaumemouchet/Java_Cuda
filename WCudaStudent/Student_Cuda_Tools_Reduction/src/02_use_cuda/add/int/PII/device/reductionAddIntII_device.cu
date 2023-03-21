@@ -22,7 +22,13 @@ static __device__ void reductionIntraThread(int* tabSM);
 
 __global__ void KAddIntProtocoleII(int* ptrSumGM)
     {
-    // TODO ReductionAddIntII
+    extern __shared__ int tabSM[];
+
+    // ReductionIntraThread
+    reductionIntraThread (tabSM);
+
+    // ReductionAdd
+    ReductionAdd::reduce(tabSM, ptrSumGM);
     }
 
 /*--------------------------------------*\
@@ -35,9 +41,11 @@ __global__ void KAddIntProtocoleII(int* ptrSumGM)
 __device__ void reductionIntraThread(int* tabSM)
     {
     // TODO ReductionAddIntII
+    const int TID_LOCAL = Thread2D::tidLocalBlock();
+    const int TID = Thread2D::tid();
+    tabSM[TID_LOCAL] = TID;
     }
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
-

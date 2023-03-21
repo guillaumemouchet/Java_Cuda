@@ -57,6 +57,8 @@ class Reduction
 
 	    // TODO ReductionGeneric
 	    // Meme principe que ReductionAdd
+	    reductionIntraBlock(OP,tabSM);
+	    reductionInterBlock(ATOMIC_OP,tabSM, ptrResultGM);
 	    }
 
     private:
@@ -74,6 +76,13 @@ class Reduction
 	    // TODO ReductionGeneric
 	    // Meme principe que ReductionAdd
 	    // OP est la variable representant l'operateur binaire
+
+	const int TID_LOCAL = Thread2D::tidLocalBlock();
+
+		    if(TID_LOCAL < middle)
+			{
+			tabSM[TID_LOCAL] = OP(tabSM[TID_LOCAL],tabSM[TID_LOCAL + middle]);
+			}
 	    }
 
 	/**
@@ -85,6 +94,13 @@ class Reduction
 	    // TODO ReductionGeneric
 	    // Meme principe que ReductionAdd
 	    // OP est la variable representant l'operateur binaire
+	    int m = Thread2D::nbThreadBlock() >> 1;
+	   	    while(m > 0)
+	   		{
+	   		ecrasement(OP,tabSM, m);
+	   		m=m>>1;
+	   		__syncthreads();
+	   		}
 	    }
 
 	/*--------------------------------------*\
@@ -97,6 +113,12 @@ class Reduction
 	    // TODO ReductionGeneric
 	    // Meme principe que ReductionAdd
 	    // ATOMIC_OP est la variable representant l'operateur binaire atomic
+	    const int TID_LOCAL = Thread2D::tidLocalBlock();
+
+	    	    if(TID_LOCAL == 0)
+	    		{
+	    		ATOMIC_OP(ptrResultGM, tabSM[0]);
+	    		}
 	    }
 
     };

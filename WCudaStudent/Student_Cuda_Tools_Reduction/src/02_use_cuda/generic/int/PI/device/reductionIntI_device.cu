@@ -1,10 +1,8 @@
-#include "Thread1D.cu.h"
-#include "cudas.h"
-
-#include "Reduction.cu.h"
-
-
+#include <Lock.cu.h>
 #include <stdio.h>
+#include <Thread2D.cu.h>
+
+#include "../../../../../01_cudatools/generic/Reduction.cu.h"
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -25,10 +23,17 @@ static __device__ void addAtomicV2(int* ptrX , int y);
  |*			Implementation 					*|
  \*---------------------------------------------------------------------*/
 
-
 __global__ void KIntProtocoleI(int* ptrSumGM)
     {
-    // TODO ReductionIntI
+    extern __shared__ int tabSM[]; //Reception du tabSM
+
+    //Reduction intra thread
+
+    reductionIntraThread (tabSM);
+
+    __syncthreads();
+    //Reduction
+    Reduction::reduce(add, addAtomicV1, tabSM, ptrSumGM);
     }
 
 /*--------------------------------------*\
@@ -40,7 +45,8 @@ __global__ void KIntProtocoleI(int* ptrSumGM)
  */
 __device__ void reductionIntraThread(int* tabSM)
     {
-    // TODO ReductionIntI
+    const int TID_LOCAL = Thread2D::tidLocalBlock();
+    tabSM[TID_LOCAL] = 1;
     }
 
 /*----------------------------*\
@@ -49,7 +55,7 @@ __device__ void reductionIntraThread(int* tabSM)
 
 __device__ int add(int x , int y)
     {
-    // TODO ReductionIntI
+    return x + y;
     }
 
 /**
@@ -59,7 +65,7 @@ __device__ int add(int x , int y)
  */
 __device__ void addAtomicV1(int* ptrX , int y)
     {
-    // TODO ReductionIntI
+    atomicAdd(ptrX, y);
     }
 
 /**
@@ -73,8 +79,7 @@ __device__ void addAtomicV2(int* ptrX , int y)
     Lock locker(&mutex);
     locker.lock();
 
-    // TODO ReductionIntI
-
+    *ptrX = *ptrX + y;
     locker.unlock();
     }
 

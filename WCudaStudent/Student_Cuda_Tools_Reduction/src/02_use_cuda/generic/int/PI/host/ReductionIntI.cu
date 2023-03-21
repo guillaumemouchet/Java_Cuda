@@ -1,10 +1,10 @@
 #include "ReductionIntI.h"
 
-#include "GM.h"
-#include "Grid.h"
-
-#include <iostream>
 #include <assert.h>
+#include <GM.h>
+#include <GM_MemoryManagement.h>
+#include <Grid.h>
+#include <iostream>
 
 using std::cout;
 using std::endl;
@@ -28,17 +28,22 @@ extern __global__ void KIntProtocoleI(int* ptrSumGM);
  |*		Constructeur			*|
  \*-------------------------------------*/
 
-ReductionIntI::ReductionIntI(const Grid& grid , int* ptrSum,bool isVerbose) :
-	RunnableGPU(grid, "ReductionIntI-" + to_string(grid.threadCounts()),isVerbose), // classe parente
-	ptrSum(ptrSum)
+ReductionIntI::ReductionIntI(const Grid& grid , int* ptrSum , bool isVerbose) :
+	RunnableGPU(grid, "ReductionIntI-" + to_string(grid.threadCounts()), isVerbose), // classe parente
+	ptrSum(ptrSum), dg(grid.dg), db(grid.db)
     {
     // TODO ReductionIntI
-    this->sizeSM = -1;
+    this->sizeSM = sizeof(int) * grid.threadByBlock();
+
+    GM::mallocInt0(&ptrSumGM);
+
     }
 
 ReductionIntI::~ReductionIntI()
     {
     // TODO ReductionIntI
+    GM::free(ptrSumGM);
+
     }
 
 /*--------------------------------------*\
@@ -47,7 +52,10 @@ ReductionIntI::~ReductionIntI()
 
 void ReductionIntI::run()
     {
-    // TODO ReductionIntI
+    KIntProtocoleI<<<dg, db, sizeSM>>>(ptrSumGM);
+    // Tip:  Il y a une methode dedier ramener coter host un int
+    //
+    GM::memcpyDToH_int(ptrSum, ptrSumGM);
     }
 
 /*----------------------------------------------------------------------*\

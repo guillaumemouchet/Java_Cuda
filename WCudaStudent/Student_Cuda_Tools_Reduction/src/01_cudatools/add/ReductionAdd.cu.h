@@ -54,9 +54,9 @@ class ReductionAdd
 	    //		Chaque thread possede son armoire en SM
 	    //		1 thread <---> 1 armoire
 
-	    // TODO ReductionAdd
-	    // reductionIntraBlock
-	    // reductionInterblock
+
+	    reductionIntraBlock(tabSM);
+	    reductionInterBlock(tabSM, ptrResultGM);
 
 	    // __syncthreads();// pour touts les threads d'un meme block, necessaires? ou?
 	    }
@@ -65,7 +65,7 @@ class ReductionAdd
 
 	/*--------------------------------------*\
 	|*	reductionIntraBlock		*|
-	 \*-------------------------------------*/
+	\*--------------------------------------*/
 
 	/**
 	 * used dans une boucle in reductionIntraBlock
@@ -78,9 +78,14 @@ class ReductionAdd
 	    // 	(I2) Tous les threads doivent-ils faire quelquechose?
 	    //  (I3) Travailler sous l hypothese d'une grid2d,avec Thread2D
 
-	    // TODO ReductionAdd
+	    const int TID_LOCAL = Thread2D::tidLocalBlock();
 
-	    // __syncthreads();// pour touts les threads d'un meme block, necessaires? ou?
+	    if(TID_LOCAL < middle)
+		{
+		tabSM[TID_LOCAL] = tabSM[TID_LOCAL] + tabSM[TID_LOCAL + middle];
+		}
+
+	    //__syncthreads();// pour touts les threads d'un meme block, necessaires? ou?
 
 	    }
 
@@ -92,9 +97,13 @@ class ReductionAdd
 	    {
 	    // Ecrasement sucessifs dans une boucle (utiliser la methode ecrasement ci-dessus)
 
-	    // TODO ReductionAdd
-
-	    // __syncthreads();// pour touts les threads d'un meme block, necessaires? ou?
+	    int m = Thread2D::nbThreadBlock() >> 1;
+	    while(m > 0)
+		{
+		ecrasement(tabSM, m);
+		m=m>>1;
+		__syncthreads();
+		}
 	    }
 
 	/*--------------------------------------*\
@@ -107,10 +116,14 @@ class ReductionAdd
 	    // Indication:
 	    //		(I1) Utiliser atomicAdd(pointeurDestination, valeurSource);
 	    //		(i2) Travailler sous l hypothese d'une grid2d,avec Thread2D
+	    const int TID_LOCAL = Thread2D::tidLocalBlock();
 
-	    // TODO ReductionAdd
+	    if(TID_LOCAL == 0)
+		{
+		atomicAdd(ptrResultGM, tabSM[0]);
+		}
 
-	    // __syncthreads();// pour touts les threads d'un meme block, necessaires? ou?
+	    //__syncthreads();// pour touts les threads d'un meme block, necessaires? ou?
 	    }
 
     };
