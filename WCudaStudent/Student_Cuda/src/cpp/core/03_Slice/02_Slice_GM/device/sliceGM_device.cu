@@ -62,5 +62,5 @@ __global__ void ecrasementGM(float* tabGM , int middle)
 
 __device__ float f(float x)
     {
-    return 4.0f / (1 + x * x);
+    return 4.0f / (1.0f + x * x);
     }

@@ -1,4 +1,4 @@
-11:12:49 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+10:40:25 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -338,7 +338,19 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 [CBI] -> Compilation parallel (36 threads)
 
-[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_Slice_GM_Host/device/sliceGMHOST_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainTest.cpp
+src/cpp/main/mainTest.cpp: In function ‘int mainTest()’:
+src/cpp/main/mainTest.cpp:51:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/cpp/main/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
 
@@ -443,7 +455,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 4 (s)
+[CBI] -> Time		  : 2 (s)
 ==================================================================================
 
 
@@ -455,5 +467,5 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Student_Cuda_arc27_cuda_110_x86_64 : End ALL!
 
 
-11:12:56 Build Finished. 0 errors, 0 warnings. (took 7s.169ms)
+10:40:31 Build Finished. 0 errors, 1 warnings. (took 5s.113ms)
 

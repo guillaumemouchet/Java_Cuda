@@ -124,14 +124,17 @@ RunnableGPU_I* SliceSmUse::getRunnableGPU()
 Grid SliceSmUse::createGrid()
     {
     const int MP = Hardware::getMPCount();
+    const bool IS_CHECK_HEURISTIC = false;
 
     // Contraintes :
     //	(C1) max(db.x*db.y*db.z)<=1024
     //	(C2) db power 2 (reduction)
 
-    Grid grid; // TODO SliceSM
-    assert(false); // to remove once coded
+    const int CORE_MP = Hardware::getCoreCountMP();
 
+        dim3 dg(256, 1, 1);
+        dim3 db(CORE_MP*4, 1, 1);
+        Grid grid(dg,db,IS_CHECK_HEURISTIC);
     return grid;
     }
 

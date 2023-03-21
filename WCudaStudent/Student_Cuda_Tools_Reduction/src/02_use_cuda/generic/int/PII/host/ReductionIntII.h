@@ -39,6 +39,8 @@ class ReductionIntII: public RunnableGPU
 
 	// Inputs/Outputs
 	int* ptrSum;
+	dim3 dg;
+	dim3 db;
 
 	// Tools
 	int* ptrSumGM;

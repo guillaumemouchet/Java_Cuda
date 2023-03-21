@@ -39,7 +39,8 @@ class ReductionLongII: public RunnableGPU
 
 	// Inputs/Outputs
 	long* ptrSum;
-
+	dim3 dg;
+		dim3 db;
 	// Tools
 	long* ptrSumGM;
 	size_t sizeSM;

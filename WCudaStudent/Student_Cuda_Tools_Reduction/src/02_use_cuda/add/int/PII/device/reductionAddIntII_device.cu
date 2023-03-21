@@ -26,6 +26,7 @@ __global__ void KAddIntProtocoleII(int* ptrSumGM)
 
     // ReductionIntraThread
     reductionIntraThread (tabSM);
+    __syncthreads();
 
     // ReductionAdd
     ReductionAdd::reduce(tabSM, ptrSumGM);

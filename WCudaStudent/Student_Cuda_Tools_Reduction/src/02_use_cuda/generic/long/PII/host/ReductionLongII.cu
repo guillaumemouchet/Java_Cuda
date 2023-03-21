@@ -30,15 +30,18 @@ extern __global__ void KLongProtocoleII(long* ptrSumGM);
 
 ReductionLongII::ReductionLongII(const Grid& grid , long* ptrSum,bool isVerbose) :
 	RunnableGPU(grid, "ReductionLongII-" + to_string(grid.threadCounts()),isVerbose), // classe parente
-	ptrSum(ptrSum)
+	ptrSum(ptrSum),
+	dg(grid.dg),
+	db(grid.db)
     {
     // TODO ReductionLongII
-    this->sizeSM = -1;
+    this->sizeSM = sizeof(long) * grid.threadByBlock();
+    GM::mallocLong0(&ptrSumGM);
     }
 
 ReductionLongII::~ReductionLongII()
     {
-    // TODO ReductionLongII
+    GM::free(ptrSumGM);
     }
 
 /*--------------------------------------*\
@@ -47,7 +50,9 @@ ReductionLongII::~ReductionLongII()
 
 void ReductionLongII::run()
     {
-    // TODO ReductionLongII
+    // TODO R
+    KLongProtocoleII<<<dg, db, sizeSM>>>(ptrSumGM);
+    GM::memcpyDToH_long(ptrSum, ptrSumGM);
     }
 
 /*----------------------------------------------------------------------*\

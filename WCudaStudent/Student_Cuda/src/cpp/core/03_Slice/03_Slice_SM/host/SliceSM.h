@@ -47,7 +47,8 @@ class SliceSM: public RunnableGPU
 
 	// Inputs
 	int nbSlice;
-
+	dim3 dg;
+		dim3 db;
 	// Inputs/Outputs
 	double* ptrPiHat;
 

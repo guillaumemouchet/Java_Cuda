@@ -1,11 +1,10 @@
-#include "Thread1D_long.cu.h"
+#include "Thread2D_long.cu.h"
 #include "cudas.h"
 
 #include "Reduction.cu.h"
 #include "Lock.cu.h"
 
 #include <stdio.h>
-
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
  \*---------------------------------------------------------------------*/
@@ -30,6 +29,15 @@ static __device__ void addAtomic(long* ptrX , long y);
 __global__ void KLongProtocoleII(long* ptrSumGM)
     {
     // TODO ReductionLongII
+    extern __shared__ long tabSM[];//Reception du tabSM
+
+    //Reduction intra thread
+
+    reductionIntraThread (tabSM);
+    __syncthreads();
+
+    //Reduction
+    Reduction::reduce(add, addAtomic, tabSM, ptrSumGM);
     }
 
 /*--------------------------------------*\
@@ -70,13 +78,14 @@ __device__ void reductionIntraThread(long* tabSM)
     // Attention
     //
     //		Tout ceci est vrai seulement ici, dans le cadre du protocoleII
-
+    const long TID_LOCAL = Thread2D_long::tidLocalBlock();
+    const long TID = Thread2D_long::tid();
+    tabSM[TID_LOCAL] = TID;
     // TODO ReductionLongII
 
     // pour TID       utiliser const long TID=Thread2D_long::tid();		// (nouvelle methode)
     // pour TID_LOCAL utiliser const int TID_LOCAL=Thread2D::tidLocal();	// (methode habituelle)
     }
-
 
 /*----------------------------*\
 |*	Operateur reduction    *|
@@ -84,7 +93,7 @@ __device__ void reductionIntraThread(long* tabSM)
 
 __device__ long add(long x , long y)
     {
-    // TODO ReductionLongII
+    return x + y;
     }
 
 /**
@@ -102,7 +111,7 @@ __device__ void addAtomic(long* ptrX , long y)
     Lock locker(&mutex);
     locker.lock();
 
-    // TODO ReductionLongII
+    *ptrX = *ptrX + y;
 
     locker.unlock();
     }

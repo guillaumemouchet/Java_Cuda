@@ -46,9 +46,9 @@ int mainTest()
 
     // Slice//
 	{
-	testSuite.add(std::auto_ptr < Suite > (new TestSliceGMHOST()));
+	//testSuite.add(std::auto_ptr < Suite > (new TestSliceGMHOST()));
 	//testSuite.add(std::auto_ptr < Suite > (new TestSliceGM()));
-	//testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
+	testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
 	}
 
 // Montecarlo

@@ -32,10 +32,12 @@ SliceSM::SliceSM(const Grid& grid , int nbSlice , double* ptrPiHat , bool isVerb
 	RunnableGPU(grid, "SliceSM-" + to_string(nbSlice), isVerbose), // classe parente
 	//
 	ptrPiHat(ptrPiHat), //
-	nbSlice(nbSlice) //
+	nbSlice(nbSlice),
+	dg(grid.dg),
+	db(grid.db)//
     {
     this->ptrPiHatGM = NULL;
-    this->sizeSM = -1; //TODO SliceSM
+    this->sizeSM = sizeof(float) * grid.threadByBlock(); //TODO SliceSM
 
     // MM
 	{
@@ -43,13 +45,13 @@ SliceSM::SliceSM(const Grid& grid , int nbSlice , double* ptrPiHat , bool isVerb
 
 	// Tip:		Il y a une methode dedier pour malloquer un float cote device et l'initialiser a zero
 	//
-	//		   GM::mallocfloat0(&ptrGM);
+	GM::mallocFloat0(&ptrPiHatGM);
 	}
     }
 
 SliceSM::~SliceSM(void)
     {
-    // TODO SliceSM
+    GM::free(ptrPiHatGM);
     }
 
 /*--------------------------------------*\
@@ -61,7 +63,10 @@ void SliceSM::run()
     // Etape 1 : lancer le kernel
     // Etape 2 : recuperer le resultat coter host (par exemple avec memcpyDToH_float)
     // Etape 3 : finaliser le calcul de PI
-
+    sliceSM<<<dg,db,sizeSM>>>(nbSlice,ptrPiHatGM);
+    float result;
+    GM::memcpyDToH_float(&result, ptrPiHatGM);
+    *ptrPiHat =  result / nbSlice;
     // TODO SliceSM
     }
 
