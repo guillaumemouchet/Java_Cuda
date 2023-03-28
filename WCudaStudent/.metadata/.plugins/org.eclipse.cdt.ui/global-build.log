@@ -1,4 +1,4 @@
-10:36:28 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Tools_Reduction ****
+11:42:49 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -86,9 +86,9 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 
 ==================================================================================
-[CBI] -> Target Name  : Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64
+[CBI] -> Target Name  : Student_Cuda_arc27_cuda_110_x86_64
 [CBI] ->
-[CBI] -> Build        : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
+[CBI] -> Build        : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
 [CBI] -> Deploy       : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	      : EXE
@@ -101,6 +101,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 [CBI] -> SRC AUX (Recursif) :
 [CBI] ->
+[CBI] ->              : ../Student_Cuda_Tools_Reduction/src/01_cudatools
 [CBI] ->              : /opt/api/ext/cpptest/200/LIB_STATIC/gcc
 
 [CBI] -> CXXFLAGS (Partial) :
@@ -127,29 +128,46 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : -arch=sm_75
 
 [CBI] -> INC_PATH (auto detect):
-[CBI] ->              : src/01_cudatools/add/
-[CBI] ->              : src/01_cudatools/generic/
-[CBI] ->              : src/02_use_cuda/add/int/PI/host/
-[CBI] ->              : src/02_use_cuda/add/int/PII/host/
-[CBI] ->              : src/02_use_cuda/generic/int/PI/host/
-[CBI] ->              : src/02_use_cuda/generic/int/PII/host/
-[CBI] ->              : src/02_use_cuda/generic/long/PII/host/
-[CBI] ->              : src/03_private/a_use_wrapper/add/int/PI/use/
-[CBI] ->              : src/03_private/a_use_wrapper/add/int/PII/use/
-[CBI] ->              : src/03_private/a_use_wrapper/generic/int/PI/use/
-[CBI] ->              : src/03_private/a_use_wrapper/generic/int/PII/use/
-[CBI] ->              : src/03_private/a_use_wrapper/generic/long/PII/use/
-[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/int/
-[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/int/I/
-[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/int/II/
-[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/long/
-[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/long/II/
-[CBI] ->              : src/03_private/a_use_wrapper/tools/use/
-[CBI] ->              : src/03_private/b_test/add/int/PI/
-[CBI] ->              : src/03_private/b_test/add/int/PII/
-[CBI] ->              : src/03_private/b_test/generic/int/PI/
-[CBI] ->              : src/03_private/b_test/generic/int/PII/
-[CBI] ->              : src/03_private/b_test/generic/long/PII/
+[CBI] ->              : ../Student_Cuda_Tools_Reduction/src/01_cudatools/add/
+[CBI] ->              : ../Student_Cuda_Tools_Reduction/src/01_cudatools/generic/
+[CBI] ->              : src/cpp/core/01_hello_objet/host/
+[CBI] ->              : src/cpp/core/02_addArray/00_tools/
+[CBI] ->              : src/cpp/core/02_addArray/01_entrelacement/host/
+[CBI] ->              : src/cpp/core/02_addArray/01_entrelacement/use/
+[CBI] ->              : src/cpp/core/02_addArray/02_un_un/host/
+[CBI] ->              : src/cpp/core/02_addArray/02_un_un/use/
+[CBI] ->              : src/cpp/core/03_Slice/
+[CBI] ->              : src/cpp/core/03_Slice/01_Slice_GM_Host/host/
+[CBI] ->              : src/cpp/core/03_Slice/01_Slice_GM_Host/use/
+[CBI] ->              : src/cpp/core/03_Slice/02_Slice_GM/host/
+[CBI] ->              : src/cpp/core/03_Slice/02_Slice_GM/use/
+[CBI] ->              : src/cpp/core/03_Slice/03_Slice_SM/host/
+[CBI] ->              : src/cpp/core/03_Slice/03_Slice_SM/use/
+[CBI] ->              : src/cpp/core/04_Montecarlo/
+[CBI] ->              : src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/
+[CBI] ->              : src/cpp/core/04_Montecarlo/01_Montecarlo_mono/use/
+[CBI] ->              : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/host/01_thread_version/
+[CBI] ->              : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/host/02_stream_version/
+[CBI] ->              : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/use/01_thread_version/
+[CBI] ->              : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/use/02_stream_version/
+[CBI] ->              : src/cpp/core/05_addvector_stream/00_tools/
+[CBI] ->              : src/cpp/core/05_addvector_stream/02_baseline/host/
+[CBI] ->              : src/cpp/core/05_addvector_stream/02_baseline/use/
+[CBI] ->              : src/cpp/core/05_addvector_stream/03_bistream/host/
+[CBI] ->              : src/cpp/core/05_addvector_stream/03_bistream/use/
+[CBI] ->              : src/cpp/core/05_addvector_stream/03_tristream/host/
+[CBI] ->              : src/cpp/core/05_addvector_stream/03_tristream/use/
+[CBI] ->              : src/cpp/test/unit/03_Test_Slice/gm/
+[CBI] ->              : src/cpp/test/unit/03_Test_Slice/gmhost/
+[CBI] ->              : src/cpp/test/unit/03_Test_Slice/sm/
+[CBI] ->              : src/cpp/test/unit/04_Test_Montecarlo/
+[CBI] ->              : src/cpp/test/unit/04_Test_Montecarlo/mono/
+[CBI] ->              : src/cpp/test/unit/04_Test_Montecarlo/multi/01_thread/
+[CBI] ->              : src/cpp/test/unit/04_Test_Montecarlo/multi/02_stream/
+[CBI] ->              : src/cpp/test/unit/05_Test_Vector_Stream/base/
+[CBI] ->              : src/cpp/test/unit/05_Test_Vector_Stream/bistream/
+[CBI] ->              : src/cpp/test/unit/05_Test_Vector_Stream/tristream/justesse/
+[CBI] ->              : src/cpp/test/unit/05_Test_Vector_Stream/tristream/performance/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -320,12 +338,119 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 [CBI] -> Compilation parallel (36 threads)
 
-make[1]: Nothing to be done for 'compilelink'.
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBenchmark.cpp
 
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
+[CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_305_014_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_305_014_cuda_110_x86_64
+[CBI] ->              : -lBilatTools_OMP_305_014_gcc_x86_64
+[CBI] ->              : -lCpp_Test_200_gcc_x86_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -laccinj64
+[CBI] ->              : -lboost_atomic-gcc750
+[CBI] ->              : -lboost_chrono-gcc750
+[CBI] ->              : -lboost_container-gcc750
+[CBI] ->              : -lboost_context-gcc750
+[CBI] ->              : -lboost_contract-gcc750
+[CBI] ->              : -lboost_coroutine-gcc750
+[CBI] ->              : -lboost_date_time-gcc750
+[CBI] ->              : -lboost_fiber-gcc750
+[CBI] ->              : -lboost_filesystem-gcc750
+[CBI] ->              : -lboost_graph-gcc750
+[CBI] ->              : -lboost_iostreams-gcc750
+[CBI] ->              : -lboost_json-gcc750
+[CBI] ->              : -lboost_locale-gcc750
+[CBI] ->              : -lboost_log-gcc750
+[CBI] ->              : -lboost_log_setup-gcc750
+[CBI] ->              : -lboost_math_c99-gcc750
+[CBI] ->              : -lboost_math_c99f-gcc750
+[CBI] ->              : -lboost_math_c99l-gcc750
+[CBI] ->              : -lboost_math_tr1-gcc750
+[CBI] ->              : -lboost_math_tr1f-gcc750
+[CBI] ->              : -lboost_math_tr1l-gcc750
+[CBI] ->              : -lboost_nowide-gcc750
+[CBI] ->              : -lboost_numpy27-gcc750
+[CBI] ->              : -lboost_prg_exec_monitor-gcc750
+[CBI] ->              : -lboost_program_options-gcc750
+[CBI] ->              : -lboost_python27-gcc750
+[CBI] ->              : -lboost_random-gcc750
+[CBI] ->              : -lboost_regex-gcc750
+[CBI] ->              : -lboost_serialization-gcc750
+[CBI] ->              : -lboost_stacktrace_addr2line-gcc750
+[CBI] ->              : -lboost_stacktrace_backtrace-gcc750
+[CBI] ->              : -lboost_stacktrace_basic-gcc750
+[CBI] ->              : -lboost_stacktrace_noop-gcc750
+[CBI] ->              : -lboost_system-gcc750
+[CBI] ->              : -lboost_thread-gcc750
+[CBI] ->              : -lboost_timer-gcc750
+[CBI] ->              : -lboost_type_erasure-gcc750
+[CBI] ->              : -lboost_unit_test_framework-gcc750
+[CBI] ->              : -lboost_wave-gcc750
+[CBI] ->              : -lboost_wserialization-gcc750
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcublasLt
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcudnn
+[CBI] ->              : -lcudnn_adv_infer
+[CBI] ->              : -lcudnn_adv_train
+[CBI] ->              : -lcudnn_cnn_infer
+[CBI] ->              : -lcudnn_cnn_train
+[CBI] ->              : -lcudnn_ops_infer
+[CBI] ->              : -lcudnn_ops_train
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusolverMg
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvcaffe_parser
+[CBI] ->              : -lnvinfer
+[CBI] ->              : -lnvinfer_plugin
+[CBI] ->              : -lnvjpeg
+[CBI] ->              : -lnvonnxparser
+[CBI] ->              : -lnvparsers
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+
+
+==================================================================================
+[CBI] -> Target Name  : Student_Cuda_arc27_cuda_110_x86_64
+[CBI] -> Location     : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : arc27
+[CBI] ->
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 2 (s)
+==================================================================================
+
+
+[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_arc27_cuda_110_x86_64.run
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
-[CBI] -> Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64 : End ALL!
+[CBI] -> Student_Cuda_arc27_cuda_110_x86_64 : End ALL!
 

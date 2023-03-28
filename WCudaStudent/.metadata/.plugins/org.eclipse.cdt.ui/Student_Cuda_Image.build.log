@@ -1,4 +1,4 @@
-10:07:50 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+11:37:38 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -459,60 +459,10 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : opencv_video_gcc750
 [CBI] ->              : opencv_videoio_gcc750
 
-[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin
-[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/obj
-[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/cubin
 
 [CBI] -> Compilation parallel (36 threads)
 
 [Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/02_Test_Mandelbrot/TestMandelbrot.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/cm/TestRaytracingCM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/cm2sm/TestRaytracingCM2SM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/sm/TestRaytracingSM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/gm/TestRaytracingGM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/01_Test_Rippling/TestRippling.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Rippling/b_provider/RipplingProvider.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Mandelbrot/b_provider/MandelbrotProvider.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderCM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderSM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingCreator.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBenchmark.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderGM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderCM2SM.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBruteforce.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainTest.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainImage.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/a_animable/device/ripplingDevice.cu
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/a_animable/host/Rippling.cu
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot/a_animable/device/mandelbrotDevice.cu
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot/a_animable/host/Mandelbrot.cu
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/device/raytracingDevice.cu
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/host/Raytracing.cu
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/host/tools/SphereCreator.cu
-src/cpp/core/03_RayTracing/a_animable/device/raytracingCM.cu.h(39): warning: integer conversion resulted in a change of sign
-
-src/cpp/main/mainTest.cpp: In function ‘int mainTest()’:
-src/cpp/main/mainTest.cpp:39:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
-  testSuite.add(std::auto_ptr < Suite > (new TestRippling()));
-                     ^~~~~~~~
-In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
-                 from /usr/include/c++/7/locale:43,
-                 from /usr/include/c++/7/iomanip:43,
-                 from src/cpp/main/mainTest.cpp:4:
-/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
-   template<typename> class auto_ptr;
-                            ^~~~~~~~
-src/cpp/core/03_RayTracing/a_animable/device/raytracingDevice.cu(79): warning: function "work" was declared but never referenced
-
-src/cpp/core/02_Mandelbrot/a_animable/device/math/MandelbrotMath.cu.h(116): warning: missing return statement at end of non-void function "MandelbrotMath::suite"
-
-src/cpp/core/02_Mandelbrot/a_animable/device/mandelbrotDevice.cu(25): warning: variable "x" was declared but never referenced
-
-src/cpp/core/02_Mandelbrot/a_animable/device/mandelbrotDevice.cu(26): warning: variable "y" was declared but never referenced
-
-src/cpp/core/03_RayTracing/a_animable/device/raytracingCM.cu.h(39): warning: integer conversion resulted in a change of sign
-
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
 
@@ -647,7 +597,7 @@ src/cpp/core/03_RayTracing/a_animable/device/raytracingCM.cu.h(39): warning: int
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 5 (s)
+[CBI] -> Time		  : 2 (s)
 ==================================================================================
 
 
@@ -659,5 +609,5 @@ src/cpp/core/03_RayTracing/a_animable/device/raytracingCM.cu.h(39): warning: int
 [CBI] -> Student_Cuda_Image_arc27_cuda_110_x86_64 : End ALL!
 
 
-10:07:58 Build Finished. 0 errors, 7 warnings. (took 7s.574ms)
+11:37:42 Build Finished. 0 errors, 0 warnings. (took 3s.916ms)
 

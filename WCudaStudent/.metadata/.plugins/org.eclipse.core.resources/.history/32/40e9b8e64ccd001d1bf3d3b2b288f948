@@ -59,8 +59,8 @@ int mainBenchmark()
     // Slice
 	{
 	//sliceGMHOST();
-	//sliceGM();
-	sliceSM();
+	sliceGM();
+	//sliceSM();
 	}
 
     // Montecarlo
