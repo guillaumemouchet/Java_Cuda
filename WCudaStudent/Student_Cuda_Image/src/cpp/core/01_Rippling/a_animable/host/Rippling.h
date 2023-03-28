@@ -47,6 +47,7 @@ class Rippling: public Animable_I<uchar4>
 
     private:
 
+
 	// Inputs
 	float dt;
 

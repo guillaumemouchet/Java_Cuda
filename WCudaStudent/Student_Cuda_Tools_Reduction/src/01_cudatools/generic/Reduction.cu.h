@@ -55,7 +55,7 @@ class Reduction
 	    {
 	    // Meme principe que ReductionAdd
 
-	    // TODO ReductionGeneric
+	    // DONE ReductionGeneric
 	    // Meme principe que ReductionAdd
 	    reductionIntraBlock(OP,tabSM);
 	    reductionInterBlock(ATOMIC_OP,tabSM, ptrResultGM);

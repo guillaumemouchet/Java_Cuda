@@ -32,7 +32,7 @@ extern __global__ void rippling(uchar4* tabPixelsGM,uint w, uint h,float t);
  \*-------------------------*/
 
 Rippling::Rippling(const Grid& grid, uint w, uint h, float dt,bool isVerbose) :
-	Animable_I<uchar4>(grid, w, h, "Rippling-Cuda-uchar4",isVerbose)// super classe
+	Animable_I<uchar4>(grid, w, h, "Rippling-Cuda-uchar4",isVerbose)// super classe)
     {
     assert(w == h); // specific rippling
 
@@ -58,11 +58,10 @@ Rippling::~Rippling()
  */
 void Rippling::process(uchar4* tabPixelsGM, uint w, uint h, const DomaineMath& domaineMath)
     {
-    // TODO Rippling GPU
+    // DONE Rippling GPU
     // lancer le kernel avec <<<dg,db>>>
     // le kernel est importer ci-dessus (ligne 19)
-
-    assert(false);// to delete once implement
+    rippling<<<dg,db>>>(tabPixelsGM, w, h, t);
     }
 
 /**

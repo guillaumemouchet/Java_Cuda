@@ -28,14 +28,14 @@ __global__ void KAddIntProtocoleI(int* ptrSumGM)
 
     // ReductionIntraThread
     reductionIntraThread (tabSM);
-
+    __syncthreads(); // Attention, selon la taille de la grille le code peut quand meme fonctionner
     // ReductionAdd
     ReductionAdd::reduce(tabSM, ptrSumGM);
 //    __syncthreads(); // des threads de meme block!// Question : utile? ou?
     }
 
 /*--------------------------------------*\
- |*        Private            *|
+ |*        	  Private               *|
  \*-------------------------------------*/
 
 /**
