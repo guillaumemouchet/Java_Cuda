@@ -2,16 +2,16 @@
 #	Qui
 ###########################################
 
-nom1                 =
-prenom1              =
-accompte cuda        =
+nom1                 = Mouchet
+prenom1              = Guillaume
+accompte cuda        = 27
 
-nom2                 =
-prenom2              =
-accompte cuda        =
+nom2                 = Mouchet
+prenom2              = Benjamin
+accompte cuda        = 26
 
 Rendu
-Accompte cuda        = 
+Accompte cuda        = 27
 (1 seul par groupe)
 
 ###########################################

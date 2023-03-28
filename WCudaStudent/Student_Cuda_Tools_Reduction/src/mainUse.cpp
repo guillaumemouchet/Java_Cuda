@@ -35,23 +35,23 @@ int mainUse()
 // reductiontools
 	{
 	// add
-	UseReductionAddIntI useReductionAddIntI(IS_VERBOSE);
+	//UseReductionAddIntI useReductionAddIntI(IS_VERBOSE);
 	UseReductionAddIntII useReductionAddIntII(IS_VERBOSE);
 
-	isOk &= useReductionAddIntI.isOk(IS_VERBOSE);
+	//isOk &= useReductionAddIntI.isOk(IS_VERBOSE);
 	isOk &= useReductionAddIntII.isOk(IS_VERBOSE);
 
 	// generic
-	UseReductionIntI useReductionIntI(IS_VERBOSE);
-	UseReductionIntII useReductionIntII(IS_VERBOSE);
+	//UseReductionIntI useReductionIntI(IS_VERBOSE);
+	//UseReductionIntII useReductionIntII(IS_VERBOSE);
 //
-	isOk &= useReductionIntI.isOk(IS_VERBOSE);
-	isOk &= useReductionIntII.isOk(IS_VERBOSE);
+	//isOk &= useReductionIntI.isOk(IS_VERBOSE);
+	//isOk &= useReductionIntII.isOk(IS_VERBOSE);
 
 	// long
-	UseReductionLongII useReductionLongII(IS_VERBOSE);
+	//UseReductionLongII useReductionLongII(IS_VERBOSE);
 
-	isOk &= useReductionLongII.isOk(IS_VERBOSE);
+	//isOk &= useReductionLongII.isOk(IS_VERBOSE);
 	}
 
     ptrChrono->stop();

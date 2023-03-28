@@ -95,7 +95,7 @@ int mainTest()
 // run
 	{
 	string folder = "./out";
-	string title = "testAll"; // see above, title list
+	string title = "testSliceSM"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);

@@ -1,4 +1,4 @@
-10:40:25 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+13:33:38 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -335,11 +335,75 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/obj
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/cubin
 
 [CBI] -> Compilation parallel (36 threads)
 
 [Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Slice/gmhost/TestSliceGMHOST.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Slice/sm/TestSliceSM.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Slice/gm/FilterGridSliceGM.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Slice/gm/TestSliceGM.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/05_Test_Vector_Stream/bistream/TestVectorBistream.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/05_Test_Vector_Stream/tristream/performance/TestVectorTristreamPerformance.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/05_Test_Vector_Stream/tristream/justesse/TestVectorTristream.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/05_Test_Vector_Stream/base/TestVector.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/04_Test_Montecarlo/FilterGridMontecarlo.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/04_Test_Montecarlo/mono/TestMontecarlo.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/04_Test_Montecarlo/multi/02_stream/TestMontecarloMulti_stream.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/04_Test_Montecarlo/multi/01_thread/TestMontecarloMulti_thread.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/MontecarloUseTools.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/use/02_stream_version/MontecarloMultiUse_stream.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/use/02_stream_version/MontecarloMultiProvider_stream.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/use/01_thread_version/MontecarloMultiUse_thread.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/use/01_thread_version/MontecarloMultiProvider_thread.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/host/02_stream_version/MontecarloMulti_stream.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/01_Montecarlo_mono/use/MontecarloUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/02_Montecarlo_multi/host/01_thread_version/MontecarloMulti_thread.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/02_addArray/02_un_un/use/AddArrayUse11.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/03_Slice_SM/use/SliceProviderSM.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/03_Slice_SM/use/SliceSmUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/SliceNumber.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/02_addArray/00_tools/ArrayTools.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/01_Montecarlo_mono/use/MontecarloProvider.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/01_Slice_GM_Host/use/SliceGmHostUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/02_addArray/01_entrelacement/use/AddArrayUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/01_Slice_GM_Host/use/SliceProviderGMHOST.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/02_Slice_GM/use/SliceProviderGM.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/05_addvector_stream/03_bistream/use/AddVectorBistreamUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/05_addvector_stream/03_bistream/use/AddVectorBistreamProvider.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/02_Slice_GM/use/SliceGmUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/05_addvector_stream/03_tristream/use/AddVectorTristreamUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/05_addvector_stream/00_tools/VectorTools.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/05_addvector_stream/03_tristream/use/AddVectorTristreamProvider.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/05_addvector_stream/02_baseline/use/AddVectorProvider.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/05_addvector_stream/02_baseline/use/AddVectorUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/01_hello_objet/useAddScalar.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainUse.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBruteforce.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBenchmark.cpp
 [Student_Cuda_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainTest.cpp
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_addArray/02_un_un/device/addArray11_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_addArray/02_un_un/host/AddArray11.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_addArray/01_entrelacement/device/addArray_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/03_Slice_SM/device/sliceSM_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_addArray/01_entrelacement/host/AddArray.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_Slice_GM_Host/device/sliceGMHOST_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/03_Slice_SM/host/SliceSM.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/02_Slice_GM/device/sliceGM_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/00_hello_procedurale/hello.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/01_Slice_GM_Host/host/SliceGMHOST.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/02_Slice_GM/host/SliceGM.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/05_addvector_stream/03_bistream/host/AddVectorBistream.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/05_addvector_stream/01_device/addVector_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/05_addvector_stream/02_baseline/host/AddVector.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/01_hello_objet/device/addScalar_device.cu
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/01_hello_objet/host/AddScalar.cu
 src/cpp/main/mainTest.cpp: In function ‘int mainTest()’:
 src/cpp/main/mainTest.cpp:51:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
   testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
@@ -351,6 +415,70 @@ In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
 /usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
    template<typename> class auto_ptr;
                             ^~~~~~~~
+src/cpp/core/05_addvector_stream/01_device/addVector_device.cu(84): warning: variable "sGlobal" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_bistream/host/AddVectorBistream.cu(87): warning: variable "MIDLE" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_bistream/host/AddVectorBistream.cu(88): warning: variable "MIDLE_SIZE" was declared but never referenced
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(99): warning: variable "nbDarUnderCurveThread" was declared but never referenced
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(101): warning: variable "xAlea01" was set but never used
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(102): warning: variable "yAlea0h" was set but never used
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(104): warning: variable "nbDar" was declared but never referenced
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(139): warning: missing return statement at end of non-void function "add"
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu(58): warning: integer conversion resulted in a change of sign
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu(62): warning: integer conversion resulted in a change of sign
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu(67): warning: integer conversion resulted in a change of sign
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu(67): warning: variable "sizeTabDevGeneratorGM" was declared but never referenced
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(91): warning: function "reductionIntraThread" was declared but never referenced
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(127): warning: function "f" was declared but never referenced
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(136): warning: function "add" was declared but never referenced
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/device/montecarlo_device.cu(146): warning: function "addAtomic" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(49): warning: integer conversion resulted in a change of sign
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(245): warning: variable "INDEX_BEFORE_LAST" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(296): warning: variable "INDEX_BEFORE_LAST" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(280): warning: variable "streamA" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(281): warning: variable "streamB" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(282): warning: variable "streamC" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(284): warning: variable "streamA_old" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(285): warning: variable "streamB_old" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(286): warning: variable "streamC_old" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(339): warning: variable "OFFSET_SLICE" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(354): warning: variable "OFFSET_SLICE" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(367): warning: variable "OFFSET_SLICE" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(49): warning: integer conversion resulted in a change of sign
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu(58): warning: integer conversion resulted in a change of sign
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu(62): warning: integer conversion resulted in a change of sign
+
+src/cpp/core/04_Montecarlo/01_Montecarlo_mono/host/Montecarlo.cu(67): warning: integer conversion resulted in a change of sign
+
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
 
@@ -455,7 +583,7 @@ In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 2 (s)
+[CBI] -> Time		  : 7 (s)
 ==================================================================================
 
 
