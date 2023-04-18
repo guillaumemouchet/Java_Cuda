@@ -234,13 +234,13 @@
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*.cmd"/>
-				<item value="*.mk"/>
-				<item value="*.h"/>
-				<item value=".*sh"/>
-				<item value="*.cu"/>
 				<item value="*.cpp"/>
+				<item value="*.cu"/>
+				<item value="*.h"/>
+				<item value="*.mk"/>
 				<item value="*.txt"/>
 				<item value=".*cu"/>
+				<item value=".*sh"/>
 			</list>
 			<list key="workingSets">
 			</list>
@@ -309,10 +309,7 @@
 		<item key="DIALOG_WIDTH" value="645"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
 		<item key="DIALOG_HEIGHT" value="499"/>
-		<item key="DIALOG_Y_ORIGIN" value="481"/>
+		<item key="DIALOG_Y_ORIGIN" value="210"/>
 		<item key="DIALOG_X_ORIGIN" value="760"/>
-	</section>
-	<section name="">
-		<item key="org.eclipse.search.resultpage.limit" value="1000"/>
 	</section>
 </section>

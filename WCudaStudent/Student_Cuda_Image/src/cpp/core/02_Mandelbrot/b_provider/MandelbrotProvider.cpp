@@ -23,22 +23,28 @@ Grid MandelbrotProvider::grid()
 
     // fp64 (float 64 bits)
 #ifdef MANDELBROT_DOUBLE
-    assert(false); // to be removed once implemented
-    Grid grid; //TODO Mandelbrot
+    dim3 dg(MP, 4, 1);
+    dim3 db(CORE_MP, 4, 1);
+
+    Grid grid(dg, db);
     return grid;
 #endif
 
     // fp32 (float 32 bits)
 #ifdef MANDELBROT_FLOAT
-    assert(false); // to be removed once implemented
-    Grid grid; //TODO Mandelbrot
+    dim3 dg(MP, 4, 1);
+    dim3 db(CORE_MP, 4, 1);
+
+    Grid grid(dg, db);
     return grid;
 #endif
 
     // fp16 (float 16 bits)
 #ifdef MANDELBROT_HALF
-    assert(false); // to be removed once implemented
-    Grid grid; //TODO Mandelbrot
+    dim3 dg(MP, 4, 1);
+    dim3 db(CORE_MP, 4, 1);
+
+    Grid grid(dg, db);
     return grid;
 #endif
 
@@ -51,8 +57,8 @@ Grid MandelbrotProvider::grid()
 Animable_I<uchar4>* MandelbrotProvider::createAnimable(const Grid& grid , bool isVerbose)
     {
     // Animation;
-    int nMin = 20; // 100
-    int nMax = 120; // 100
+    int nMin = 1000; // 100
+    int nMax = 1000; // 100
 
     // Domaine init
     double x1 = -2.1;

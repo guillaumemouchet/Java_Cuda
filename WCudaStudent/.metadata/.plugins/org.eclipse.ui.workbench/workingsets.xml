@@ -23,6 +23,7 @@
 <workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1670507836174_331" label="Cuda_Video_GL" name="Cuda_Video_GL">
 <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_Video" type="4"/>
 <item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_3D_Cube_video" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tuto_Cuda_3D_Surface" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1295959088341_0" label="Window Working Set" name="Aggregate for window 1295959088341"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1330805859499_5" label="Multiple Working Sets" name="Aggregate:Hellos:Work:"/>

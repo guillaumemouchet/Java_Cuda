@@ -3,7 +3,7 @@
 	<section name="CleanDialogSettings">
 		<item key="DIALOG_WIDTH" value="575"/>
 		<item key="BUILD_ALL" value="true"/>
-		<item key="TOGGLE_SELECTED" value="true"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
 		<item key="DIALOG_HEIGHT" value="644"/>
 		<item key="BUILD_NOW" value="false"/>
 		<item key="DIALOG_Y_ORIGIN" value="28"/>
@@ -17,6 +17,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/arc27/CUDA/toStudent/code/WCudaTuto/Tuto_Cuda_3D_Surface"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCudaStudent/Corriger_Cuda_3D_Cube_video"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Corriger_Cuda_3D_Cube_video"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Student_Cuda_Video"/>
@@ -36,7 +37,6 @@
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/BilatTools_JNI"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_Surface_3D"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Surface_Cuda"/>
-			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Image_Cuda_3D"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
@@ -58,6 +58,15 @@
 	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
 		<item key="SELECTED_FILTER_GROUP" value="selected_CBI"/>
 		<list key="PREV_SELECTED_ELEMENTS">
+		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/arc27/CUDA/toStudent/code/WCudaStudent/Tuto_Cuda_3D_Surface"/>
 		</list>
 	</section>
 </section>

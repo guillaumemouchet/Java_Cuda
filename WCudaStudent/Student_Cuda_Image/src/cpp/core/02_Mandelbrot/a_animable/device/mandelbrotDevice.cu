@@ -22,8 +22,25 @@ __global__ void mandelbrot(uchar4* tabPixelsGM , uint w , uint h , DomaineMath d
     // s -> (i,j) -> (x,y)
     // appeler colorXY
 
+    const int TID = Thread2D::tid();
+    const int NB_THREAD = Thread2D::nbThread();
+    const int WH = w * h;
+
+    int s = TID;
+    int i = 0;
+    int j = 0;
+
     double x;
     double y;
+
+    while (s < WH)
+    	{
+    	Indices::toIJ(s, w, &i, &j);
+    	domaineMath.toXY(i, j, &x, &y);
+    	mandelbrotMath.colorXY(&tabPixelsGM[s], (real)x, (real)y);
+    	s += NB_THREAD;
+    	}
+
     //domaineMath.toXY(i, j, &x, &y); // x et y doivent etre en double! Caster ensuite en real lors du passage à colorXY
 
     // Probleme : Choix a faire pour le type de (x,y) :
@@ -42,4 +59,3 @@ __global__ void mandelbrot(uchar4* tabPixelsGM , uint w , uint h , DomaineMath d
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
-

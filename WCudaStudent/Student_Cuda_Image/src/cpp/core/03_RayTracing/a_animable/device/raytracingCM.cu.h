@@ -36,7 +36,7 @@ __host__ void uploadToCM(Sphere* tabSpheres , int nbSpheres)
     {
     assert(nbSpheres == NB_SPHERE);
 
-    size_t sizeSpheres = -1; // TODO taille en octets de toute les spheres
+    size_t sizeSpheres = nbSpheres*sizeof(tabSpheres[0]); // TODO taille en octets de toute les spheres
 
     const bool IS_V1 = true; // TODO essayer avec true et false. Difference de performance?
     if (IS_V1)

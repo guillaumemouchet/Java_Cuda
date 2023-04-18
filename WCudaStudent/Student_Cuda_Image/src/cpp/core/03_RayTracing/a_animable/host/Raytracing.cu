@@ -66,6 +66,7 @@ Raytracing::Raytracing(const Grid& grid , uint w , uint h , float dt , bool isVe
 
 	uploadToDevice(sphereCreator.getTabSphere());
 	} // SphereCreator depiler, donc detruit, tabSphere cote host detruit!
+
     }
 
 Raytracing::~Raytracing()
@@ -75,9 +76,7 @@ Raytracing::~Raytracing()
 	{
     case GM:
 	{
-	assert(false); // TODO  Raytracing  GM
-	// ??
-
+	GM::free(tabSpheresGM);
 	break;
 	}
     case CM:
@@ -118,7 +117,8 @@ void Raytracing::process(uchar4* tabPixelsGM , uint w , uint h , const DomaineMa
 	{
     case GM:
 	{
-	assert(false);	    // TODO Raytracing GM delete once implement
+	kernelRaytacingGM<<<dg,db>>>(tabPixelsGM ,w , h , t ,tabSpheresGM ,nbSpheres);
+
 	// Call the kernel kernelRaytacingGM (prototype line 20, about)
 	break;
 	}
@@ -126,11 +126,14 @@ void Raytracing::process(uchar4* tabPixelsGM , uint w , uint h , const DomaineMa
 	{
 	assert(false);	     // TODO Raytracing CM to delete once implement
 	// Call the kernel kernelRaytacingCM (prototype line 20, about)
+	kernelRaytacingCM<<<dg,db>>>(tabPixelsGM ,w , h , t,nbSpheres);
 	break;
 	}
     case SM:
 	{
-	assert(false);	     // TODO Raytracing SM to delete once implement
+	kernelRaytacingSM<<<dg,db,sizeSpheres>>>(tabPixelsGM ,w , h , t ,tabSpheresGM ,nbSpheres);
+
+	// TODO Raytracing SM to delete once implement
 	// Call the kernel kernelRaytacingSM (prototype line 20, about)
 	break;
 	}
@@ -176,8 +179,8 @@ void Raytracing::uploadToDevice(Sphere* tabSpheres)
 	// MM pour la GM ( malloc et memcpy)
 	// Utiliser la classe GM
 	// Regarder bien les attributs de la classe avant dans le .h
-	assert(false);	   // to be removed once implemented
-
+	GM::malloc(&tabSpheresGM, sizeSpheres);
+	GM::memcpyHToD(tabSpheresGM, tabSpheres, sizeSpheres);
 	break;
 	}
     case CM:
@@ -185,19 +188,19 @@ void Raytracing::uploadToDevice(Sphere* tabSpheres)
 	// TODO Raytracing CM uploadToDevice
 	// But : copier les spheres en CM
 	// Utiliser la methode importer uploadToCM et pister là!
-	assert(false);	    // to be removed once implemented
+	uploadToCM(tabSpheres, nbSpheres);
 
 	break;
 	}
     case SM:
 	{
 	// TODO Raytracing SM uploadToDevice
-
+	GM::malloc(&tabSpheresGM, sizeSpheres);
+	GM::memcpyHToD(tabSpheresGM, tabSpheres, sizeSpheres);
 	// Indication:
 	//		Coter device, on copie GM to SM
 	//		Il faut donc d'abord copier les spheres sur le device!
 	//		Le code est donc le meme que GM
-	assert(false);	   // to be removed once implemented
 
 	break;
 	}

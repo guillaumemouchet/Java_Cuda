@@ -6,11 +6,9 @@
 #include "real.h"
 #include "Maths.h"
 
-
 #include "Colors.cu.h"
 
 #include "DomaineMath.h"
-
 
 /*--------------------------------------*\
  |*		Helper type		*|
@@ -57,7 +55,7 @@ class MandelbrotMath
 	    }
 
 	__device__
-	   virtual ~MandelbrotMath(void)
+	     virtual ~MandelbrotMath(void)
 	    {
 	    // rien
 	    }
@@ -72,6 +70,24 @@ class MandelbrotMath
 	void colorXY(uchar4* ptrColorIJ , real x , real y)
 	    {
 	    // TODO Mandelbrot GPU
+
+	    // Tester pipeline
+	    uchar levelGris;
+
+	    int k = suite(x, y);
+	    float h01 = k / (float)(n - 1);
+
+	    if (k > n)
+		{
+		ptrColorIJ->x = 0;
+		ptrColorIJ->y = 0;
+		ptrColorIJ->z = 0;
+		ptrColorIJ->w = 255;
+		}
+	    else
+		{
+		Colors::HSB_TO_RVB(h01, ptrColorIJ);
+		}
 
 	    // Calculer la suite en (x,y) et recuperer l'indice d'arret de la suite
 	    // Colorier : 	Il faut convertir l'indice d'arret en une hue01!
@@ -90,6 +106,7 @@ class MandelbrotMath
 	    //		ptrColorIJ->z = 128;
 	    //		ptrColorIJ->w = 255; // opacity facultatif
 	    //		}
+
 	    }
 
     private:
@@ -113,6 +130,21 @@ class MandelbrotMath
 
 	    // Calculer la suite en (x,y) jusqu'à n, à moins que critere arret soit atteint avant
 	    // return le nombre d'element de la suite calculer, ie un entier
+
+	    int indice = ZERO;
+	    real xz = ZERO;
+	    real yz = ZERO;
+	    real xzCopy = ZERO;
+
+	    do
+		{
+		xzCopy = xz;
+		xz = (xz * xz - yz * yz) + x;
+		yz = DEUX * xzCopy * yz + y;
+		indice++;
+		}while((xz * xz + yz * yz) < QUATRE && indice <= n);
+
+	    return indice;
 	    }
 
 	//

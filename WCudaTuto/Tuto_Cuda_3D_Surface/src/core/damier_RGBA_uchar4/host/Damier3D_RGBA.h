@@ -16,7 +16,7 @@
  * 		- nombre de cannaux couleurs
  * 		- type des cannaux couleurs
  *
- *      Dans cet api, on peut choisir ces deux propri�t�s
+ *      Dans cet api, on peut choisir ces deux propri?t?s
  *      	- #cannaux couleurs
  *      	- #type des cannaux
  *
@@ -36,7 +36,7 @@
  * Contraintes:
  *
  * 		Le choix du type des cannaux couleurs influence le type de l'image apparaissant dans la methode fillVertex.
- * 		Il faut etre coherent! En cas de mauvais matching, une erreur de compilation surviendra (attention elle est pas forcement tr�s explicite).
+ * 		Il faut etre coherent! En cas de mauvais matching, une erreur de compilation surviendra (attention elle est pas forcement tr?s explicite).
  *
  * 		Exemples:
  *

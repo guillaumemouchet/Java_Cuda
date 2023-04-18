@@ -44,7 +44,7 @@ class RaytracingMath
 	    xySol.x = i;
 	    xySol.y = j;
 
-	    colorIJ(xySol, ptrColorIJ); // update ptrColorIJ
+	    //colorIJ(xySol, ptrColorIJ); // update ptrColorIJ
 
 	    ptrColorIJ->w = 255; // opacity facultatif
 
@@ -56,10 +56,10 @@ class RaytracingMath
 
 	    //   debug temp
 		{
-//	    		ptrColorIJ->x = 128;
-//	    		ptrColorIJ->y = 128;
-//	    		ptrColorIJ->z = 128;
-//	    		ptrColorIJ->w = 255; // opacity facultatif
+	    		ptrColorIJ->x = 128;
+	    		ptrColorIJ->y = 128;
+	    		ptrColorIJ->z = 128;
+	    		ptrColorIJ->w = 255; // opacity facultatif
 		}
 	    }
 

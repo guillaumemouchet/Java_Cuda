@@ -5,6 +5,9 @@
 #include "Calibreur.cu.h"
 #include "Colors.cu.h"
 
+#define DEUX 2.f
+#define QUATRE 4.f
+#define ZERO 0.f
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -20,7 +23,6 @@ class Damier3DMath_RGBA
     public:
 
 	__device__ Damier3DMath_RGBA(int n) :
-		calibreur(Interval<float>(-1, 1), Interval<float>(0, 0.9)),//
 		n(n)
 	    {
 	    // rien
@@ -38,31 +40,86 @@ class Damier3DMath_RGBA
     public:
 
 	__device__
-	void sommetXY(float3* ptrSommet , float x , float y , float t)
+	void process(float3* ptrSommet , uchar4* ptrColor , float x , float y , float t)
 	    {
-	    float z = f(x, y, t);
+	    int k = suite(x, y);
+	    float h01 = k / (float)(n - 1);
 
 	    ptrSommet->x = x;
 	    ptrSommet->y = y;
-	    ptrSommet->z = z;
+	    ptrSommet->z = z(h01);
+
+	    colorXY(ptrColor, k);
 	    }
 
-	__device__
-	void colorZ(uchar4* ptrColorRGBA , float z)
+    private:__device__
+	void colorXY(uchar4* ptrColorIJ , int k)
 	    {
-	    calibreur.calibrer(&z);
-	    float hue01 = z;
-	    Colors::HSB_TO_RVB(hue01, ptrColorRGBA);
+	    // TODO Mandelbrot GPU
+
+	    float h01 = k / (float)(n - 1);
+
+	    if (k > n)
+		{
+		ptrColorIJ->x = 0;
+		ptrColorIJ->y = 0;
+		ptrColorIJ->z = 0;
+		ptrColorIJ->w = 255;
+		}
+	    else
+		{
+		Colors::HSB_TO_RVB(h01, ptrColorIJ);
+		}
 	    }
 
-    private:
-
+	__inline__
 	__device__
-	float f(float x , float y , float t)
+	int suite(float x , float y)
 	    {
-	    return sin(x * n + t) * cos(y * n + t);
-	    }
+	    // TODO Mandelbrot GPU
 
+	    // Utiliser dans vos formules les variable :
+	    //
+	    //		DEUX
+	    //		QUATTRE
+	    //		ZERO
+	    //
+	    // definit au debut de ce fichier. Est-utile pour  passer facilement d'une version fp64 (double) fp32(float) fp16(half)
+
+	    // Calculer la suite en (x,y) jusqu'à n, à moins que critere arret soit atteint avant
+	    // return le nombre d'element de la suite calculer, ie un entier
+
+	    int indice = ZERO;
+	    float xz = ZERO;
+	    float yz = ZERO;
+	    float xzCopy = ZERO;
+
+	    do
+		{
+		xzCopy = xz;
+		xz = (xz * xz - yz * yz) + x;
+		yz = DEUX * xzCopy * yz + y;
+		indice++;
+		}while((xz * xz + yz * yz) < QUATRE && indice <= n);
+
+	    return indice;
+	    }
+	__device__
+	float z(float h01)
+	    {
+	    const int M = 8;	    //1 ou 8 (ici fixe)
+	    return logs(h01, M) + 0.5f;
+	    }
+	__device__
+	float logs(float h01 , const int M)
+	    {
+	    float z = h01;
+	    for (int i = 0; i <= M; i++)
+		{
+		z = log(z + 1.0f);
+		}
+	    return z;
+	    }
 	/*--------------------------------------*\
 	|*		Attributs		*|
 	 \*-------------------------------------*/
@@ -71,9 +128,6 @@ class Damier3DMath_RGBA
 
 	// Input
 	int n;
-
-	// Tools
-	Calibreur<float> calibreur;
 
     };
 

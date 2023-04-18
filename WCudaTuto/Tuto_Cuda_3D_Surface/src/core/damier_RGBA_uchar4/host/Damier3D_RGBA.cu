@@ -1,10 +1,10 @@
 #include "Damier3D_RGBA.h"
 
 #include <assert.h>
-
-
-#include "Maths.h"
-#include "cudas.h"
+#include <FontLoader_A.h>
+#include <Graphic2D.h>
+#include <Interval_CPU.h>
+#include <Maths.h>
 
 using std::to_string;
 
@@ -19,7 +19,7 @@ using gpu::SurfaceStrip_RGBA_uchar4;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-extern __global__ void damier3DCuda(float3* tabVerticesXYZGM, uchar4* tabVerticesColorGM, int w, int h, DomainMath3D domaineMath, int n, float t);
+extern __global__ void damier3DCuda(float3* tabVerticesXYZGM, uchar4* tabVerticesColorGM, int w, int h, DomainMath3D domaineMath, float t);
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -41,7 +41,7 @@ Damier3D_RGBA::Damier3D_RGBA(const Grid& grid , int w , int h , const DomainMath
 	dg(grid.dg), //
 	db(grid.db), //
 	// Tools
-	variateurAnimation(cpu::Interval<float>(0, 2 * PI), dt)
+	variateurAnimation(cpu::Interval<float>(0, 150), 1)
     {
     // Tools
     this->title = "Damier3D_RGBA_uchar4";
@@ -63,7 +63,7 @@ Damier3D_RGBA::~Damier3D_RGBA()
  */
 void Damier3D_RGBA::fillVertex(float3* tabVerticesXYZGM , uchar4* tabVerticesColorGM , unsigned int w , unsigned int h , const gpu::DomainMath3D& domaineMath)
     {
-damier3DCuda<<<dg,db>>>(tabVerticesXYZGM,tabVerticesColorGM,w,h,domaineMath,n,t);
+damier3DCuda<<<dg,db>>>(tabVerticesXYZGM,tabVerticesColorGM,w,h,domaineMath,t);
 }
 
 /**
@@ -108,4 +108,3 @@ graphic2D.setColorRGB(r, g, b);
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
-

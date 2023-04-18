@@ -1,10 +1,9 @@
-#include "Damier3DMath_RGBA.h"
-#include "Thread2D.cu.h"
-#include "Indices.cu.h"
+#include <DomainMath3D_GPU.h>
+#include <Indices.cu.h>
+#include <Thread2D.cu.h>
 
-#include "cudas.h"
+#include "math/Damier3DMath_RGBA.h"
 
-#include "DomainMath3D_GPU.h"
 using namespace gpu;
 
 /*----------------------------------------------------------------------*\
@@ -15,7 +14,7 @@ using namespace gpu;
  |*		Public			*|
  \*-------------------------------------*/
 
-__global__ void damier3DCuda(float3* tabVerticesXYZGM , uchar4* tabVerticesColorGM , int w , int h , DomainMath3D domaineMath , int n , float t);
+__global__ void damier3DCuda(float3* tabVerticesXYZGM , uchar4* tabVerticesColorGM , int w , int h , DomainMath3D domaineMath , float t);
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -29,10 +28,11 @@ __global__ void damier3DCuda(float3* tabVerticesXYZGM , uchar4* tabVerticesColor
  * w nbPoint en x
  * h nbPoint en y
  */
-__global__ void damier3DCuda(float3* tabVerticesXYZGM , uchar4* tabVerticesColorGM , int w , int h , DomainMath3D domaineMath , int n , float t)
+__global__ void damier3DCuda(float3* tabVerticesXYZGM , uchar4* tabVerticesColorGM , int w , int h , DomainMath3D domaineMath , float t)
     {
-    Damier3DMath_RGBA damierMath(n);
 
+    const int n = (int)t;
+    Damier3DMath_RGBA damierMath(n);
     const int TID = Thread2D::tid();
     const int NB_THREAD = Thread2D::nbThread();
 
@@ -58,8 +58,7 @@ __global__ void damier3DCuda(float3* tabVerticesXYZGM , uchar4* tabVerticesColor
 
 	domaineMath.toXY(DX, DY, vertexI, vertexJ, &x, &y);
 
-	damierMath.sommetXY(&sommet, x, y, t); // update sommet
-	damierMath.colorZ(&color, sommet.z); // update color
+	damierMath.process(&sommet, &color, x, y, n); // update sommet
 
 	tabVerticesColorGM[s] = color;
 	tabVerticesXYZGM[s] = sommet;
@@ -72,4 +71,3 @@ __global__ void damier3DCuda(float3* tabVerticesXYZGM , uchar4* tabVerticesColor
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
-

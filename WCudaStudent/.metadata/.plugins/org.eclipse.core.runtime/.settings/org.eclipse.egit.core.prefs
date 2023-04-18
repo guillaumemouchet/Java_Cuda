@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=Q\:\\a\\WCoursJava\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;
+GitRepositoriesView.GitDirectories=/home/arc27/CUDA/toStudent/code/WCudaStudent/.git;\:/home/arc27/CUDA/toStudent/code/.git\:
+GitRepositoriesView.GitDirectories.relative=.git;\:/home/arc27/CUDA/toStudent/code/.git\:
 core_preferredMergeStrategy=jgit-default-mergeStrategy
 eclipse.preferences.version=1

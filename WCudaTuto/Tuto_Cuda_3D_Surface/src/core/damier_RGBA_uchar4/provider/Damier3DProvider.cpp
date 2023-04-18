@@ -24,8 +24,9 @@ using gpu::DomainMath3D;
  */
 SurfaceStrip_I* Damier3DProvider::createSurfaceStrip()
     {
+
     // Dimension "Image" en noeud
-    uint w = 100;
+    uint w = 1600;
     uint h = w;	// contrainte temporaire! Doit eter carrer, sinon bug!
 
     // Animation
@@ -35,13 +36,11 @@ SurfaceStrip_I* Damier3DProvider::createSurfaceStrip()
     int k = 2;
 
     // Domaine init
-    double x1 = 0;
-    double x2 = 2 * PI;
-
-    double y1 = 0;
-    double y2 = 2 * PI;
-
-    double z1 = -1;
+    double x1 = -2.1;
+    double y1 = -1.3;
+    double x2 = 0.8;
+    double y2 = 1.3;
+    double z1 = 0;
     double z2 = 1;
 
     DomainMath3D domaineMath(x1, x2, y1, y2, z1, z2); // Attention ordre, pas idem DomainMath2D, ici x1,x2, ...
@@ -66,4 +65,3 @@ SurfaceStrip_I* Damier3DProvider::createSurfaceStrip()
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
-
