@@ -1,4 +1,4 @@
-10:40:38 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+17:53:14 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -462,7 +462,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 [CBI] -> Compilation parallel (36 threads)
 
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/host/Raytracing.cu
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainImage.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
 
@@ -597,7 +597,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 7 (s)
+[CBI] -> Time		  : 3 (s)
 ==================================================================================
 
 
