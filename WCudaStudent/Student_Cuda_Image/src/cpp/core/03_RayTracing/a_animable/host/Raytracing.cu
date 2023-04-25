@@ -124,7 +124,6 @@ void Raytracing::process(uchar4* tabPixelsGM , uint w , uint h , const DomaineMa
 	}
     case CM:
 	{
-	assert(false);	     // TODO Raytracing CM to delete once implement
 	// Call the kernel kernelRaytacingCM (prototype line 20, about)
 	kernelRaytacingCM<<<dg,db>>>(tabPixelsGM ,w , h , t,nbSpheres);
 	break;
@@ -139,8 +138,9 @@ void Raytracing::process(uchar4* tabPixelsGM , uint w , uint h , const DomaineMa
 	}
     case CM2SM:
 	{
-	assert(false);	     // TODO Raytracing CM_2_SM to delete once implement
+	// TODO Raytracing CM_2_SM to delete once implement
 	// Call the kernel kernelRaytacingSMbyCM (prototype line 20, about)
+	kernelRaytacingCM2SM<<<dg, db>>>(tabPixelsGM, w, h, t, nbSpheres);
 	break;
 	}
 	}
@@ -210,7 +210,7 @@ void Raytracing::uploadToDevice(Sphere* tabSpheres)
 	//		Coter device, on copie CM to SM
 	//		Il faut donc d'abord copier les spheres en CM
 	//		Le code est donc le meme que CM
-	assert(false);		    // TODO uploadToDevice CM2SM ://to be removed once implemented
+	uploadToCM(tabSpheres, nbSpheres);
 	// ??
 	break;
 	}

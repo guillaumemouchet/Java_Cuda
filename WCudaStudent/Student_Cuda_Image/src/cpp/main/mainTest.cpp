@@ -41,13 +41,13 @@ int mainTest()
 
 // Mandelbrot
 	{
-	testSuite.add(std::auto_ptr < Suite > (new TestMandelbrot));
+//	testSuite.add(std::auto_ptr < Suite > (new TestMandelbrot));
 	}
 
 //// Raytracing
 //	{
 //	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingGM));
-//	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM));
+	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM));
 //	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingSM));
 //	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM2SM));
 //	}
@@ -55,7 +55,7 @@ int mainTest()
 // run
 	{
 	string folder = "./out";
-	string title = "TestMandelbrotHalf"; // see above, title list
+	string title = "TestRaytracingCM"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);

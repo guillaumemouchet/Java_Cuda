@@ -19,9 +19,10 @@ Grid RaytracingProviderCM::grid()
     const int MP = Hardware::getMPCount();
     const int CORE_MP = Hardware::getCoreCountMP();
 
-    Grid grid; // TODO Raytracing
-    assert(false); //to be removed once implemented
+    dim3 dg(MP, 4, 1);
+    dim3 db(CORE_MP, 4, 1);
 
+    Grid grid(dg, db);
     return grid;
     }
 

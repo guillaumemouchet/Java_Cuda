@@ -43,7 +43,7 @@ __global__ void kernelRaytacingSM(uchar4* tabPixelsGM , uint w , uint h , float 
     extern __shared__ Sphere tabSM[];
 
     const int NB_THREADS = Thread2D::nbThreadLocal();
-    const int TID_LOCAL = Thread2D::tidLocalBlock();
+    const int TID_LOCAL = Thread2D::tidLocal();
 
     int s = TID_LOCAL;
 
@@ -79,7 +79,7 @@ __global__ void kernelRaytacingCM2SM(uchar4* tabPixelsGM , uint w , uint h , flo
     extern __shared__ Sphere tabSM[];
 
     const int NB_THREADS = Thread2D::nbThreadLocal();
-    const int TID_LOCAL = Thread2D::tidLocalBlock();
+    const int TID_LOCAL = Thread2D::tidLocal();
 
     int s = TID_LOCAL;
 

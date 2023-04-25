@@ -1,4 +1,4 @@
-17:53:14 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+12:32:53 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -609,5 +609,5 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Student_Cuda_Image_arc27_cuda_110_x86_64 : End ALL!
 
 
-17:53:19 Build Finished. 0 errors, 0 warnings. (took 4s.753ms)
+12:32:58 Build Finished. 0 errors, 0 warnings. (took 4s.870ms)
 

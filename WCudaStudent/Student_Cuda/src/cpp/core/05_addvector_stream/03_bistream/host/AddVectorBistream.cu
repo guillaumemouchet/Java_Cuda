@@ -44,7 +44,7 @@ AddVectorBistream::AddVectorBistream(const Grid& grid , int* ptrV1 , int* ptrV2 
     assert(n % 2 == 0); // on suppose que les 2 slice ont la meme taille
 
     this->sizeVector = n * sizeof(int); // octet
-
+    GM::memcpyA
     // MM (malloc Device)
 	{
 	GM::malloc0(&ptrDevV1, sizeVector);
@@ -91,7 +91,6 @@ void AddVectorBistream::run()
 	{
 	// TODO addVector see schema in pdf
 	// stream0 : copieHtoD  slice0
-
 	Stream::synchronize(stream0);
 	}
 

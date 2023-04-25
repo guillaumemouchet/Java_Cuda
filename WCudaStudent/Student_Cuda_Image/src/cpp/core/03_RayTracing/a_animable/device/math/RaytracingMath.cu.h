@@ -25,7 +25,7 @@ class RaytracingMath
 	    // rien de plus
 	    }
 
-	__device__  virtual ~RaytracingMath()
+	__device__    virtual ~RaytracingMath()
 	    {
 	    // rien
 	    }
@@ -44,7 +44,7 @@ class RaytracingMath
 	    xySol.x = i;
 	    xySol.y = j;
 
-	    //colorIJ(xySol, ptrColorIJ); // update ptrColorIJ
+	    colorIJ(xySol, ptrColorIJ); // update ptrColorIJ
 
 	    ptrColorIJ->w = 255; // opacity facultatif
 
@@ -56,10 +56,10 @@ class RaytracingMath
 
 	    //   debug temp
 		{
-	    		ptrColorIJ->x = 128;
-	    		ptrColorIJ->y = 128;
-	    		ptrColorIJ->z = 128;
-	    		ptrColorIJ->w = 255; // opacity facultatif
+//	    		ptrColorIJ->x = 128;
+//	    		ptrColorIJ->y = 128;
+//	    		ptrColorIJ->z = 128;
+//	    		ptrColorIJ->w = 255; // opacity facultatif
 		}
 	    }
 
@@ -72,7 +72,54 @@ class RaytracingMath
 	    // TODO Raytracing GPU math
 	    // process the color for the pixel (i,j)
 	    // use methode of classe Sphere
+	    int bestIndex = -1;
+	    float bestDistance = -1;
 
+	    for (int cpt = 0; cpt < nbSpheres; cpt++)
+		{
+		//				h2 (hCarrer)
+		float h2 = tabSpheresDev[cpt].h2(xySol);
+		//  			isEndessous
+
+		if (tabSpheresDev[cpt].isEnDessous(h2))
+		    {
+		    //  			dz
+
+		    float dz = tabSpheresDev[cpt].dz(h2);
+		    //  			distance
+
+		    float distance = tabSpheresDev[cpt].distance(dz);
+
+		    if (bestIndex == -1 || distance < bestDistance)
+			{
+			bestIndex = cpt;
+			bestDistance = distance;
+			}
+		    }
+		}
+
+	    if (bestIndex == -1)
+		{
+		ptrColorIJ->x = 0;
+		ptrColorIJ->y = 0;
+		ptrColorIJ->z = 0;
+		}
+	    else
+		{
+		float h2 = tabSpheresDev[bestIndex].h2(xySol);
+		float dz = tabSpheresDev[bestIndex].dz(h2);
+		//  			brightness
+
+		float brightness = tabSpheresDev[bestIndex].brightness(dz);
+		float saturation = 1.0;
+		float hue = tabSpheresDev[bestIndex].hue(t);
+
+		float3 hsb01;
+		hsb01.x = hue;
+		hsb01.y = saturation;
+		hsb01.z = brightness;
+		Colors::HSB_TO_RVB(hsb01, ptrColorIJ);
+		}
 	    // Indications:
 	    //
 	    // 		(I1) 	Voici la sequence des elements a calculer
