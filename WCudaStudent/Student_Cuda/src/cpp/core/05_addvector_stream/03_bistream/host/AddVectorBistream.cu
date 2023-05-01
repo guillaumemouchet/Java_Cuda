@@ -22,7 +22,6 @@ using std::string;
  |*		Imported	 	*|
  \*-------------------------------------*/
 
-
 extern __global__ void addVector(int* ptrDevV1, int* ptrDevV2, int* ptrDevW,int n,int sliceIndex=0);
 
 /*----------------------------------------------------------------------*\
@@ -44,7 +43,7 @@ AddVectorBistream::AddVectorBistream(const Grid& grid , int* ptrV1 , int* ptrV2 
     assert(n % 2 == 0); // on suppose que les 2 slice ont la meme taille
 
     this->sizeVector = n * sizeof(int); // octet
-    GM::memcpyA
+
     // MM (malloc Device)
 	{
 	GM::malloc0(&ptrDevV1, sizeVector);
@@ -55,7 +54,8 @@ AddVectorBistream::AddVectorBistream(const Grid& grid , int* ptrV1 , int* ptrV2 
     // Stream
 	{
 	// TODO addVector, see attribute in .h
-	assert(false); // to remove once coded
+	Stream::create(&stream0);
+	Stream::create(&stream1);
 	}
     }
 
@@ -70,8 +70,9 @@ AddVectorBistream::~AddVectorBistream(void)
 
     // Stream
 	{
-	// TODO addVector
-	assert(false); // to remove once coded
+//	// TODO addVector
+	Stream::destroy(stream0);
+	Stream::destroy(stream1);
 	}
     }
 
@@ -84,13 +85,15 @@ AddVectorBistream::~AddVectorBistream(void)
  */
 void AddVectorBistream::run()
     {
-    const int MIDLE = n >> 1; // n/2
-    const size_t MIDLE_SIZE = sizeVector >> 1; // sizeVector/2
+    const int MIDDLE = n >> 1; // n/2
+    const size_t MIDDLE_SIZE = sizeVector >> 1; // sizeVector/2
 
     // Step 1:
 	{
 	// TODO addVector see schema in pdf
 	// stream0 : copieHtoD  slice0
+	GM::memcpyAsyncHToD(ptrDevV1, ptrV1, MIDDLE_SIZE, stream0);
+	GM::memcpyAsyncHToD(ptrDevV2, ptrV2, MIDDLE_SIZE, stream0);
 	Stream::synchronize(stream0);
 	}
 
@@ -98,7 +101,11 @@ void AddVectorBistream::run()
 	{
 	// TODO addVector see schema in pdf
 	// stream1 : copieHtoD  slice1
+	GM::memcpyAsyncHToD(ptrDevV1+MIDDLE, ptrV1+MIDDLE, MIDDLE_SIZE, stream1);
+	GM::memcpyAsyncHToD(ptrDevV2+MIDDLE, ptrV2+MIDDLE, MIDDLE_SIZE, stream1);
+	Stream::synchronize(stream1);
 	// stream0 : kernel     slice0
+	addVector<<<dg,db,0,stream0>>>(ptrDevV1, ptrDevV2, ptrDevW, MIDDLE, 0);// assynchrone
 	// Warning : il faut lancer le kernel sur une slice!, pas sur tout le veteur!
 	//	(W1)	Attention a la dimension a donner
 	//	(W2)	Attention au sliceIndex,  ie 0
@@ -108,7 +115,10 @@ void AddVectorBistream::run()
 	{
 	// TODO addVector see schema in pdf
 	// stream0 : copieDtoH   slice0
+	Stream::synchronize(stream0);
+	GM::memcpyAsyncDToH(ptrW, ptrDevW, MIDDLE_SIZE, stream0);
 	// stream1 : kernel      slice1
+	addVector<<<dg,db,0,stream1>>>(ptrDevV1+MIDDLE, ptrDevV2+MIDDLE, ptrDevW+MIDDLE, MIDDLE, 1);
 	// Warning : il faut lancer le kernel sur la slice1, pas sur tout le veteur!
 	//	(W1)	Attention a la dimension a donner, ie le nombre de case de la slice, ie MIDLE
 	//	(W2) 	Attention au sliceIndex, ie 1
@@ -127,6 +137,7 @@ void AddVectorBistream::run()
 	{
 	// TODO addVector see schema in pdf
 	// stream1 : copieDtoH      slice1
+	GM::memcpyAsyncDToH(ptrW+MIDDLE, ptrDevW+MIDDLE, MIDDLE_SIZE, stream1);
 	}
 
     // Synchronize

@@ -25,7 +25,7 @@ int main(int argc , char** argv)
 
     // public
 	{
-	cudaContext.deviceId = 0; //  in [0,2] width Server Cuda3
+	cudaContext.deviceId = 1; //  in [0,2] width Server Cuda3
 
 	cudaContext.deviceDriver = DeviceDriver::LOAD_CURRENT; // LOAD_CURRENT   LOAD_ALL
 	cudaContext.deviceInfo = DeviceInfo::ALL_SIMPLE;   // NONE  ALL  ALL_SIMPLE  CURRENT

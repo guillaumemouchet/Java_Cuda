@@ -140,7 +140,7 @@ void Raytracing::process(uchar4* tabPixelsGM , uint w , uint h , const DomaineMa
 	{
 	// TODO Raytracing CM_2_SM to delete once implement
 	// Call the kernel kernelRaytacingSMbyCM (prototype line 20, about)
-	kernelRaytacingCM2SM<<<dg, db>>>(tabPixelsGM, w, h, t, nbSpheres);
+	kernelRaytacingCM2SM<<<dg, db,sizeSpheres>>>(tabPixelsGM, w, h, t, nbSpheres);
 	break;
 	}
 	}

@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
-<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1346431186914_27" label="Make" name="Make">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BUILDER" type="4"/>
-</workingSet>
-<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1367415214911_169" label="Cuda" name="Cuda">
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda" type="4"/>
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_Tools_Reduction" type="4"/>
-</workingSet>
-<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1391266587718_313" label="Target" name="Target">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RELEASE" type="4"/>
-</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1346431186914_27" label="Make" name="Make"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1367415214911_169" label="Cuda" name="Cuda"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1391266587718_313" label="Target" name="Target"/>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1557921688752_328" label="Java Main Sources" name="Java Main Sources"/>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1557921688921_329" label="Java Test Sources" name="Java Test Sources"/>
-<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1639579092287_332" label="OMP" name="OMP">
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_OMP" type="4"/>
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_OMP_Image" type="4"/>
-</workingSet>
-<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1639579215111_334" label="Cuda_Image_GL" name="Cuda_Image_GL">
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_3D_Cube" type="4"/>
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_Image" type="4"/>
-</workingSet>
-<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1670507836174_331" label="Cuda_Video_GL" name="Cuda_Video_GL">
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_Video" type="4"/>
-<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/Student_Cuda_3D_Cube_video" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tuto_Cuda_3D_Surface" type="4"/>
-</workingSet>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1639579092287_332" label="OMP" name="OMP"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1639579215111_334" label="Cuda_Image_GL" name="Cuda_Image_GL"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1670507836174_331" label="Cuda_Video_GL" name="Cuda_Video_GL"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1295959088341_0" label="Window Working Set" name="Aggregate for window 1295959088341"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1330805859499_5" label="Multiple Working Sets" name="Aggregate:Hellos:Work:"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1330878854766_8" label="Multiple Working Sets" name="Aggregate:cppTest:Cuda:OpenMP:"/>

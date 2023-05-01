@@ -1,1 +1,1 @@
-/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCudaStudent/Student_Cuda_3D_Cube_video/src/cpp/core/scene/SceneCubeCreator.h
+/home/arc27/CUDA/toStudent/code/WCudaStudent/Student_Cuda_3D_Cube_video/src/cpp/core/scene/SceneCubeCreator.h

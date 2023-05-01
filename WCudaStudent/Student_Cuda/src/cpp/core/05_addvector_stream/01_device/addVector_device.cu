@@ -79,9 +79,8 @@ __device__ int loseTime(int u)
  * 	Version tristream : Seulement une partie du vecteur, une des slices
 
  */
-__device__ void process(int* ptrDevV1 , int* ptrDevV2 , int* ptrDevW , int s , int n,int sliceIndex)
+__device__ void process(int* ptrDevV1 , int* ptrDevV2 , int* ptrDevW , int s , int n , int sliceIndex)
     {
-    int sGlobal = s + (sliceIndex+n);
 
     //1) additioner la composante s:	us=v1(s)+v2(s)
     //2) appeler loseTime sur us, loseTime ne modifie pas us
@@ -89,12 +88,12 @@ __device__ void process(int* ptrDevV1 , int* ptrDevV2 , int* ptrDevW , int s , i
     //
     //	 		resultatS=loseTime(v1(s)+v2(s))
 
-    // TODO
-
+    int resultat = loseTime(ptrDevV1[s] + ptrDevV2[s]);
+    ptrDevW[s] = resultat;
     // TIP : pour debuguer, mettez au début:
     //
+    // 		int sGlobal = s + (sliceIndex * n);
     //		ptrDevW[s]=sGlobal;
-    //
     // 	     Si vous avez un bug, ca permetra de savoir si ca vient du host ou du device
     }
 
@@ -111,11 +110,15 @@ __global__ void addVector(int* ptrDevV1 , int* ptrDevV2 , int* ptrDevW , int n ,
     const int NB_THREAD = Thread1D::nbThread();
     const int TID = Thread1D::tid();
 
-   // TODO addVector
     // entrelacement et call process ci-dessus
+    int s = TID;
+    while (s < n)
+	{
+	process(ptrDevV1, ptrDevV2, ptrDevW, s, n, sliceIndex);
+	s += NB_THREAD;
+	}
     }
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
-

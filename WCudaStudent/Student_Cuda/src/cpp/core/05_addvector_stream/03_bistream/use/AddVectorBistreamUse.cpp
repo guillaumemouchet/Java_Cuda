@@ -133,9 +133,10 @@ Grid AddVectorBistreamUse::createGrid()
     // TODO addVector
     // dim3 dg
     // dim3 db // contrainte : max(db.x*db.y*db.z)<=1024
-    Grid grid; // TODO
 
-    assert(false);        // to remove once coded
+    dim3 dg(MP, 4, 1);
+    dim3 db(CORE_MP, 4, 1);
+    Grid grid(dg, db);
 
     return grid;
     }

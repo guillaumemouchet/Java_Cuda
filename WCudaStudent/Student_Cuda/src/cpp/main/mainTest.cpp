@@ -48,7 +48,7 @@ int mainTest()
 	{
 	//testSuite.add(std::auto_ptr < Suite > (new TestSliceGMHOST()));
 	//testSuite.add(std::auto_ptr < Suite > (new TestSliceGM()));
-	testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
+	//testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
 	}
 
 // Montecarlo
@@ -72,7 +72,7 @@ int mainTest()
     // AddVector
 	{
 //	testSuite.add(std::auto_ptr < Suite > (new TestVector()));
-//	testSuite.add(std::auto_ptr < Suite > (new TestVectorBistream()));
+	testSuite.add(std::auto_ptr < Suite > (new TestVectorBistream()));
 
 	// Tristream
 	    {
@@ -95,7 +95,7 @@ int mainTest()
 // run
 	{
 	string folder = "./out";
-	string title = "testSliceSM"; // see above, title list
+	string title = "TestVectorBistream"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);

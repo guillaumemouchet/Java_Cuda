@@ -1,5 +1,5 @@
-12:32:53 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
-cbicc cuda jall 
+13:30:15 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
+cbicc cuda all 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -82,7 +82,7 @@ Cuda compilation tools, release 11.0, V11.0.221
 Build cuda_11.0_bu.TC445_37.28845127_0
 
 
-[CUDA GCC] : jall
+[CUDA GCC] : all
 
 
 ==================================================================================
@@ -460,9 +460,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : opencv_videoio_gcc750
 
 
-[CBI] -> Compilation parallel (36 threads)
-
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainImage.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBenchmark.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
 
@@ -606,8 +604,8 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
-[CBI] -> Student_Cuda_Image_arc27_cuda_110_x86_64 : End ALL!
+[CBI] -> Student_Cuda_Image_arc27_cuda_110_x86_64   : End ALL!
 
 
-12:32:58 Build Finished. 0 errors, 0 warnings. (took 4s.870ms)
+13:30:19 Build Finished. 0 errors, 0 warnings. (took 3s.901ms)
 

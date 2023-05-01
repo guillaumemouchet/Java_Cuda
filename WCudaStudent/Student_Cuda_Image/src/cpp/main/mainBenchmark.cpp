@@ -37,12 +37,12 @@ int mainBenchmark()
     cout << "\n[Benchmark] mode" << endl;
 
     // Please, un a la fois!
-    rippling();
+//    rippling();
 //    mandelbrot(); // Conseil : use nFixe (by example nMin=nMax=80)
-//    raytracingGM();
-//    raytracingSM();
+  //  raytracingGM();
+//  raytracingSM();
 //    raytracingCM();
-//    raytracingCM2SM();
+    raytracingCM2SM();
 
     cout << "\n[Benchmark] end" << endl;
 

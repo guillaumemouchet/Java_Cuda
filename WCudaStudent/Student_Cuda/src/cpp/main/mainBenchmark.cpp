@@ -60,7 +60,7 @@ int mainBenchmark()
 	{
 	//sliceGMHOST();
 	//sliceGM();
-	sliceSM();
+	//sliceSM();
 	}
 
     // Montecarlo
@@ -74,7 +74,7 @@ int mainBenchmark()
 	{
 	//addvectorTristream();
 	//addvectorBistream();
-	//addvector();
+	addvector();
 	}
 
     cout << "\n[Benchmark] end" << endl;

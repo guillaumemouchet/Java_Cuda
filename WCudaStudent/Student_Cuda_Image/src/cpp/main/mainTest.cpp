@@ -47,15 +47,15 @@ int mainTest()
 //// Raytracing
 //	{
 //	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingGM));
-	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM));
+//	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM));
 //	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingSM));
-//	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM2SM));
+	testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM2SM));
 //	}
 
 // run
 	{
 	string folder = "./out";
-	string title = "TestRaytracingCM"; // see above, title list
+	string title = "TestRaytracingCM2SM"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);

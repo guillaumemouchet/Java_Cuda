@@ -65,11 +65,11 @@ int mainUse()
 
     // Slice
 	{
-	SliceGmHostUse sliceGmHostUse(IS_VERBOSE);
+//	SliceGmHostUse sliceGmHostUse(IS_VERBOSE);
 //	SliceGmUse sliceGmUse(IS_VERBOSE);
 	//SliceSmUse sliceSmUse(IS_VERBOSE);
 //
-	isOk &= sliceGmHostUse.isOk(IS_VERBOSE);
+//	isOk &= sliceGmHostUse.isOk(IS_VERBOSE);
 //	isOk &= sliceGmUse.isOk(IS_VERBOSE);
 	//isOk &= sliceSmUse.isOk(IS_VERBOSE);
 	}
@@ -101,10 +101,10 @@ int mainUse()
 
     // Vector
 	{
-//	AddVectorUse addVectorUse(IS_VERBOSE);
+	AddVectorUse addVectorUse(IS_VERBOSE);
 //	AddVectorBistreamUse addVectorBistreamUse(IS_VERBOSE);
 //
-//	isOk &= addVectorUse.isOk(false);
+	isOk &= addVectorUse.isOk(false);
 //	isOk &= addVectorBistreamUse.isOk(false);
 
 // tristream : debug
