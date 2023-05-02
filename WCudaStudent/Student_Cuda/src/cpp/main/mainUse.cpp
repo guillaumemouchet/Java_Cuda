@@ -101,21 +101,21 @@ int mainUse()
 
     // Vector
 	{
-	AddVectorUse addVectorUse(IS_VERBOSE);
+//	AddVectorUse addVectorUse(IS_VERBOSE);
 //	AddVectorBistreamUse addVectorBistreamUse(IS_VERBOSE);
 //
-	isOk &= addVectorUse.isOk(false);
+//	isOk &= addVectorUse.isOk(false);
 //	isOk &= addVectorBistreamUse.isOk(false);
 
 // tristream : debug
 //	    {
-//	    int nbSlice = 3; // Changer aussi n dans VectorTools:n(); // Contrainte : n%nbSlkice=0 (pour se faciliter la vie)
-//
-//	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, !IS_VERBOSE);
-//	    bool isOkSlice = addVectorTristreamUse.isOk(!false);
-//	    cout << nbSlice << "\t" << isOkSlice << endl;
-//
-//	    isOk &= isOkSlice;
+	    int nbSlice = 3; // Changer aussi n dans VectorTools:n(); // Contrainte : n%nbSlkice=0 (pour se faciliter la vie)
+
+	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, !IS_VERBOSE);
+	    bool isOkSlice = addVectorTristreamUse.isOk(!false);
+	    cout << nbSlice << "\t" << isOkSlice << endl;
+
+	    isOk &= isOkSlice;
 //	    }
 
 // tristream : use1

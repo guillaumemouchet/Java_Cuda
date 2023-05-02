@@ -1,5 +1,5 @@
-08:48:20 **** Build of configuration CudaGCC_parallel for project Student_Cuda_Tools_Reduction ****
-cbicc cuda jall 
+16:23:57 **** Build of configuration CudaGCC for project Student_Cuda_Tools_Reduction ****
+cbicc cuda all 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -82,7 +82,7 @@ Cuda compilation tools, release 11.0, V11.0.221
 Build cuda_11.0_bu.TC445_37.28845127_0
 
 
-[CUDA GCC] : jall
+[CUDA GCC] : all
 
 
 ==================================================================================
@@ -317,11 +317,63 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
-
-[CBI] -> Compilation parallel (36 threads)
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/obj
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/cubin
 
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/mainUse.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/mainTest.cpp
+src/mainTest.cpp: In function ‘int mainTest()’:
+src/mainTest.cpp:42:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionAddI()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:43:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:46:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:47:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:50:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/main.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/long/PII/TestReductionGenericLongII.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/int/PII/TestReductionGenericII.cpp
@@ -342,32 +394,21 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PII/use/UseReductionAddIntII.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PII/use/ReductionAddIntIIProvider.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PI/use/UseReductionAddIntI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PI/use/ReductionAddIntIProvider.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/long/PII/device/reductionLongII_device.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/long/PII/host/ReductionLongII.cu
-[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PI/use/ReductionAddIntIProvider.cpp
-[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PII/host/ReductionIntII.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PII/device/reductionIntII_device.cu
+src/02_use_cuda/generic/int/PII/device/reductionIntII_device.cu(76): warning: function "addAtomicV2" was declared but never referenced
+
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PII/host/ReductionIntII.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu
+src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu(77): warning: function "addAtomicV2" was declared but never referenced
+
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PI/host/ReductionIntI.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PII/device/reductionAddIntII_device.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PII/host/ReductionAddIntII.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/device/reductionAddIntI_device.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/host/ReductionAddIntI.cu
-src/02_use_cuda/generic/int/PII/device/reductionIntII_device.cu(76): warning: function "addAtomicV2" was declared but never referenced
-
-src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu(77): warning: function "addAtomicV2" was declared but never referenced
-
-src/mainTest.cpp: In function ‘int mainTest()’:
-src/mainTest.cpp:50:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
-  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
-                     ^~~~~~~~
-In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
-                 from /usr/include/c++/7/locale:43,
-                 from /usr/include/c++/7/iomanip:43,
-                 from src/mainTest.cpp:4:
-/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
-   template<typename> class auto_ptr;
-                            ^~~~~~~~
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 
@@ -472,7 +513,7 @@ In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 5 (s)
+[CBI] -> Time		  : 44 (s)
 ==================================================================================
 
 
@@ -481,8 +522,8 @@ In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
-[CBI] -> Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64 : End ALL!
+[CBI] -> Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64   : End ALL!
 
 
-08:48:27 Build Finished. 0 errors, 3 warnings. (took 7s.573ms)
+16:24:43 Build Finished. 0 errors, 7 warnings. (took 45s.741ms)
 

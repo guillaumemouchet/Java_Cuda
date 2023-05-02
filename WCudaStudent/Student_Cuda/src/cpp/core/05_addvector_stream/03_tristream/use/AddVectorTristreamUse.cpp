@@ -1,15 +1,12 @@
 #include "AddVectorTristreamUse.h"
 
-#include "VectorTools.h"
-#include "AddVectorTristream.h"
-#include "Limits.h"
-
-#include "Maths.h"
-#include "Hardware.h"
-
-#include <iostream>
-#include <iomanip>
 #include <assert.h>
+#include <Hardware.h>
+#include <iomanip>
+#include <iostream>
+
+#include "../../00_tools/VectorTools.h"
+#include "../host/AddVectorTristream.h"
 
 using std::cerr;
 using std::cout;
@@ -132,13 +129,9 @@ Grid AddVectorTristreamUse::createGrid()
     const int MP = Hardware::getMPCount();
     const int CORE_MP = Hardware::getCoreCountMP();
 
-    // TODO addVector
-    // dim3 dg
-    // dim3 db // contrainte : max(db.x*db.y*db.z)<=1024
-    Grid grid; // TODO
-
-    assert(false);        // to remove once coded
-
+    dim3 dg(MP, 4, 1);
+    dim3 db(CORE_MP, 4, 1);
+    Grid grid(dg, db);
     return grid;
     }
 
@@ -147,8 +140,8 @@ Grid AddVectorTristreamUse::createGrid()
  */
 int AddVectorTristreamUse::nbSliceOptimum()
     {
-    const int N = 3; // TODO
-    assert(false);        // to remove once coded
+    const int N = 6; // TODO
+    //assert(false);        // to remove once coded
 
     // check
 	{

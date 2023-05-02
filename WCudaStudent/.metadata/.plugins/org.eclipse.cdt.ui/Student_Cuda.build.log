@@ -1,4 +1,4 @@
-09:27:54 **** Incremental Build of configuration CudaGCC for project Student_Cuda ****
+17:18:04 **** Incremental Build of configuration CudaGCC for project Student_Cuda ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -336,7 +336,136 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : nvrtc-builtins
 
 
-cp: cannot create regular file '../RELEASE/bin/Student_Cuda_arc27_cuda_110_x86_64.run': Text file busy
+[Student_Cuda_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(274): warning: variable "INDEX_BEFORE_LAST" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(325): warning: variable "INDEX_BEFORE_LAST" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(309): warning: variable "streamA" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(310): warning: variable "streamB" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(311): warning: variable "streamC" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(313): warning: variable "streamA_old" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(314): warning: variable "streamB_old" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(315): warning: variable "streamC_old" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(368): warning: variable "OFFSET_SLICE" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(383): warning: variable "OFFSET_SLICE" was declared but never referenced
+
+src/cpp/core/05_addvector_stream/03_tristream/host/AddVectorTristream.cu(396): warning: variable "OFFSET_SLICE" was declared but never referenced
+
+
+[CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_305_014_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_305_014_cuda_110_x86_64
+[CBI] ->              : -lBilatTools_OMP_305_014_gcc_x86_64
+[CBI] ->              : -lCpp_Test_200_gcc_x86_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -laccinj64
+[CBI] ->              : -lboost_atomic-gcc750
+[CBI] ->              : -lboost_chrono-gcc750
+[CBI] ->              : -lboost_container-gcc750
+[CBI] ->              : -lboost_context-gcc750
+[CBI] ->              : -lboost_contract-gcc750
+[CBI] ->              : -lboost_coroutine-gcc750
+[CBI] ->              : -lboost_date_time-gcc750
+[CBI] ->              : -lboost_fiber-gcc750
+[CBI] ->              : -lboost_filesystem-gcc750
+[CBI] ->              : -lboost_graph-gcc750
+[CBI] ->              : -lboost_iostreams-gcc750
+[CBI] ->              : -lboost_json-gcc750
+[CBI] ->              : -lboost_locale-gcc750
+[CBI] ->              : -lboost_log-gcc750
+[CBI] ->              : -lboost_log_setup-gcc750
+[CBI] ->              : -lboost_math_c99-gcc750
+[CBI] ->              : -lboost_math_c99f-gcc750
+[CBI] ->              : -lboost_math_c99l-gcc750
+[CBI] ->              : -lboost_math_tr1-gcc750
+[CBI] ->              : -lboost_math_tr1f-gcc750
+[CBI] ->              : -lboost_math_tr1l-gcc750
+[CBI] ->              : -lboost_nowide-gcc750
+[CBI] ->              : -lboost_numpy27-gcc750
+[CBI] ->              : -lboost_prg_exec_monitor-gcc750
+[CBI] ->              : -lboost_program_options-gcc750
+[CBI] ->              : -lboost_python27-gcc750
+[CBI] ->              : -lboost_random-gcc750
+[CBI] ->              : -lboost_regex-gcc750
+[CBI] ->              : -lboost_serialization-gcc750
+[CBI] ->              : -lboost_stacktrace_addr2line-gcc750
+[CBI] ->              : -lboost_stacktrace_backtrace-gcc750
+[CBI] ->              : -lboost_stacktrace_basic-gcc750
+[CBI] ->              : -lboost_stacktrace_noop-gcc750
+[CBI] ->              : -lboost_system-gcc750
+[CBI] ->              : -lboost_thread-gcc750
+[CBI] ->              : -lboost_timer-gcc750
+[CBI] ->              : -lboost_type_erasure-gcc750
+[CBI] ->              : -lboost_unit_test_framework-gcc750
+[CBI] ->              : -lboost_wave-gcc750
+[CBI] ->              : -lboost_wserialization-gcc750
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcublasLt
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcudnn
+[CBI] ->              : -lcudnn_adv_infer
+[CBI] ->              : -lcudnn_adv_train
+[CBI] ->              : -lcudnn_cnn_infer
+[CBI] ->              : -lcudnn_cnn_train
+[CBI] ->              : -lcudnn_ops_infer
+[CBI] ->              : -lcudnn_ops_train
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusolverMg
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvcaffe_parser
+[CBI] ->              : -lnvinfer
+[CBI] ->              : -lnvinfer_plugin
+[CBI] ->              : -lnvjpeg
+[CBI] ->              : -lnvonnxparser
+[CBI] ->              : -lnvparsers
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+
+
+==================================================================================
+[CBI] -> Target Name  : Student_Cuda_arc27_cuda_110_x86_64
+[CBI] -> Location     : /tmp/ramdrive/arc27/Targets/Student_Cuda_arc27/bin/Student_Cuda_arc27_cuda_110_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : arc27
+[CBI] ->
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 5 (s)
+==================================================================================
+
 
 [CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_arc27_cuda_110_x86_64.run
 
@@ -346,5 +475,5 @@ cp: cannot create regular file '../RELEASE/bin/Student_Cuda_arc27_cuda_110_x86_6
 [CBI] -> Student_Cuda_arc27_cuda_110_x86_64   : End ALL!
 
 
-09:27:57 Build Finished. 0 errors, 0 warnings. (took 2s.290ms)
+17:18:11 Build Finished. 0 errors, 11 warnings. (took 6s.915ms)
 

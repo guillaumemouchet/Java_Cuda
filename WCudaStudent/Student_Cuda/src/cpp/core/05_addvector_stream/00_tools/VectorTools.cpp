@@ -20,10 +20,10 @@ using std::endl;
  */
 int VectorTools::n()
     {
-    return n1();
+    //return n1();
     //return n2();
 
-    //return nDebug();
+    return nDebug();
     }
 
 /**

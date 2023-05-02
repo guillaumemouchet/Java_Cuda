@@ -39,12 +39,12 @@ int mainTest()
     // ReductionTools
 	{
 	// atomic
-	//testSuite.add(std::auto_ptr < Suite > (new TestReductionAddI()));
-	//testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
+	testSuite.add(std::auto_ptr < Suite > (new TestReductionAddI()));
+	testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
 
 	// generic
-	//testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
-	//testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
+	testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
+	testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
 //
 //	// long
 	testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
@@ -53,7 +53,7 @@ int mainTest()
     // run
 	{
 	string folder = "./out";
-	string title = "TestReductionGenericLongII"; // see above, title list
+	string title = "TestAllReduction"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);
