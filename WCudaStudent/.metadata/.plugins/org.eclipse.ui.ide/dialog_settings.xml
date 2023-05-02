@@ -17,6 +17,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/arc27/CUDA/toStudent/code/WCudaStudent"/>
 			<item value="/home/arc27/CUDA/toStudent/code/WCudaTuto/Tuto_Cuda_3D_Surface"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCudaStudent/Corriger_Cuda_3D_Cube_video"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Corriger_Cuda_3D_Cube_video"/>
@@ -36,7 +37,6 @@
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_JNI_C"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/BilatTools_JNI"/>
 			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Cuda_Surface_3D"/>
-			<item value="/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCuda/Tuto_Surface_Cuda"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

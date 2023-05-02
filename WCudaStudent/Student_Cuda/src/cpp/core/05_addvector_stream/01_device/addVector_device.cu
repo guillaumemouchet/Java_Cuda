@@ -107,8 +107,8 @@ __device__ void process(int* ptrDevV1 , int* ptrDevV2 , int* ptrDevW , int s , i
  */
 __global__ void addVector(int* ptrDevV1 , int* ptrDevV2 , int* ptrDevW , int n , int sliceIndex = 0)
     {
-    const int NB_THREAD = Thread1D::nbThread();
-    const int TID = Thread1D::tid();
+    const int NB_THREAD = Thread2D::nbThread();
+    const int TID = Thread2D::tid();
 
     // entrelacement et call process ci-dessus
     int s = TID;

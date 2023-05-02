@@ -1,4 +1,4 @@
-13:35:03 **** Build of configuration CudaGCC for project Student_Cuda_3D_Cube ****
+08:46:30 **** Build of configuration CudaGCC for project Student_Cuda_3D_Cube ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -597,7 +597,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 39 (s)
+[CBI] -> Time		  : 40 (s)
 ==================================================================================
 
 
@@ -609,5 +609,5 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Student_Cuda_3D_Cube_arc27_cuda_110_x86_64   : End ALL!
 
 
-13:35:42 Build Finished. 0 errors, 1 warnings. (took 39s.600ms)
+08:47:11 Build Finished. 0 errors, 1 warnings. (took 41s.78ms)
 

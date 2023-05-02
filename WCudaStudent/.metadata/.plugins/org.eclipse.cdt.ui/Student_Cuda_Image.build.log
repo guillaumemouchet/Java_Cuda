@@ -1,4 +1,4 @@
-13:30:15 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
+08:40:50 **** Build of configuration CudaGCC for project Student_Cuda_Image ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -459,8 +459,48 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : opencv_video_gcc750
 [CBI] ->              : opencv_videoio_gcc750
 
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/obj
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/cubin
 
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/02_Test_Mandelbrot/TestMandelbrot.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/cm/TestRaytracingCM.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/cm2sm/TestRaytracingCM2SM.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/sm/TestRaytracingSM.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/03_Test_Raytracing/gm/TestRaytracingGM.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/01_Test_Rippling/TestRippling.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Rippling/b_provider/RipplingProvider.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Mandelbrot/b_provider/MandelbrotProvider.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderCM.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderSM.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingCreator.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderGM.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/b_provider/RaytracingProviderCM2SM.cpp
 [Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBenchmark.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBruteforce.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainImage.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainTest.cpp
+src/cpp/main/mainTest.cpp: In function ‘int mainTest()’:
+src/cpp/main/mainTest.cpp:52:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestRaytracingCM2SM));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/cpp/main/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/a_animable/device/ripplingDevice.cu
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/a_animable/host/Rippling.cu
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot/a_animable/device/mandelbrotDevice.cu
+src/cpp/core/02_Mandelbrot/a_animable/device/math/MandelbrotMath.cu.h(75): warning: variable "levelGris" was declared but never referenced
+
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot/a_animable/host/Mandelbrot.cu
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/device/raytracingDevice.cu
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/host/Raytracing.cu
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/a_animable/host/tools/SphereCreator.cu
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
 
@@ -595,7 +635,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 3 (s)
+[CBI] -> Time		  : 49 (s)
 ==================================================================================
 
 
@@ -607,5 +647,5 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Student_Cuda_Image_arc27_cuda_110_x86_64   : End ALL!
 
 
-13:30:19 Build Finished. 0 errors, 0 warnings. (took 3s.901ms)
+08:41:40 Build Finished. 0 errors, 2 warnings. (took 50s.305ms)
 

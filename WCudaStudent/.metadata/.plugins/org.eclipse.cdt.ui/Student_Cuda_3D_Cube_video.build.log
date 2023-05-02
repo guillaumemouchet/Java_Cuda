@@ -1,4 +1,4 @@
-13:37:23 **** Build of configuration CudaGCC for project Student_Cuda_3D_Cube_video ****
+08:57:19 **** Build of configuration CudaGCC for project Student_Cuda_3D_Cube_video ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -631,5 +631,5 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Student_Cuda_3D_Cube_videoarc27_cuda_110_x86_64   : End ALL!
 
 
-13:38:21 Build Finished. 0 errors, 12 warnings. (took 57s.393ms)
+08:58:16 Build Finished. 0 errors, 12 warnings. (took 56s.829ms)
 
