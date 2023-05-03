@@ -129,8 +129,8 @@ Grid AddVectorTristreamUse::createGrid()
     const int MP = Hardware::getMPCount();
     const int CORE_MP = Hardware::getCoreCountMP();
 
-    dim3 dg(MP, 4, 1);
-    dim3 db(CORE_MP, 4, 1);
+    dim3 dg(MP*2);
+    dim3 db(CORE_MP* 6);
     Grid grid(dg, db);
     return grid;
     }
@@ -140,8 +140,7 @@ Grid AddVectorTristreamUse::createGrid()
  */
 int AddVectorTristreamUse::nbSliceOptimum()
     {
-    const int N = 6; // TODO
-    //assert(false);        // to remove once coded
+    const int N = 12; // Given in the .h
 
     // check
 	{

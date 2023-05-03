@@ -53,7 +53,7 @@ int mainTest()
     // run
 	{
 	string folder = "./out";
-	string title = "TestAllReduction"; // see above, title list
+	string title = "testAll_reductionTools"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);

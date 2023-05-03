@@ -89,7 +89,7 @@ __device__ void process(int* ptrDevV1 , int* ptrDevV2 , int* ptrDevW , int s , i
     //	 		resultatS=loseTime(v1(s)+v2(s))
 
     int resultat = loseTime(ptrDevV1[s] + ptrDevV2[s]);
-    ptrDevW[s] = resultat;
+    *(ptrDevW+s) = resultat;
     // TIP : pour debuguer, mettez au début:
     //
     // 		int sGlobal = s + (sliceIndex * n);

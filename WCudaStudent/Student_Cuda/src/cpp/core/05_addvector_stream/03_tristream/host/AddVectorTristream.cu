@@ -97,13 +97,12 @@ void AddVectorTristream::run()
     {
     // Warmup
 	{
-	run3Slice();
+	//run3Slice();
 	//run4Slice();
 	//run5Slice();
 	}
 
-    //runGeneric(); // TODO addVector a activer une fois le warup valider
-
+    runGeneric();
     // Synchronize
 	{
 	Stream::synchronize(stream0);
@@ -126,231 +125,254 @@ void AddVectorTristream::run3Slice()
 
     // step1 :
 	{
-	GM::memcpyAsyncHToD(ptrDevV1, ptrV1, N_BY_SLICE, stream0);
-	GM::memcpyAsyncHToD(ptrDevV2, ptrV2, N_BY_SLICE, stream0);
-	Stream::synchronize(stream0);
-	// TODO addVector see schema in pdf
+	copyHtoD(0, stream0);
 	}
 
     // step2 :
 	{
-	GM::memcpyAsyncHToD(ptrDevV1 + N_BY_SLICE, ptrV1 + N_BY_SLICE, SIZE_SLICE, stream1);
-	GM::memcpyAsyncHToD(ptrDevV2 + N_BY_SLICE, ptrV2 + N_BY_SLICE, SIZE_SLICE, stream1);
-	Stream::synchronize(stream1);
-	addVector<<<dg,db,0,stream0>>>(ptrDevV1, ptrDevV2, ptrDevW, N_BY_SLICE, 0);    // assynchrone
+	copyHtoD(1, stream1);
+	kernelSlice(0, stream0);
 
-    // TODO addVector see schema in pdf
 	}
 
 // partie centrale 3 stream en parallel
-    {
+
     // step3 : (1 seul step pour 3 slice et 3 stream)
 	{
-	GM::memcpyAsyncHToD(ptrDevV1 + N_BY_SLICE * 2, ptrV1 + N_BY_SLICE * 2, SIZE_SLICE, stream2);
-	GM::memcpyAsyncHToD(ptrDevV2 + N_BY_SLICE * 2, ptrV2 + N_BY_SLICE * 2, SIZE_SLICE, stream2);
-	Stream::synchronize(stream2);
-	// TODO addVector see schema in pdf
-	GM::memcpyAsyncDToH(ptrW, ptrDevW, SIZE_SLICE, stream0);
-	addVector<<<dg,db,0,stream1>>>(ptrDevV1, ptrDevV2, ptrDevW, N_BY_SLICE, 0);    // assynchrone
+	copyHtoD(2, stream2);
+	kernelSlice(1, stream1);
+	copyDtoH(0, stream0);
 
 	}
-    }
 
     // step 4 :
-{
-// TODO addVector see schema in pdf
-GM::memcpyAsyncHToD(ptrDevV1 + N_BY_SLICE * 3, ptrV1 + N_BY_SLICE * 3, SIZE_SLICE, stream0);
-GM::memcpyAsyncHToD(ptrDevV2 + N_BY_SLICE * 3, ptrV2 + N_BY_SLICE * 3, SIZE_SLICE, stream0);
-Stream::synchronize(stream0);
-// TODO addVector see schema in pdf
-GM::memcpyAsyncDToH(ptrW, ptrDevW, SIZE_SLICE, stream1);
-addVector<<<dg,db,0,stream2>>>(ptrDevV1, ptrDevV2, ptrDevW, N_BY_SLICE*2, 0);    // assynchrone
+	{
+	kernelSlice(2, stream2);
+	copyDtoH(1, stream1);
 
-}
+	}
 
-    // step 5 :
-{
-    // TODO addVector see schema in pdf
-GM::memcpyAsyncDToH(ptrW, ptrDevW, SIZE_SLICE, stream2);
-
-}
-}
+// step 5 :
+	{
+	copyDtoH(2, stream2);
+	}
+    }
 
 /**
  * Warmup : 4 slice
  */
 void AddVectorTristream::run4Slice()
-{
+    {
 
-    // Warning : use private methode:
-    //			- void copyHtoD(int sliceIndex , cudaStream_t stream)
-    //			- void copyDtoH(int sliceIndex , cudaStream_t stream)
-    //			- kernelSlice(int sliceIndex , cudaStream_t stream)
+// Warning : use private methode:
+//			- void copyHtoD(int sliceIndex , cudaStream_t stream)
+//			- void copyDtoH(int sliceIndex , cudaStream_t stream)
+//			- kernelSlice(int sliceIndex , cudaStream_t stream)
 
-    // partie Init
-{
-    // step1
-{
-// TODO addVector see schema in pdf
-}
+// partie Init
+	{
+	// step1
+	    {
+	    copyHtoD(0, stream0);
+	    }
 
-    // step2
-{
-// TODO addVector see schema in pdf
-}
-}
+	// step2
+	    {
+	    copyHtoD(1, stream1);
+	    kernelSlice(0, stream0);
+	    }
+	}
 
-    // partie centrale 3 stream en parallel
-{
-    // step3
-{
-// TODO addVector see schema in pdf
-}
+// partie centrale 3 stream en parallel
+	{
+	// step3
+	    {
+	    copyHtoD(2, stream2);
+	    kernelSlice(1, stream1);
+	    copyDtoH(0, stream0);
+	    }
 
-    // step4
-{
-// TODO addVector see schema in pdf
-}
-}
+	// step4
+	    {
+	    copyHtoD(3, stream0);
+	    kernelSlice(2, stream2);
+	    copyDtoH(1, stream1);
+	    }
+	}
 
-    // partie Finale
-{
-    // step 4
-{
-// TODO addVector see schema in pdf
-}
+// partie Finale
+	{
+	// step 4
+	    {
+	    kernelSlice(3, stream0);
+	    copyDtoH(2, stream2);
+	    }
 
-    //step 5
-{
-// TODO addVector see schema in pdf
-}
-}
-}
+	//step 5
+	    {
+	    copyDtoH(3, stream0);
+
+	    }
+	}
+    }
 
 /**
  * Warmup : 5 slice
  */
 void AddVectorTristream::run5Slice()
-{
-    // Warning : use private methode:
-    //			- void copyHtoD(int sliceIndex , cudaStream_t stream)
-    //			- void copyDtoH(int sliceIndex , cudaStream_t stream)
-    //			- kernelSlice(int sliceIndex , cudaStream_t stream)
+    {
+// Warning : use private methode:
+//			- void copyHtoD(int sliceIndex , cudaStream_t stream)
+//			- void copyDtoH(int sliceIndex , cudaStream_t stream)
+//			- kernelSlice(int sliceIndex , cudaStream_t stream)
 
-    // partie Init
-{
-    // step1
-{
-// TODO addVector see schema in pdf
-}
-
-    // step2
-{
-// TODO addVector see schema in pdf
-}
-}
-
-    // partie centrale 3 stream en parallel
-{
-    // step3
-{
-// TODO addVector see schema in pdf
-}
-
-    // step4
-{
-// TODO addVector see schema in pdf
-}
-
-    // step 5
-{
-// TODO addVector see schema in pdf
-}
-}
-
-    // partie finale
-{
-const int INDEX_LAST = -1;        // TODO 		// un peu de genericiter
-const int INDEX_BEFORE_LAST = INDEX_LAST - 1; 	// un peu de genericiter
-
- 	// before last
-{
-// TODO addVector see schema in pdf
-}
-
- 	// last
-{
-// TODO addVector see schema in pdf
-}
-}
-}
-
-void AddVectorTristream::runGeneric()
-{
- 	// Warning : use private methode:
-	//			- void copyHtoD(int sliceIndex , cudaStream_t stream)
-	//			- void copyDtoH(int sliceIndex , cudaStream_t stream)
-	//			- kernelSlice(int sliceIndex , cudaStream_t stream)
-
-	// partie Init
-{
+// partie Init
+	{
 	// step1
-{
-// TODO addVector see schema in pdf
-}
+	    {
+	    copyHtoD(0, stream0);
+
+	    }
 
 	// step2
-{
-// TODO addVector see schema in pdf
-}
-}
+	    {
+	    copyHtoD(1, stream1);
+	    kernelSlice(0, stream0);
+	    }
+	}
 
-	// 6 variable utile pour les permutations
-cudaStream_t streamA = stream0; // cudaStream_t est un int
-cudaStream_t streamB = stream2;
-cudaStream_t streamC = stream1;
+// partie centrale 3 stream en parallel
+	{
+	// step3
+	    {
+	    copyHtoD(2, stream2);
+	    kernelSlice(1, stream1);
+	    copyDtoH(0, stream0);
+	    }
 
-cudaStream_t streamA_old = stream0;
-cudaStream_t streamB_old = stream2;
-cudaStream_t streamC_old = stream1;
+	// step4
+	    {
+	    copyHtoD(3, stream0);
+	    kernelSlice(2, stream2);
+	    copyDtoH(1, stream1);
+	    }
 
- // partie centrale 3 stream en parallel
-{
- // TODO addVector see schema in pdf
-}
+	// step 5
+	    {
+	    copyHtoD(4, stream1);
+	    kernelSlice(3, stream0);
+	    copyDtoH(2, stream2);
+	    }
+	}
 
- // partie finale
-{
-const int INDEX_LAST = nbSlice - 1;
-const int INDEX_BEFORE_LAST = INDEX_LAST - 1;
+// partie finale
+	{
+	const int INDEX_LAST = -1;        // TODO 		// un peu de genericiter
+	const int INDEX_BEFORE_LAST = INDEX_LAST - 1; 	// un peu de genericiter
 
- // before last
-{
-// TODO addVector see schema in pdf
-}
+	// before last
+	    {
+	    kernelSlice(INDEX_LAST, stream1);
+	    copyDtoH(INDEX_BEFORE_LAST, stream0);
+	    }
 
- // last
-{
-// TODO addVector see schema in pdf
-}
-}
-}
+	// last
+	    {
+	    copyDtoH(INDEX_LAST, stream1);
+
+	    }
+	}
+    }
+
+void AddVectorTristream::runGeneric()
+    {
+// Warning : use private methode:
+//			- void copyHtoD(int sliceIndex , cudaStream_t stream)
+//			- void copyDtoH(int sliceIndex , cudaStream_t stream)
+//			- kernelSlice(int sliceIndex , cudaStream_t stream)
+
+// partie Init
+	{
+	// step1
+	    {
+	    copyHtoD(0, stream0);
+	    }
+
+	// step2
+	    {
+	    copyHtoD(1, stream1);
+	    kernelSlice(0, stream0);
+	    }
+	}
+
+// 6 variable utile pour les permutations
+    cudaStream_t streamA = stream0; // cudaStream_t est un int
+    cudaStream_t streamB = stream2;
+    cudaStream_t streamC = stream1;
+
+    cudaStream_t streamA_old = stream0;
+    cudaStream_t streamB_old = stream2;
+    cudaStream_t streamC_old = stream1;
+
+// partie centrale 3 stream en parallel
+	{
+	for (int i = 2; i < nbSlice; i++)
+	    {
+	    copyHtoD(i, streamB);
+	    kernelSlice(i - 1, streamC);
+	    copyDtoH(i - 2, streamA);
+	    /*
+	     *  copyHtoD(2, stream2); ==B
+	     *	kernelSlice(1, stream1); ==C
+	     *	copyDtoH(0, stream0); ==A
+	     */
+	    // Reset old stream
+	    streamA_old = streamA;
+	    streamB_old = streamB;
+	    streamC_old = streamC;
+
+	    //set streams to new values in a circular way A->C->B->A
+	    streamA = streamC_old;
+	    streamB = streamA_old;
+	    streamC = streamB_old;
+
+	    }
+	}
+
+// partie finale
+	{
+	const int INDEX_LAST = nbSlice - 1;
+	const int INDEX_BEFORE_LAST = INDEX_LAST - 1;
+
+	// before last
+	    {
+	    kernelSlice(INDEX_LAST, streamB_old);
+	    copyDtoH(INDEX_BEFORE_LAST, streamC_old);
+	    }
+
+	// last
+	    {
+	    copyDtoH(INDEX_LAST, streamB_old);
+
+	    }
+	}
+    }
 
 /**
  * override
  */
 double AddVectorTristream::getInputGO()
-{
-return ((long)2 * (long)n * (long)sizeof(half)) / (double)((long)1024 * (long)1024 * (long)1024);
-}
+    {
+    return ((long)2 * (long)n * (long)sizeof(half)) / (double)((long)1024 * (long)1024 * (long)1024);
+    }
 
 /**
  * override
  */
 double AddVectorTristream::getOutputGO()
-{
-return ((long)1 * (long)n * (long)sizeof(half)) / (double)((long)1024 * (long)1024 * (long)1024);
-}
+    {
+    return ((long)1 * (long)n * (long)sizeof(half)) / (double)((long)1024 * (long)1024 * (long)1024);
+    }
 
 /*--------------------------------------*\
  |*		Private			*|
@@ -364,13 +386,15 @@ return ((long)1 * (long)n * (long)sizeof(half)) / (double)((long)1024 * (long)10
  * 	sliceIndex in [0,nbSlice[
  */
 void AddVectorTristream::copyHtoD(int sliceIndex , cudaStream_t stream)
-{
-const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
+    {
+    const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
 
- // TODO addVector
- // Copier sur le device la slice de v1 correspondand a sliceIndex  sur la stream demander
- // idem pour v2
-}
+// addVector
+// Copier sur le device la slice de v1 correspondand a sliceIndex  sur la stream demander
+// idem pour v2
+    GM::memcpyAsyncHToD(ptrDevV1 + OFFSET_SLICE, ptrV1 + OFFSET_SLICE, SIZE_SLICE, stream);
+    GM::memcpyAsyncHToD(ptrDevV2 + OFFSET_SLICE, ptrV2 + OFFSET_SLICE, SIZE_SLICE, stream);
+    }
 
 /**
  * copyDtoH: la slice sliceIndex pour
@@ -379,12 +403,13 @@ const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
  * 	sliceIndex in [0,nbSlice[
  */
 void AddVectorTristream::copyDtoH(int sliceIndex , cudaStream_t stream)
-{
-const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
+    {
+    const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
 
- // TODO addVector
- // Copier sur le host la slice de w correspondand à sliceIndex  sur la stream demander
-}
+// addVector
+// Copier sur le host la slice de w correspondand à sliceIndex  sur la stream demander
+    GM::memcpyAsyncDToH(ptrW + OFFSET_SLICE, ptrDevW + OFFSET_SLICE, SIZE_SLICE, stream);
+    }
 
 /**
  * lance le kernel de calcul pour la slice sliceIndex
@@ -392,23 +417,24 @@ const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
  * 	sliceIndex in [0,nbSlice[
  */
 void AddVectorTristream::kernelSlice(int sliceIndex , cudaStream_t stream)
-{
-const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
+    {
+    const int OFFSET_SLICE = sliceIndex * N_BY_SLICE;
 
-    // TODO addVector
-    // appeler le kernel sur la slice correspondant a sliceIndex
+// addVector
+// appeler le kernel sur la slice correspondant a sliceIndex
+    addVector<<<dg,db,0,stream>>>(ptrDevV1 + OFFSET_SLICE, ptrDevV2 + OFFSET_SLICE, ptrDevW + OFFSET_SLICE, N_BY_SLICE, sliceIndex);
 }
 
 string AddVectorTristream::title(int nbSlice)
 {
-if (VectorTools::isDMA())
-{
-return "Addvector-tristream-slice" + to_string(nbSlice) + "-DMA-int";
-}
-else
-{
-return "Addvector-tristream-slice" + to_string(nbSlice) + "-DMA-int";
-}
+    if (VectorTools::isDMA())
+	{
+	return "Addvector-tristream-slice" + to_string(nbSlice) + "-DMA-int";
+	}
+    else
+	{
+	return "Addvector-tristream-slice" + to_string(nbSlice) + "-DMA-int";
+	}
 }
 
 /*----------------------------------------------------------------------*\

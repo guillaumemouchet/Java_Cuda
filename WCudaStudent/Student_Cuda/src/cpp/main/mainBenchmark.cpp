@@ -72,9 +72,9 @@ int mainBenchmark()
 
     // Vector
 	{
-	//addvectorTristream();
+	addvectorTristream();
 	//addvectorBistream();
-	addvector();
+	//addvector();
 	}
 
     cout << "\n[Benchmark] end" << endl;

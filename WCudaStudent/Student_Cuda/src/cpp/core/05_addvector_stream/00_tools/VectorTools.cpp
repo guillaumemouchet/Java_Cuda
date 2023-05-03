@@ -20,10 +20,10 @@ using std::endl;
  */
 int VectorTools::n()
     {
-    //return n1();
+    return n1();
     //return n2();
 
-    return nDebug();
+//    return nDebug();
     }
 
 /**
@@ -96,7 +96,7 @@ int VectorTools::nDebug()
     //const int N=6;	// debug use only 3 slice
     //const int N=8;	// debug use only 4 slice
     //const int N=10;	// debug use only 5 slice
-    const int N = 6;
+    const int N = 10;
 
     return N;
     }
@@ -194,4 +194,5 @@ void VectorTools::print(int* ptrV , int n)
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/
+
 

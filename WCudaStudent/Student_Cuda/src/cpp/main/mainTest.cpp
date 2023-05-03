@@ -46,9 +46,9 @@ int mainTest()
 
     // Slice//
 	{
-	//testSuite.add(std::auto_ptr < Suite > (new TestSliceGMHOST()));
-	//testSuite.add(std::auto_ptr < Suite > (new TestSliceGM()));
-	//testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
+	testSuite.add(std::auto_ptr < Suite > (new TestSliceGMHOST()));
+	testSuite.add(std::auto_ptr < Suite > (new TestSliceGM()));
+	testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
 	}
 
 // Montecarlo
@@ -71,31 +71,31 @@ int mainTest()
 
     // AddVector
 	{
-//	testSuite.add(std::auto_ptr < Suite > (new TestVector()));
+	testSuite.add(std::auto_ptr < Suite > (new TestVector()));
 	testSuite.add(std::auto_ptr < Suite > (new TestVectorBistream()));
 
 	// Tristream
 	    {
 	    // Justesse
 //		{
-//		for (int nbSlice = 3; nbSlice <= 15; nbSlice++) // long
-//		    {
-//		    testSuite.add(std::auto_ptr < Suite > (new TestVectorTriStream(nbSlice)));
-//		    }
+		for (int nbSlice = 3; nbSlice <= 15; nbSlice++) // long
+		    {
+		    testSuite.add(std::auto_ptr < Suite > (new TestVectorTriStream(nbSlice)));
+		    }
 //		}
 	    }
 
 	 // Optimalite
-//	    {
-//	    int nbSliceOptimal = AddVectorTristreamUse::nbSliceOptimum();
-//	    testSuite.add(std::auto_ptr < Suite > (new TestVectorTristreamPerformance(nbSliceOptimal)));
-//	    }
+	    {
+	    int nbSliceOptimal = AddVectorTristreamUse::nbSliceOptimum();
+	    testSuite.add(std::auto_ptr < Suite > (new TestVectorTristreamPerformance(nbSliceOptimal)));
+	    }
 	}
 
 // run
 	{
 	string folder = "./out";
-	string title = "TestVectorBistream"; // see above, title list
+	string title = "testAll_no_image"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);

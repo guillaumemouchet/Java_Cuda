@@ -109,24 +109,24 @@ int mainUse()
 
 // tristream : debug
 //	    {
-	    int nbSlice = 3; // Changer aussi n dans VectorTools:n(); // Contrainte : n%nbSlkice=0 (pour se faciliter la vie)
-
-	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, !IS_VERBOSE);
-	    bool isOkSlice = addVectorTristreamUse.isOk(!false);
-	    cout << nbSlice << "\t" << isOkSlice << endl;
-
-	    isOk &= isOkSlice;
-//	    }
-
-// tristream : use1
-//	for (int nbSlice = 3; nbSlice <= 15; nbSlice++)
-//	    {
-//	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, IS_VERBOSE);
-//	    bool isOkSlice = addVectorTristreamUse.isOk(false);
-//	   // cout << nbSlice << "\t" << isOkSlice << endl;
+//	    int nbSlice = 3; // Changer aussi n dans VectorTools:n(); // Contrainte : n%nbSlkice=0 (pour se faciliter la vie)
+//
+//	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, !IS_VERBOSE);
+//	    bool isOkSlice = addVectorTristreamUse.isOk(!false);
+//	    cout << nbSlice << "\t" << isOkSlice << endl;
 //
 //	    isOk &= isOkSlice;
 //	    }
+
+// tristream : use1
+	for (int nbSlice = 3; nbSlice <= 15; nbSlice++)
+	    {
+	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, IS_VERBOSE);
+	    bool isOkSlice = addVectorTristreamUse.isOk(false);
+	   // cout << nbSlice << "\t" << isOkSlice << endl;
+
+	    isOk &= isOkSlice;
+	    }
 
 // tristream : use2
 //	for (int nbSlice = 5; nbSlice <= 75; nbSlice += 5)
