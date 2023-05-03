@@ -34,9 +34,9 @@ int mainImage(const Args& args)
     ImageOption nozoomable(false, true, false, false);
 
 //   Viewer<RipplingProvider> rippling(nozoomable, 0, 0); // imageOption px py
-   Viewer<MandelbrotProvider> mandelbrot(zoomable, 0, 0);
+ //  Viewer<MandelbrotProvider> mandelbrot(zoomable, 0, 0);
 //   Viewer<RaytracingProviderGM> raytracingGM(nozoomable, 0, 0);
-// Viewer<RaytracingProviderCM> raytracingCM(nozoomable, 0, 0);
+ Viewer<RaytracingProviderCM> raytracingCM(nozoomable, 0, 0);
 //  Viewer<RaytracingProviderSM> raytracingSM(nozoomable, 0, 0); //GM2SM
 //   Viewer<RaytracingProviderCM2SM> raytracingCM2SM(nozoomable, 0, 0);
 

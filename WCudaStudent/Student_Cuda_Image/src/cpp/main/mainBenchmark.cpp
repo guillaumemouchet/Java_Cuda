@@ -41,8 +41,8 @@ int mainBenchmark()
 //    mandelbrot(); // Conseil : use nFixe (by example nMin=nMax=80)
   //  raytracingGM();
 //  raytracingSM();
-//    raytracingCM();
-    raytracingCM2SM();
+    raytracingCM();
+//    raytracingCM2SM();
 
     cout << "\n[Benchmark] end" << endl;
 
