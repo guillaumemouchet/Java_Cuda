@@ -101,10 +101,10 @@ int mainUse()
 
     // Vector
 	{
-//	AddVectorUse addVectorUse(IS_VERBOSE);
+	AddVectorUse addVectorUse(IS_VERBOSE);
 //	AddVectorBistreamUse addVectorBistreamUse(IS_VERBOSE);
 //
-//	isOk &= addVectorUse.isOk(false);
+	isOk &= addVectorUse.isOk(false);
 //	isOk &= addVectorBistreamUse.isOk(false);
 
 // tristream : debug
@@ -118,15 +118,15 @@ int mainUse()
 //	    isOk &= isOkSlice;
 //	    }
 
-// tristream : use1
-	for (int nbSlice = 3; nbSlice <= 15; nbSlice++)
-	    {
-	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, IS_VERBOSE);
-	    bool isOkSlice = addVectorTristreamUse.isOk(false);
-	   // cout << nbSlice << "\t" << isOkSlice << endl;
-
-	    isOk &= isOkSlice;
-	    }
+//// tristream : use1
+//	for (int nbSlice = 3; nbSlice <= 15; nbSlice++)
+//	    {
+//	    AddVectorTristreamUse addVectorTristreamUse(nbSlice, IS_VERBOSE);
+//	    bool isOkSlice = addVectorTristreamUse.isOk(false);
+//	   // cout << nbSlice << "\t" << isOkSlice << endl;
+//
+//	    isOk &= isOkSlice;
+//	    }
 
 // tristream : use2
 //	for (int nbSlice = 5; nbSlice <= 75; nbSlice += 5)

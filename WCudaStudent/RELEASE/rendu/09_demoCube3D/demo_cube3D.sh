@@ -1,5 +1,5 @@
 # !/bin/bash
 
-gl cbirt ./demo_Cube3D.run
+gl cbirt ./demo_cube3D.run
 
 

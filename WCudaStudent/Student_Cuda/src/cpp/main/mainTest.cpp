@@ -44,12 +44,12 @@ int mainTest()
     {
     Suite testSuite;
 
-    // Slice//
-	{
-	testSuite.add(std::auto_ptr < Suite > (new TestSliceGMHOST()));
-	testSuite.add(std::auto_ptr < Suite > (new TestSliceGM()));
-	testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
-	}
+//    // Slice//
+//	{
+//	testSuite.add(std::auto_ptr < Suite > (new TestSliceGMHOST()));
+//	testSuite.add(std::auto_ptr < Suite > (new TestSliceGM()));
+//	testSuite.add(std::auto_ptr < Suite > (new TestSliceSM()));
+//	}
 
 // Montecarlo
 	{
@@ -71,17 +71,17 @@ int mainTest()
 
     // AddVector
 	{
-	testSuite.add(std::auto_ptr < Suite > (new TestVector()));
-	testSuite.add(std::auto_ptr < Suite > (new TestVectorBistream()));
+//	testSuite.add(std::auto_ptr < Suite > (new TestVector()));
+//	testSuite.add(std::auto_ptr < Suite > (new TestVectorBistream()));
 
 	// Tristream
 	    {
 	    // Justesse
 //		{
-		for (int nbSlice = 3; nbSlice <= 15; nbSlice++) // long
-		    {
-		    testSuite.add(std::auto_ptr < Suite > (new TestVectorTriStream(nbSlice)));
-		    }
+//		for (int nbSlice = 3; nbSlice <= 15; nbSlice++) // long
+//		    {
+//		    testSuite.add(std::auto_ptr < Suite > (new TestVectorTriStream(nbSlice)));
+//		    }
 //		}
 	    }
 
@@ -95,7 +95,7 @@ int mainTest()
 // run
 	{
 	string folder = "./out";
-	string title = "testAll_no_image"; // see above, title list
+	string title = "testVector_tristream"; // see above, title list
 	string fileHTML = title + ".html";
 
 	Folders::mkdirP(folder);

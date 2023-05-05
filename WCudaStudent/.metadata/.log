@@ -7302,3 +7302,131 @@ Binding(ALT+SHIFT+R,
 
 !ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-03 19:25:31.814
 !MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.272954162"
+!SESSION 2023-05-05 16:01:33.082 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2023-05-05 16:01:40.383
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-05 16:01:40.383
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14bf9fd0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@391e5ffa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-05 16:01:40.383
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f4d391c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@470b5213,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:04:51.579
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.1880378736"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:04:51.604
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.370585809"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:04:51.629
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.2064026964"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:04:51.696
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.309315409"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:04:51.721
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.1926094149"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:04:51.746
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.272954162"
+!SESSION 2023-05-05 16:43:45.771 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2023-05-05 16:44:09.757
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-05 16:44:09.757
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@26b3fe8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f6d7e7c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-05-05 16:44:09.757
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20518250,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7836c79,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:54:35.875
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.1880378736"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:54:35.899
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.370585809"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:54:35.923
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.2064026964"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:54:35.991
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.309315409"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:54:36.015
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.cl.option.includes" for "org.eclipse.cdt.msvc.cl.option.includes.1926094149"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2023-05-05 16:54:36.046
+!MESSAGE Missing superclass "org.eclipse.cdt.msvc.rc.option.includes" for "org.eclipse.cdt.msvc.rc.option.includes.272954162"

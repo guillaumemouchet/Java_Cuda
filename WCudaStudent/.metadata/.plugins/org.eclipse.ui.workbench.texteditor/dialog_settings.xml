@@ -9,12 +9,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="//"/>
+		<item key="selection" value="&#x09;&#x09;for (int nbSlice = 3; nbSlice &lt;= 15; nbSlice++) // long"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="&#x09;&#x09;for (int nbSlice = 3; nbSlice &lt;= 15; nbSlice++) // long"/>
 			<item value="//"/>
 			<item value="&#x09;&#x09;{"/>
 			<item value="float"/>
@@ -22,7 +23,6 @@
 			<item value="CallbackNatif"/>
 			<item value="error"/>
 			<item value="ptrRunnable"/>
-			<item value="simple"/>
 		</list>
 		<list key="replacehistory">
 			<item value="WorkGPUStream"/>

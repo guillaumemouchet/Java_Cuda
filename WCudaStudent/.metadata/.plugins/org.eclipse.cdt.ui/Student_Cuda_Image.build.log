@@ -1,4 +1,4 @@
-19:31:18 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
+16:16:51 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -460,8 +460,18 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : opencv_videoio_gcc750
 
 
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBenchmark.cpp
+[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainTest.cpp
+src/cpp/main/mainTest.cpp: In function ‘int mainTest()’:
+src/cpp/main/mainTest.cpp:51:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestRaytracingSM));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/cpp/main/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
 
@@ -608,5 +618,5 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> Student_Cuda_Image_arc27_cuda_110_x86_64   : End ALL!
 
 
-19:31:22 Build Finished. 0 errors, 0 warnings. (took 4s.300ms)
+16:16:55 Build Finished. 0 errors, 1 warnings. (took 3s.944ms)
 

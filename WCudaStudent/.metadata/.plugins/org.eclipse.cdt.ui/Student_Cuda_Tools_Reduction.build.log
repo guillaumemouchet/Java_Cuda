@@ -1,4 +1,4 @@
-19:09:35 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Tools_Reduction ****
+17:10:06 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Tools_Reduction ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -84,7 +84,6 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 [CUDA GCC] : all
 
-[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PII/host/ReductionAddIntII.cu
 
 ==================================================================================
 [CBI] -> Target Name  : Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64
@@ -318,11 +317,97 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/obj
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/cubin
 
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/mainUse.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/mainTest.cpp
+src/mainTest.cpp: In function ‘int mainTest()’:
+src/mainTest.cpp:42:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionAddI()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:43:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:46:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:47:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:50:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/main.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/long/PII/TestReductionGenericLongII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/int/PII/TestReductionGenericII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/int/PI/TestReductionGenericI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/add/int/PII/TestReductionAddII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/add/int/PI/TestReductionAddI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/use/UseReductionLong.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/use/UseReductionInt.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/protocole/long/II/PLongII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/protocole/int/II/PIntII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/protocole/int/I/PIntI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/long/PII/use/UseReductionLongII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/long/PII/use/ReductionLongIIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PII/use/ReductionIntIIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PII/use/UseReductionIntII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PI/use/ReductionIntIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PI/use/UseReductionIntI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PII/use/UseReductionAddIntII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PII/use/ReductionAddIntIIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PI/use/UseReductionAddIntI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PI/use/ReductionAddIntIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/long/PII/device/reductionLongII_device.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/long/PII/host/ReductionLongII.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PII/device/reductionIntII_device.cu
+src/02_use_cuda/generic/int/PII/device/reductionIntII_device.cu(76): warning: function "addAtomicV2" was declared but never referenced
+
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PII/host/ReductionIntII.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu
+src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu(77): warning: function "addAtomicV2" was declared but never referenced
+
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PI/host/ReductionIntI.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PII/device/reductionAddIntII_device.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PII/host/ReductionAddIntII.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/device/reductionAddIntI_device.cu
-[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/device/reductionAddIntI_device.cu
-[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/host/ReductionAddIntI.cu
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/host/ReductionAddIntI.cu
 
 [CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
@@ -416,149 +501,29 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : -lnvrtc-builtins
 
 
-[CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->
-[CBI] ->              : -lBilatTools_CPP_305_014_gcc_x86_64
-[CBI] ->              : -lBilatTools_Cuda_305_014_cuda_110_x86_64
-[CBI] ->              : -lBilatTools_OMP_305_014_gcc_x86_64
-[CBI] ->              : -lCpp_Test_200_gcc_x86_64
-[CBI] ->              : -lOpenCL
-[CBI] ->              : -laccinj64
-[CBI] ->              : -lboost_atomic-gcc750
-[CBI] ->              : -lboost_chrono-gcc750
-[CBI] ->              : -lboost_container-gcc750
-[CBI] ->              : -lboost_context-gcc750
-[CBI] ->              : -lboost_contract-gcc750
-[CBI] ->              : -lboost_coroutine-gcc750
-[CBI] ->              : -lboost_date_time-gcc750
-[CBI] ->              : -lboost_fiber-gcc750
-[CBI] ->              : -lboost_filesystem-gcc750
-[CBI] ->              : -lboost_graph-gcc750
-[CBI] ->              : -lboost_iostreams-gcc750
-[CBI] ->              : -lboost_json-gcc750
-[CBI] ->              : -lboost_locale-gcc750
-[CBI] ->              : -lboost_log-gcc750
-[CBI] ->              : -lboost_log_setup-gcc750
-[CBI] ->              : -lboost_math_c99-gcc750
-[CBI] ->              : -lboost_math_c99f-gcc750
-[CBI] ->              : -lboost_math_c99l-gcc750
-[CBI] ->              : -lboost_math_tr1-gcc750
-[CBI] ->              : -lboost_math_tr1f-gcc750
-[CBI] ->              : -lboost_math_tr1l-gcc750
-[CBI] ->              : -lboost_nowide-gcc750
-[CBI] ->              : -lboost_numpy27-gcc750
-[CBI] ->              : -lboost_prg_exec_monitor-gcc750
-[CBI] ->              : -lboost_program_options-gcc750
-[CBI] ->              : -lboost_python27-gcc750
-[CBI] ->              : -lboost_random-gcc750
-[CBI] ->              : -lboost_regex-gcc750
-[CBI] ->              : -lboost_serialization-gcc750
-[CBI] ->              : -lboost_stacktrace_addr2line-gcc750
-[CBI] ->              : -lboost_stacktrace_backtrace-gcc750
-[CBI] ->              : -lboost_stacktrace_basic-gcc750
-[CBI] ->              : -lboost_stacktrace_noop-gcc750
-[CBI] ->              : -lboost_system-gcc750
-[CBI] ->              : -lboost_thread-gcc750
-[CBI] ->              : -lboost_timer-gcc750
-[CBI] ->              : -lboost_type_erasure-gcc750
-[CBI] ->              : -lboost_unit_test_framework-gcc750
-[CBI] ->              : -lboost_wave-gcc750
-[CBI] ->              : -lboost_wserialization-gcc750
-[CBI] ->              : -lcublas
-[CBI] ->              : -lcublasLt
-[CBI] ->              : -lcudart
-[CBI] ->              : -lcudnn
-[CBI] ->              : -lcudnn_adv_infer
-[CBI] ->              : -lcudnn_adv_train
-[CBI] ->              : -lcudnn_cnn_infer
-[CBI] ->              : -lcudnn_cnn_train
-[CBI] ->              : -lcudnn_ops_infer
-[CBI] ->              : -lcudnn_ops_train
-[CBI] ->              : -lcufft
-[CBI] ->              : -lcufftw
-[CBI] ->              : -lcuinj64
-[CBI] ->              : -lcurand
-[CBI] ->              : -lcusolver
-[CBI] ->              : -lcusolverMg
-[CBI] ->              : -lcusparse
-[CBI] ->              : -lgomp
-[CBI] ->              : -lnppc
-[CBI] ->              : -lnppial
-[CBI] ->              : -lnppicc
-[CBI] ->              : -lnppidei
-[CBI] ->              : -lnppif
-[CBI] ->              : -lnppig
-[CBI] ->              : -lnppim
-[CBI] ->              : -lnppist
-[CBI] ->              : -lnppisu
-[CBI] ->              : -lnppitc
-[CBI] ->              : -lnpps
-[CBI] ->              : -lnvToolsExt
-[CBI] ->              : -lnvblas
-[CBI] ->              : -lnvcaffe_parser
-[CBI] ->              : -lnvinfer
-[CBI] ->              : -lnvinfer_plugin
-[CBI] ->              : -lnvjpeg
-[CBI] ->              : -lnvonnxparser
-[CBI] ->              : -lnvparsers
-[CBI] ->              : -lnvrtc
-[CBI] ->              : -lnvrtc-builtins
-
-
 ==================================================================================
-
 [CBI] -> Target Name  : Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64
-==================================================================================
 [CBI] -> Location     : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 [CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] -> Target Name  : Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64
 [CBI] ->
-[CBI] -> Location     : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
-[CBI] -> Type	 	  : EXE
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 	      : Linux
 [CBI] -> Type	 	  : EXE
 [CBI] -> Arch	 	  : x86_64
-[CBI] -> User	 	  : arc27
-[CBI] ->
 [CBI] -> OS	 	      : Linux
-[CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> User	 	  : arc27
-[CBI] -> Task		  : End Compiling-Linking !
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
 [CBI] -> Time		  : 44 (s)
 ==================================================================================
-[CBI] -> Time		  : 10 (s)
-
-==================================================================================
 
 
-cp: cannot create regular file '../RELEASE/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run': File exists
-
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 [CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 
 [CBI] -> Symlink Project Inc
-
-[CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
-[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
-ln: failed to create symbolic link 'INC_SYMLINK/PROJECT/TestReductionGenericLongII.h': File exists
-../BUILDER/makefile/private/common/symlink.mk:76: recipe for target 'symlinkProjectInc' failed
-make: *** [symlinkProjectInc] Error 1
-"cbicc cuda all" terminated with exit code 2. Build might be incomplete.
-
-19:09:46 Build Failed. 2 errors, 7 warnings. (took 44s.406ms)
-
 
 [CBI] -> Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64   : End ALL!
 
 
-19:09:47 Build Finished. 0 errors, 0 warnings. (took 11s.408ms)
+17:10:52 Build Finished. 0 errors, 7 warnings. (took 45s.384ms)
 

@@ -1,4 +1,4 @@
-19:31:18 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Image ****
+17:10:06 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Tools_Reduction ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -86,9 +86,9 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 
 
 ==================================================================================
-[CBI] -> Target Name  : Student_Cuda_Image_arc27_cuda_110_x86_64
+[CBI] -> Target Name  : Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64
 [CBI] ->
-[CBI] -> Build        : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
+[CBI] -> Build        : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 [CBI] -> Deploy       : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	      : EXE
@@ -127,23 +127,29 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : -arch=sm_75
 
 [CBI] -> INC_PATH (auto detect):
-[CBI] ->              : src/cpp/core/01_Rippling/a_animable/device/math/
-[CBI] ->              : src/cpp/core/01_Rippling/a_animable/host/
-[CBI] ->              : src/cpp/core/01_Rippling/b_provider/
-[CBI] ->              : src/cpp/core/02_Mandelbrot/a_animable/device/math/
-[CBI] ->              : src/cpp/core/02_Mandelbrot/a_animable/host/
-[CBI] ->              : src/cpp/core/02_Mandelbrot/b_provider/
-[CBI] ->              : src/cpp/core/03_RayTracing/a_animable/device/
-[CBI] ->              : src/cpp/core/03_RayTracing/a_animable/device/math/
-[CBI] ->              : src/cpp/core/03_RayTracing/a_animable/host/
-[CBI] ->              : src/cpp/core/03_RayTracing/a_animable/host/tools/
-[CBI] ->              : src/cpp/core/03_RayTracing/b_provider/
-[CBI] ->              : src/cpp/test/unit/01_Test_Rippling/
-[CBI] ->              : src/cpp/test/unit/02_Test_Mandelbrot/
-[CBI] ->              : src/cpp/test/unit/03_Test_Raytracing/cm/
-[CBI] ->              : src/cpp/test/unit/03_Test_Raytracing/cm2sm/
-[CBI] ->              : src/cpp/test/unit/03_Test_Raytracing/gm/
-[CBI] ->              : src/cpp/test/unit/03_Test_Raytracing/sm/
+[CBI] ->              : src/01_cudatools/add/
+[CBI] ->              : src/01_cudatools/generic/
+[CBI] ->              : src/02_use_cuda/add/int/PI/host/
+[CBI] ->              : src/02_use_cuda/add/int/PII/host/
+[CBI] ->              : src/02_use_cuda/generic/int/PI/host/
+[CBI] ->              : src/02_use_cuda/generic/int/PII/host/
+[CBI] ->              : src/02_use_cuda/generic/long/PII/host/
+[CBI] ->              : src/03_private/a_use_wrapper/add/int/PI/use/
+[CBI] ->              : src/03_private/a_use_wrapper/add/int/PII/use/
+[CBI] ->              : src/03_private/a_use_wrapper/generic/int/PI/use/
+[CBI] ->              : src/03_private/a_use_wrapper/generic/int/PII/use/
+[CBI] ->              : src/03_private/a_use_wrapper/generic/long/PII/use/
+[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/int/
+[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/int/I/
+[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/int/II/
+[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/long/
+[CBI] ->              : src/03_private/a_use_wrapper/tools/protocole/long/II/
+[CBI] ->              : src/03_private/a_use_wrapper/tools/use/
+[CBI] ->              : src/03_private/b_test/add/int/PI/
+[CBI] ->              : src/03_private/b_test/add/int/PII/
+[CBI] ->              : src/03_private/b_test/generic/int/PI/
+[CBI] ->              : src/03_private/b_test/generic/int/PII/
+[CBI] ->              : src/03_private/b_test/generic/long/PII/
 
 
 [CBI] -> LIB_PATH (auto detect):
@@ -151,22 +157,6 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> LIB_PATH (auto detect):
 
 [CBI] -> API_INC :
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/INC
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/INC/primitives
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/INC
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/INC/primitives
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_FreeGlut_Tools/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC/common
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/INC/cpu
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut_Cuda/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC/common
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/INC/cpu
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/INC
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/INC/gpu
-[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools/INC
-[CBI] ->              : /opt/api/cbi/infographie/tools/305/Bilat_tools_dll/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_014/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_014/INC/tools
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_014/INC/tools/02_fps
@@ -222,123 +212,21 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_014/INC/cudatools/tools/both
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_014/INC/cudatools/tools/device
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_014/INC/cudatools/tools/host
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/animable
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/animable/animator
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/animable/converter
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/benchmark
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/cudaContext
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/provider
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/provider/float4_HSBA
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/provider/float4_RGBA
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/provider/float_hue
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/provider/uchar
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/provider/uchar4
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/INC/cudatoolsimage/viewer
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/01_opencv
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/02_video
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/02_video/a_provider
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/02_video/a_provider/RGB
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/02_video/a_provider/gray
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/02_video/b_preloader
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/02_video/b_preloader/all
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/02_video/b_preloader/iterator
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/INC/03_image
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_014/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_014/INC/OMP_Tools
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/capture
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/capture/video
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/capture/webcam
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show/shapeOverlay
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show/shapeOverlay/appearance
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show/shapeOverlay/drawer
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show/shapeOverlay/shape
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show/view
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show/view/viewer
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/show/view/viewerMat
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/INC/tools
 [CBI] ->              : /opt/api/ext/boost/1800/include
 [CBI] ->              : /opt/api/ext/boost/1800/include/boost
 [CBI] ->              : /opt/api/ext/cpptest/200/INC
 [CBI] ->              : /opt/api/ext/cpptest/200/INC/extension
-[CBI] ->              : /opt/api/ext/opencv/460/include
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/calib3d
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/cuda
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/cuda/detail
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/detail
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/hal
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/opencl
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/opencl/runtime
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/opencl/runtime/autogenerated
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/parallel
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/parallel/backend
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/core/utils
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/dnn
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/dnn/utils
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/features2d
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/features2d/hal
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/flann
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/cpu
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/fluid
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/gpu
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/infer
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/oak
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/ocl
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/own
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/plaidml
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/python
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/render
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/s11n
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/streaming
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/streaming/gstreamer
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/streaming/onevpl
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/gapi/util
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/highgui
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/imgcodecs
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/imgcodecs/legacy
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/imgproc
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/imgproc/detail
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/imgproc/hal
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/ml
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/objdetect
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/photo
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/photo/legacy
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/stitching
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/stitching/detail
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/video
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/video/detail
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/video/legacy
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/videoio
-[CBI] ->              : /opt/api/ext/opencv/460/include/opencv4/opencv2/videoio/legacy
 [CBI] ->              : /usr/local/cuda/include
 [CBI] ->              : /usr/local/cuda/include/CL
 [CBI] ->              : /usr/local/cuda/include/crt
 
 [CBI] -> API_BIN :
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_Displayable_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/fenetrage/305/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_FreeGlut_Cuda/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/image/305/Bilat_Image_GL_Cuda/BIN/gcc
-[CBI] ->              : /opt/api/cbi/infographie/opengl/305/Bilat_OpenGL_Tools/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/305_014/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/305_014/BIN/gcc
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image/305_014/BIN/gcc
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda_image_cv/305_014/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/305_014/BIN/gcc
-[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/305_014/BIN/gcc
 [CBI] ->              : /opt/api/ext/boost/1800/lib/gcc
-[CBI] ->              : /opt/api/ext/opencv/460/lib
 [CBI] ->              : /usr/local/cuda/lib64
 
 [CBI] -> API_LIBRARIES_STATIC :
@@ -347,21 +235,7 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] -> API_LIBRARIES :
 [CBI] ->              : BilatTools_CPP_305_014_gcc_x86_64
 [CBI] ->              : BilatTools_Cuda_305_014_cuda_110_x86_64
-[CBI] ->              : BilatTools_Cuda_Image_305_014_cuda_110_x86_64
-[CBI] ->              : BilatTools_Image_OpenCV_Cuda_305_014_cuda_110_x86_64
 [CBI] ->              : BilatTools_OMP_305_014_gcc_x86_64
-[CBI] ->              : BilatTools_OpenCV_305_014_gcc_x86_64
-[CBI] ->              : Bilat_Fenetrage_Displayable_305_gcc_x86_64
-[CBI] ->              : Bilat_Fenetrage_Displayable_GL_305_gcc_x86_64
-[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_305_gcc_x86_64
-[CBI] ->              : Bilat_Image_FreeGlut_305_gcc_x86_64
-[CBI] ->              : Bilat_Image_FreeGlut_Cuda_305_cuda_110_x86_64
-[CBI] ->              : Bilat_Image_GL_305_gcc_x86_64
-[CBI] ->              : Bilat_Image_GL_Cuda_305_cuda_110_x86_64
-[CBI] ->              : Bilat_OpenGL_Tools_305_gcc_x86_64
-[CBI] ->              : GL
-[CBI] ->              : GLEW
-[CBI] ->              : GLU
 [CBI] ->              : OpenCL
 [CBI] ->              : accinj64
 [CBI] ->              : boost_atomic-gcc750
@@ -421,7 +295,6 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : cusolver
 [CBI] ->              : cusolverMg
 [CBI] ->              : cusparse
-[CBI] ->              : glut
 [CBI] ->              : nppc
 [CBI] ->              : nppial
 [CBI] ->              : nppicc
@@ -443,48 +316,108 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : nvparsers
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
-[CBI] ->              : opencv_calib3d_gcc750
-[CBI] ->              : opencv_core_gcc750
-[CBI] ->              : opencv_dnn_gcc750
-[CBI] ->              : opencv_features2d_gcc750
-[CBI] ->              : opencv_flann_gcc750
-[CBI] ->              : opencv_gapi_gcc750
-[CBI] ->              : opencv_highgui_gcc750
-[CBI] ->              : opencv_imgcodecs_gcc750
-[CBI] ->              : opencv_imgproc_gcc750
-[CBI] ->              : opencv_ml_gcc750
-[CBI] ->              : opencv_objdetect_gcc750
-[CBI] ->              : opencv_photo_gcc750
-[CBI] ->              : opencv_stitching_gcc750
-[CBI] ->              : opencv_video_gcc750
-[CBI] ->              : opencv_videoio_gcc750
 
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/obj
+[CBI] -> Create folder : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/cubin
 
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_Image_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/cpp/main/mainBenchmark.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/mainUse.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/mainTest.cpp
+src/mainTest.cpp: In function ‘int mainTest()’:
+src/mainTest.cpp:42:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionAddI()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:43:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:46:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:47:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+src/mainTest.cpp:50:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
+                     ^~~~~~~~
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from src/mainTest.cpp:4:
+/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/main.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/long/PII/TestReductionGenericLongII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/int/PII/TestReductionGenericII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/int/PI/TestReductionGenericI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/add/int/PII/TestReductionAddII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/add/int/PI/TestReductionAddI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/use/UseReductionLong.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/use/UseReductionInt.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/protocole/long/II/PLongII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/protocole/int/II/PIntII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/tools/protocole/int/I/PIntI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/long/PII/use/UseReductionLongII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/long/PII/use/ReductionLongIIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PII/use/ReductionIntIIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PII/use/UseReductionIntII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PI/use/ReductionIntIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/generic/int/PI/use/UseReductionIntI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PII/use/UseReductionAddIntII.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PII/use/ReductionAddIntIIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PI/use/UseReductionAddIntI.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/a_use_wrapper/add/int/PI/use/ReductionAddIntIProvider.cpp
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/long/PII/device/reductionLongII_device.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/long/PII/host/ReductionLongII.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PII/device/reductionIntII_device.cu
+src/02_use_cuda/generic/int/PII/device/reductionIntII_device.cu(76): warning: function "addAtomicV2" was declared but never referenced
 
-[CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PII/host/ReductionIntII.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu
+src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu(77): warning: function "addAtomicV2" was declared but never referenced
+
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/generic/int/PI/host/ReductionIntI.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PII/device/reductionAddIntII_device.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PII/host/ReductionAddIntII.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/device/reductionAddIntI_device.cu
+[Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> nvcc compiling .cu : src/02_use_cuda/add/int/PI/host/ReductionAddIntI.cu
+
+[CBI] -> Linking to   : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 
 [CBI] -> Library Link :
 [CBI] ->
 [CBI] ->              : -lBilatTools_CPP_305_014_gcc_x86_64
 [CBI] ->              : -lBilatTools_Cuda_305_014_cuda_110_x86_64
-[CBI] ->              : -lBilatTools_Cuda_Image_305_014_cuda_110_x86_64
-[CBI] ->              : -lBilatTools_Image_OpenCV_Cuda_305_014_cuda_110_x86_64
 [CBI] ->              : -lBilatTools_OMP_305_014_gcc_x86_64
-[CBI] ->              : -lBilatTools_OpenCV_305_014_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_Displayable_305_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_305_gcc_x86_64
-[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_305_gcc_x86_64
-[CBI] ->              : -lBilat_Image_FreeGlut_305_gcc_x86_64
-[CBI] ->              : -lBilat_Image_FreeGlut_Cuda_305_cuda_110_x86_64
-[CBI] ->              : -lBilat_Image_GL_305_gcc_x86_64
-[CBI] ->              : -lBilat_Image_GL_Cuda_305_cuda_110_x86_64
-[CBI] ->              : -lBilat_OpenGL_Tools_305_gcc_x86_64
 [CBI] ->              : -lCpp_Test_200_gcc_x86_64
-[CBI] ->              : -lGL
-[CBI] ->              : -lGLEW
-[CBI] ->              : -lGLU
 [CBI] ->              : -lOpenCL
 [CBI] ->              : -laccinj64
 [CBI] ->              : -lboost_atomic-gcc750
@@ -544,7 +477,6 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : -lcusolver
 [CBI] ->              : -lcusolverMg
 [CBI] ->              : -lcusparse
-[CBI] ->              : -lglut
 [CBI] ->              : -lgomp
 [CBI] ->              : -lnppc
 [CBI] ->              : -lnppial
@@ -567,26 +499,11 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->              : -lnvparsers
 [CBI] ->              : -lnvrtc
 [CBI] ->              : -lnvrtc-builtins
-[CBI] ->              : -lopencv_calib3d_gcc750
-[CBI] ->              : -lopencv_core_gcc750
-[CBI] ->              : -lopencv_dnn_gcc750
-[CBI] ->              : -lopencv_features2d_gcc750
-[CBI] ->              : -lopencv_flann_gcc750
-[CBI] ->              : -lopencv_gapi_gcc750
-[CBI] ->              : -lopencv_highgui_gcc750
-[CBI] ->              : -lopencv_imgcodecs_gcc750
-[CBI] ->              : -lopencv_imgproc_gcc750
-[CBI] ->              : -lopencv_ml_gcc750
-[CBI] ->              : -lopencv_objdetect_gcc750
-[CBI] ->              : -lopencv_photo_gcc750
-[CBI] ->              : -lopencv_stitching_gcc750
-[CBI] ->              : -lopencv_video_gcc750
-[CBI] ->              : -lopencv_videoio_gcc750
 
 
 ==================================================================================
-[CBI] -> Target Name  : Student_Cuda_Image_arc27_cuda_110_x86_64
-[CBI] -> Location     : /tmp/ramdrive/arc27/Targets/Student_Cuda_Image_arc27/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
+[CBI] -> Target Name  : Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64
+[CBI] -> Location     : /tmp/ramdrive/arc27/Targets/Student_Cuda_Tools_Recution_arc27/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 [CBI] -> Deploy 	  : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	 	  : EXE
@@ -596,14 +513,14 @@ Build cuda_11.0_bu.TC445_37.28845127_0
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 3 (s)
+[CBI] -> Time		  : 44 (s)
 ==================================================================================
 
 
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Image_arc27_cuda_110_x86_64.run
+[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64.run
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
-[CBI] -> Student_Cuda_Image_arc27_cuda_110_x86_64   : End ALL!
+[CBI] -> Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64   : End ALL!
 
