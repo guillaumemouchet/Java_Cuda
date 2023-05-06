@@ -1,1 +1,1 @@
-/home/bilat/CBI/Dropbox/01_CBI_CODE/Cuda/WCudaStudent/Student_Cuda_Video/src/core/01_WARMUP/c_texture_cuarray/03_provider/VideoTextureCuarrayProvider.h
+/home/arc27/CUDA/toStudent/code/WCudaStudent/Student_Cuda_Video/src/core/01_WARMUP/c_texture_cuarray/03_provider/VideoTextureCuarrayProvider.h
