@@ -103,7 +103,32 @@ __global__ void kernelRaytacingCM2SM(uchar4* tabPixelsGM , uint w , uint h , flo
 /*--------------------------------------*\
  |*		private			*|
  \*-------------------------------------*/
+__device void copyDevToSM(Sphere* tabSphereSM, Sphere* tabSphereGM, int nbSphere)
+    {
+    void* tabSMvoid = tabSphereSM;
+    void* tabGMvoid = tabSphereGM;
 
+    float* tabSM = (float*)tabSMvoid;
+    float* tabGM = (float*)tabGMvoid;
+
+    int n = sizeof(Sphere)*nbSphere/sizeof(float);
+    copyDevToSM(tabSM, tabGM, n);
+
+    }
+__device void copyDevToSM(float* tabSM, float* tabGM, int n)
+    {
+    const int LOCAL_ID = Thread2D::tidLocal();
+    const int LOCAL_THREAD = Thread2D::nbThreadLocal();
+    int s = LOCAL_ID;
+
+    while(s<n)
+	{
+	tabSM[s]=tabGM[s];
+	s+=LOCAL_THREAD;
+	}
+
+
+    }
 /**
  * Methode commune au 3 kernel ci-dessus.
  * Ici on ne sait pas si derriere tabSpheresDev, c'est

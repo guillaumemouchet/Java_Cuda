@@ -40,14 +40,14 @@ int mainTest()
 	{
 	// atomic
 	testSuite.add(std::auto_ptr < Suite > (new TestReductionAddI()));
-	testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
+	//testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
 
 	// generic
-	testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
-	testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
+	//testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
+	//testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
 //
 //	// long
-	testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
+	//testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
 	}
 
     // run

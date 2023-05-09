@@ -1,4 +1,4 @@
-17:10:06 **** Incremental Build of configuration CudaGCC for project Student_Cuda_Tools_Reduction ****
+10:32:20 **** Build of configuration CudaGCC for project Student_Cuda_Tools_Reduction ****
 cbicc cuda all 
 
 --------------------------------------------------------
@@ -334,46 +334,6 @@ In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
 /usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
    template<typename> class auto_ptr;
                             ^~~~~~~~
-src/mainTest.cpp:43:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
-  testSuite.add(std::auto_ptr < Suite > (new TestReductionAddII()));
-                     ^~~~~~~~
-In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
-                 from /usr/include/c++/7/locale:43,
-                 from /usr/include/c++/7/iomanip:43,
-                 from src/mainTest.cpp:4:
-/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
-   template<typename> class auto_ptr;
-                            ^~~~~~~~
-src/mainTest.cpp:46:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
-  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericI()));
-                     ^~~~~~~~
-In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
-                 from /usr/include/c++/7/locale:43,
-                 from /usr/include/c++/7/iomanip:43,
-                 from src/mainTest.cpp:4:
-/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
-   template<typename> class auto_ptr;
-                            ^~~~~~~~
-src/mainTest.cpp:47:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
-  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericII()));
-                     ^~~~~~~~
-In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
-                 from /usr/include/c++/7/locale:43,
-                 from /usr/include/c++/7/iomanip:43,
-                 from src/mainTest.cpp:4:
-/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
-   template<typename> class auto_ptr;
-                            ^~~~~~~~
-src/mainTest.cpp:50:21: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
-  testSuite.add(std::auto_ptr < Suite > (new TestReductionGenericLongII()));
-                     ^~~~~~~~
-In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
-                 from /usr/include/c++/7/locale:43,
-                 from /usr/include/c++/7/iomanip:43,
-                 from src/mainTest.cpp:4:
-/usr/include/c++/7/bits/unique_ptr.h:51:28: note: declared here
-   template<typename> class auto_ptr;
-                            ^~~~~~~~
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/main.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/long/PII/TestReductionGenericLongII.cpp
 [Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64] -> g++ compiling .cpp : src/03_private/b_test/generic/int/PII/TestReductionGenericII.cpp
@@ -513,7 +473,7 @@ src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu(77): warning: func
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 44 (s)
+[CBI] -> Time		  : 45 (s)
 ==================================================================================
 
 
@@ -525,5 +485,5 @@ src/02_use_cuda/generic/int/PI/device/reductionIntI_device.cu(77): warning: func
 [CBI] -> Student_Cuda_Tools_Recution_arc27_cuda_110_x86_64   : End ALL!
 
 
-17:10:52 Build Finished. 0 errors, 7 warnings. (took 45s.384ms)
+10:33:07 Build Finished. 0 errors, 3 warnings. (took 47s.168ms)
 
